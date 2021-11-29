@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Laravel</title>
-        <link rel="stylesheet" href="E-Bike_Rental/resources/css/landpage.css">
+        <link rel="stylesheet" href="resources/css/landpage.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
     <div class="topnav">
@@ -59,13 +54,7 @@
     </header>
 
     <!-- Page Content -->
-    <section class="py-5">
-    <div class="container">
-    <h1 class="fw-light">Half Page Image Slider</h1>
-    <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images
-        in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
-    </div>
-    </section>
+    
 
 
     <footer>
