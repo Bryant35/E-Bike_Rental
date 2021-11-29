@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Laravel</title>
-        <link rel="stylesheet" href="resources/css/landpage.css"/>
+        <link rel="stylesheet" href="landpage.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     </head>
     <body class="antialiased">
