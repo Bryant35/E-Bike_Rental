@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -8,13 +7,13 @@
     </head>
     <body class="antialiased">
     <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
+        <img src= "">
+        <a class = "headerbutton" href="">Home</a>
+        <a class = "headerbutton" href="">Contact</a>
+        <a class = "headerbutton" href="">About</a>
+        <a class = "headerbutton" href="">Portfolio</a>
     </div>
        
-
     <header>
         <div class="owl-carousel owl-theme">
             <div class="item">
