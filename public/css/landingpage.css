@@ -44,6 +44,7 @@ nav{
 }
 .logo img{
     width: 60px;
+    padding: -5px;
 }
 .navbar{
     display: flex;
