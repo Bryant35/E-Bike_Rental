@@ -107,12 +107,12 @@ nav{
     background-position: center;
     margin-left: 8%;
     margin-top: -20%;
-    text-align: center;
 }
 .text h1{
     font-size: 50px;
     color: black;
     margin-bottom: 20px;
+    text-align: center;
 }
 span{
     color: navy;
