@@ -93,6 +93,7 @@ nav{
 
 /*Home*/
 .home{
+    background-image: url("img/ebike_logo.png");
     width: 130%;
     min-height: 100vh;
 }
