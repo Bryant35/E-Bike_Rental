@@ -94,17 +94,27 @@ nav{
 /*Home*/
 .home{
     width: 100%;
+    min-height: 100vh;
     position: relative;
     background: url("img/bgpage.png");
     background-repeat: no-repeat;
     background-position: center;
     align-items: center; 
 }
-.text h1{
-    font-size: 3.5;
-    letter-spacing: 2px;
+.home img{
+    width: 100%;
+    align-items: center;
 }
-.text span{
+.text{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+.text h1{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+}
+span{
     color: navy;
 }
 /*endHome*/
