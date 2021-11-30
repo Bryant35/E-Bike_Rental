@@ -24,7 +24,7 @@
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
-            <a href="#login" class="log-in">Log In</a>
+            <a href="resources/views/login.php" class="log-in">Log In</a>
             <a href="#register" class="register">Register</a>
         </div>
     </nav>
