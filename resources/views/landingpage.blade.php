@@ -23,7 +23,7 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
         </ul>
-        <div class="header-btn">
+        <div class="nav-btn">
             <a href="#login" class="log-in">Log In</a>
             <a href="#register" class="register">Register</a>
         </div>
