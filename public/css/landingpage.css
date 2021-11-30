@@ -93,7 +93,7 @@ nav{
 
 /*Home*/
 .home{
-    width: 130%;
+    width: 100%;
     min-height: 100vh;
 }
 .home .text{

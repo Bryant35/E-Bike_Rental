@@ -31,9 +31,10 @@
 
     <!--home-->
     <section class="home">
+        <img class="img" src="img/bgpage.png" alt="">
         <div class="text">
             <h1><span>Welcome</span><br>Quick Access E-bike Rental Platform</h1>
-            <a href="#" class="rent">RENT NOW</a>
+            <a href="#">RENT NOW</a>
         </div>
     </section>
     
