@@ -101,9 +101,9 @@
         <div class="footer-content">
             <h3>follow Me On:</h3>
             <ul class="socials">
-              <li><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#youtube"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#youtube"><i class="fa fa-youtube"></i></a></li>
                 <li><a href="#whatsapp"><i class="fa fa-whatsapp"></i></a></li>
             </ul>
             <p>Mari Membangun Relasi Bersama</p>

@@ -24,13 +24,13 @@
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
-            <a href="resources/views/login.php" class="log-in">Log In</a>
+            <a href="login.php" class="log-in">Log In</a>
             <a href="#register" class="register">Register</a>
         </div>
     </nav>
 
     <!--home-->
-    <section class="home" id="home">
+    <section class="home">
         <!--<img class="img" src="img/bgpage.png" alt="">-->
         <div class="text">
             <h1><span>Welcome</span><br>Quick Access E-bike Rental Platform</h1>
@@ -44,7 +44,7 @@
         <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-        <div class="container">
+        <div class="container"> 
             <div class="row row-30">
                 <div class="col-md-4 col-xl-5">
                     <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
