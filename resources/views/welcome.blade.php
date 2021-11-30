@@ -10,13 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>
-        <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
-        </div>
+        
     </head>
     <body class="antialiased">
     <div class="topnav">
@@ -25,6 +19,14 @@
         <a class = "headerbutton" href="">Contact</a>
         <a class = "headerbutton" href="">About</a>
         <a class = "headerbutton" href="">Portfolio</a>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+        <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2">Login</button>
+        <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
     </div>
        
     <header>
