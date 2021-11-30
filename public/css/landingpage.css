@@ -96,10 +96,8 @@ nav{
     width: 100%;
     min-height: 100vh;
     position: relative;
-    background: url("img/bgpage.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    align-items: center; 
+    
+    
 }
 .home img{
     width: 100%;
@@ -109,6 +107,9 @@ nav{
     margin-top: 80px;
 }
 .text{
+    background: url("img/bgpage.png");
+    background-repeat: no-repeat;
+    background-position: center;
     margin-left: 8%;
     margin-top: 15%;
 }
