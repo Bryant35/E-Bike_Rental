@@ -19,11 +19,6 @@
         <a class = "headerbutton" href="">Contact</a>
         <a class = "headerbutton" href="">About</a>
         <a class = "headerbutton" href="">Portfolio</a>
-        <a type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search"></a>
-        <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
-        </div>
     </div>
        
     <header>
