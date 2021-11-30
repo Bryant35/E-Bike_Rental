@@ -12,7 +12,7 @@
 <body>
 
     <!--header-->
-    <header>
+    <nav>
         <a href="#" class="logo"><img src="img/ebike_logo.png" alt=""></a>
 
         <div class="bx bx-menu" id="menu-icon"></div>
@@ -27,7 +27,7 @@
             <a href="#login" class="log-in">Log In</a>
             <a href="#register" class="register">Register</a>
         </div>
-    </header>
+    </nav>
 
     <!--home-->
     <section class="home" id="home">
