@@ -168,7 +168,7 @@ h1, h2, h3{
 
 
 /*footer*/
-footer{
+.footer{
     background: black;
     height: auto;
     width: 100vw;
