@@ -112,6 +112,11 @@ nav{
     margin-bottom: 20px;
     text-align: center;
 }
+.rent{
+    background: #474fa0;
+    color: white;
+    border-radius: 0.5rem;
+}
 span{
     color: navy;
 }
