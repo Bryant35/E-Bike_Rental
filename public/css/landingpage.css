@@ -102,10 +102,9 @@ nav{
     margin-top: 80px;
 }
 .text{
-    background: url("img/bgpage.png");
+    background-image: url("img/bgpage.png");
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 8%;
     margin-top: -20%;
 }
 .text h1{
