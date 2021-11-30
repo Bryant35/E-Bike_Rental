@@ -129,6 +129,7 @@ nav{
     margin: 30x 0;
     border-radius: 5px;
     align-items: center;
+    text-align: center;
 }
 span{
     color: navy;
