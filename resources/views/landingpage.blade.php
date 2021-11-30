@@ -32,8 +32,13 @@
     <!--home-->
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section class="home">
         <!--<img class="img" src="img/bgpage.png" alt="">-->
+=======
+    <section class="home" id="home">
+        <img class="img" src="img/bgpage.png" alt="">
+>>>>>>> parent of 6e7e1bf (new landing)
 =======
     <section class="home" id="home">
         <img class="img" src="img/bgpage.png" alt="">
