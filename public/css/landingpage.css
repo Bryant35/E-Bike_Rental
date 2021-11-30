@@ -92,10 +92,6 @@ nav{
 
 
 /*Home*/
-.home{
-    width: 100%;
-    min-height: 100vh;
-}
 .home .text{
     background: rgba(255, 255, 255, 0.5);
     padding: 10px 18px;
