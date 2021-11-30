@@ -31,7 +31,6 @@ section{
 }
 nav{
     position: fixed;
-    
     width: 100%;
     top: 0;
     right: 0;
@@ -53,7 +52,7 @@ nav{
 }
 .navbar a{
     font-size: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     color: var(--text-color);
     font-weight: 500;
 }
@@ -95,7 +94,6 @@ nav{
 /*Home*/
 .home{
     width: 100%;
-    min-height: 100vh;
     position: relative;
     background: url("img/bgpage.png");
     background-repeat: no-repeat;
