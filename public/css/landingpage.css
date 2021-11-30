@@ -93,8 +93,9 @@ nav{
 
 /*Home*/
 .home{
-    width: 100vw;
-    padding: 78px 0px;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 /*.home img{
     width: 100%;
