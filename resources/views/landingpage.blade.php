@@ -69,7 +69,6 @@
     
 
     <!--Best Place For your Holdiday-->
-    <section>
     <div class="holiday">
         <div class="holiday-text">
             <div style="text-align:center">
@@ -94,11 +93,9 @@
             <!--<div class="top-left4">Universitas Ciputra</div>-->
     
             <div class="box"><img src="img/TP.png" alt=""></div>
-            <!--<div class="top-left5">Tunjungan plaza</div>-->
-    
+            <!--<div class="top-left5">Tunjungan plaza</div>-->   
         </div>
     </div>
-    </section>
     
 
     <!--footer-->
