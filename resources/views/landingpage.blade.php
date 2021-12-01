@@ -7,7 +7,7 @@
     <title>E-Bike Rental Website</title>
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body>
 
@@ -32,18 +32,14 @@
 
     <!--home-->
  
-    <section class="banner">
-		<h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">WELCOME</h2><br>
-        <h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">Quick Access E-Bike Rental Platform</h2>
-        <a href="#" class="rent">RENT NOW</a>
-	</section>
+    <div cla
 	
     
     <!--how to rent bek-->
     
-        <section id="howto">
-            <h1 id="howtop">HOW TO RENT OUR BIKE</h1>
-            <br></br>
+    <h1 id="howtop">HOW TO RENT OUR BIKE</h1>
+  
+    <section id="howto">
             <div class="howtopics">
             <img class="ONE" src="img/one.png" alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
@@ -78,19 +74,19 @@
         <div class="top-left">GWK</div>
 
         <div class="box"><img src="img/pantai_kuta.jpg" alt=""></div>
-        <div class="top-left">Pantai Kuta</div>
+        <div class="top-left1">Pantai Kuta</div>
 
         <div class="box"><img src="img/beach_walk.jpg" alt=""></div>
-        <div class="top-left">Beachwalk Mall</div>
+        <div class="top-left2">Beachwalk Mall</div>
 
         <div class="box"><img src="img/pakuwon.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left3">Pakuwon Mall</div>
 
         <div class="box"><img src="img/UC.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left4">Universitas Ciputra</div>
 
         <div class="box"><img src="img/TP.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left5">Tunjungan plaza</div>
 
 
     </div>
