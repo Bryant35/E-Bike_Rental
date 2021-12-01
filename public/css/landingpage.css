@@ -158,10 +158,14 @@ span{
     background: #fff transparent;
 }
 .buttonrent{
-    font-size: 50px;
-    color: black;
-    margin-bottom: 20px;
+    color: rgb(173, 168, 168);
+    font-family: 'Audiowide';
+    position: absolute; 
+    top: 50%; 
+    width: 100%;
     text-align: center;
+    font-size: 30px;
+    background: #fff transparent;
 }
 /*endHome*/
 
