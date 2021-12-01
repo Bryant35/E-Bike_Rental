@@ -113,6 +113,8 @@
             <li><h2>Operational Hour</h2></li>
             <li>Monday-Saturday: 6AM - 6PM</li>
             <li>Sunday: 6AM - 9PM</li>
+            <li><br></li>
+            <li><br></li>
         </section>
     
         <!-- Copyrights -->
