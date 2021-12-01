@@ -74,22 +74,22 @@
         <br>
     </div>
     <div class="container">
-        <div class="box"><img src="img/gwk.png" alt=""></div>
+        <div class="box"><img src="img/gwk.jpg" alt=""></div>
         <div class="top-left">GWK</div>
 
-        <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
+        <div class="box"><img src="img/pantai_kuta.jpg" alt=""></div>
         <div class="top-left">Pantai Kuta</div>
 
-        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="img/beach_walk.jpg" alt=""></div>
+        <div class="top-left">Beachwalk Mall</div>
+
+        <div class="box"><img src="img/pakuwon.jpg" alt=""></div>
         <div class="top-left">Top Left</div>
 
-        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="img/UC.jpg" alt=""></div>
         <div class="top-left">Top Left</div>
 
-        <div class="box"><img src="" alt=""></div>
-        <div class="top-left">Top Left</div>
-
-        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="img/TP.jpg" alt=""></div>
         <div class="top-left">Top Left</div>
 
 
