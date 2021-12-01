@@ -134,29 +134,19 @@ nav{
 span{
     color: navy;
 }
-.banner {
-	height: 200px;
-	background-image: url('img/bgpage.png');
-	background-size: cover;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.banner{
+    position: relative; width: 90%; margin: 0 auto;
 }
-.banner:after {
-	content:'';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.banner img{
+    width: 100%
 }
-.banner h2 {
-	color: #fff;
-	z-index: 1;
-	padding: 20px 25px;
-	border:3px solid #fff;
+.heading{
+    color: rgb(133, 130, 130);
+    position: absolute; 
+    top: 50%; 
+    width: 100%;
+    text-align: center;
+    font-size: 75px;
 }
 /*endHome*/
 
@@ -291,4 +281,7 @@ body .container{
 .wrapper img{
     width: 70%;
     border-radius: 20px;
+}
+.box{
+    padding: 10px;
 }
