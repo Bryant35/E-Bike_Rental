@@ -29,15 +29,56 @@
         </div>
     </nav>
 
+
     <!--home-->
-    <section class="home">
-        <img src="img/bgpage.png" alt="">
-        <div class="text">
-            <h1><span>Welcome</span><br>Quick Access E-bike Rental Platform</h1>
-            <a href="#" class="rent">RENT NOW</a>
-        </div>
+ 
+    <section class="banner">
+		<h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">WELCOME TO MY WEBSITE</h2>
+        <h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">Quick Access E-Bike Rental Platform</h2>
+        <a href="#" class="rent">RENT NOW</a>
+	</section>
+	
+    
+    <!--how to rent bek-->
+    
+        <section id="howto">
+            <h1 id="howtop">HOW TO RENT OUR BIKE</h1>
+            <div class="howtopics">
+            <img id="ONE" src="img/one.png" alt="">
+            <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
+            <p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p>
+            </div>
+
+            <div class="howtopics">
+            <img class="ONE" src="img/two.png" alt="">
+            <p class="ONEp1">RENT YOUR BIKE!</p>
+            <p class="TWOpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p>
+            </div>
+
+            <div class="howtopics">
+            <img class="ONE" src="img/three.png" alt="">
+            <p class="ONEp1">THE BIKE IS READY TO GO!</p>
+            <p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p>
+            </div>
+
+        </section>
+    
+
+    <!--Best Place For your Holdiday-->
+    <section>
+    <div class="holiday-text">
+        <div style="text-align:center">
+            <h1 style="color: black;">Best Place for Your <span>Holiday</span></h1>
+        </div>  
+        <br>
+    </div>
+    <div class="wrapper">
+        <div class="box"><img src="" alt=""></div>
+
+    </div>
     </section>
     
+
     <!--footer-->
     
     <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
