@@ -199,6 +199,9 @@ span{
 
 /*Holiday Place*/
 .holiday{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     background: #8cd3ff;
 }
 .holiday-text h1{
