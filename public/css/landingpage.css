@@ -279,8 +279,10 @@ body .container{
     display: inline-block;
 }
 .logof img{
-    width: 150%;
+    width: 120%;
     align-items: center;
+    text-align: center;
+    margin-left: -30px;
 }
 .menuf{
     font-size: 18px;
