@@ -304,14 +304,14 @@ body .container{
 
 .Hour{
     text-align: center;
-    width: 27%;
+    width: 25%;
     position: relative;
     display: inline-block;
 }
 
 .SosMed{
     font-size: 18px;
-    width: 20%;
+    width: 29%;
     position: relative;
     display: inline-block;
     text-decoration: black;
