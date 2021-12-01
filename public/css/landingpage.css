@@ -136,7 +136,7 @@ span{
 }
 .banner {
 	height: 200px;
-	background-image: url('banner.jpeg');
+	background-image: url('img/bgpage.png');
 	background-size: cover;
 	position: relative;
 	display: flex;
@@ -162,9 +162,27 @@ span{
 
 /*howto*/
 #howto{
+    justify-content: flex-start;
     align-content: space-around;
 }
-
+#howtop{
+    font-size: 24px;
+}
+.howtopics{
+    width: 50%;
+    height: 50%;
+}
+.ONE{
+width: 50%;
+}
+.ONEp1{
+font-size: 18px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.ONEpsmall{
+font-size: 14px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /*endhowto*/
 
 
