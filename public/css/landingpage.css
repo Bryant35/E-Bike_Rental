@@ -274,10 +274,12 @@ body .container{
     padding-top: 5px;
 }   
 .footer ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5px;
 }
 .logof img{
     width: 10%;
