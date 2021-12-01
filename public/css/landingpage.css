@@ -203,22 +203,6 @@ span{
 }
 /*endhowto*/
 
-
-/*Footer*/
-.footer {
-    display: block;
-    background-color: #59bfff;
-    margin: 0px, auto;
-    position: relative;
-    bottom: 0;
-    padding-top: 5px;
-}
-.logof img{
-    width: 10%;
-}
-
-/*End Footer*/
-
 /*Holiday Place*/
 .holiday{
     position: relative;
@@ -277,3 +261,20 @@ body .container{
 .box{
     padding: 10px;
 }
+
+
+
+/*Footer*/
+.footer {
+    display: block;
+    background-color: #59bfff;
+    margin: 0px, auto;
+    position: relative;
+    bottom: 0;
+    padding-top: 5px;
+}
+.logof img{
+    width: 10%;
+}
+
+/*End Footer*/

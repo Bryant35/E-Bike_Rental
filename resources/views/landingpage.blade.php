@@ -101,6 +101,12 @@
         <section class="logof">
             <img src="img/ebike_logo.png" class="foot">
         </section>
+        <section class="menuf">
+            <li><a href="#" class="aboutusf">About Us</a></li>
+            <li><a href="#" class="contactusf">Contact Us</a></li>
+            <li>Payment Method</li>
+            
+        </section>
     
         <!-- Copyrights -->
         <div class="bg-light py-4">
