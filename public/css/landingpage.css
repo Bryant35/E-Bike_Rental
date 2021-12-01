@@ -169,6 +169,7 @@ span{
 #howtop{
     font-size: 24px;
     text-align  : center;
+    background-color: red;
 }
 .howtopics{
   
@@ -259,6 +260,35 @@ ul, ol {
     top: 8px;
     left: 16px;
 }
+.top-left1{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left2{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left3{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left4{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left5{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
 body .container{
     padding: 10px;
+}
+.container img{
+    width: 50%;
+    border-radius: 20px;
 }
