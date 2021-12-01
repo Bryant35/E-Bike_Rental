@@ -33,6 +33,9 @@
     <!--home-->
  
     <div class="container"> 
+        <div class="row">
+            <div class="banner">
+                <img src=""
 	
     
     <!--how to rent bek-->
