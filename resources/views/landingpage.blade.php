@@ -32,7 +32,7 @@
 
     <!--home-->
  
-    <div cla
+    <div class="container"> 
 	
     
     <!--how to rent bek-->
