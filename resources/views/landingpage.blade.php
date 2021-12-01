@@ -38,7 +38,7 @@
             <div class="banner">
                 <img src="img/bgpage.png" alt="img">
                 <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-                <a href="#"  class="rent" >RENT NOW</a>
+                <a href="#"  class="rent" style="align-items: center">RENT NOW</a>
             </div>
         </div>
     </div>
@@ -100,9 +100,9 @@
 
     <!--footer-->
     <footer class="footer">
-        <div class="container py-5">
-            
-        </div>
+        <section class="logof">
+            <img src="img/ebike_logo.png" class="foot">
+        </section>
     
         <!-- Copyrights -->
         <div class="bg-light py-4">
