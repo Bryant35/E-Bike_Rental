@@ -121,7 +121,7 @@ nav{
     margin-bottom: 20px;
     text-align: center;
 }
-.text a{
+.banner a{
     background: #33B1FF;
     padding: 10px 18px;
     text-decoration: none;
@@ -162,7 +162,8 @@ span{
 
 /*howto*/
 #howto{
-    justify-content: flex-start;
+    display: flex;
+    justify-content: flex-end;
     align-content: space-around;
 }
 #howtop{
