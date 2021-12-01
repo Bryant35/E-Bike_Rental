@@ -115,11 +115,12 @@
             <li>Monday-Saturday: 6AM - 6PM</li>
             <li>Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 6AM - 9PM</li>
             <li><br></li>
+            <li><br></li>
         </section>
         <section class="SosMed">
             <li><h2>Follow Us</h2></li>
             <li><br></li>
-            <li>
+            <li class="logos">
                 <a href="#" class="Fb"><img src="img/Fb.png"></a>
                 <a href="#" class="ig"><img src="img/ig.png"></a>
                 <a href="#" class="tiktok"><img src="img/TikTok.png"></a>
