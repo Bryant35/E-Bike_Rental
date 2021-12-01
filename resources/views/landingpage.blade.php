@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!--For Footer-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
 
@@ -37,7 +45,7 @@
             <div class="banner">
                 <img src="img/bgpage.png" alt="img">
                 <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-                <a href="#" class="rent">RENT NOW</a>
+                <h2 href="#"  class="heading" >RENT NOW</a>
             </div>
         </div>
     </div>
@@ -77,22 +85,22 @@
     </div>
     <div class="wrapper">
         <div class="box"><img src="img/gwk.png" alt=""></div>
-        <div class="top-left">GWK</div>
+        <!--<div class="top-left">GWK</div>-->
 
         <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
-        <div class="top-left1">Pantai Kuta</div>
+        <!--<div class="top-left1">Pantai Kuta</div>-->
 
         <div class="box"><img src="img/beach_walk.png" alt=""></div>
-        <div class="top-left2">Beachwalk Mall</div>
+        <!--<div class="top-left2">Beachwalk Mall</div>-->
 
         <div class="box"><img src="img/pakuwon.png" alt=""></div>
-        <div class="top-left3">Pakuwon Mall</div>
+        <!--<div class="top-left3">Pakuwon Mall</div>-->
 
         <div class="box"><img src="img/UC.png" alt=""></div>
-        <div class="top-left4">Universitas Ciputra</div>
+        <!--<div class="top-left4">Universitas Ciputra</div>-->
 
         <div class="box"><img src="img/TP.png" alt=""></div>
-        <div class="top-left5">Tunjungan plaza</div>
+        <!--<div class="top-left5">Tunjungan plaza</div>-->
 
 
     </div>
@@ -100,60 +108,69 @@
     
 
     <!--footer-->
-    <div class="container my-5">
-        <!-- Footer -->
-            <footer class="site-footer">
-                <div class="container">
+    <footer class="container-fluid bg-grey py-5">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="logo-part">
+                            <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer" >
+                            <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
+                            <p>Use this tool as test data for an automated system or find your next pen</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-4">
+                        <h6> About Company</h6>
+                        <p>But horizontal lines can only be a full pixel high.</p>
+                        <a href="#" class="btn-footer"> More Info </a><br>
+                        <a href="#" class="btn-footer"> Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+                    <div class="col-md-6 px-4">
+                       <h6> Help us</h6>
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li> <a href="#"> Home</a> </li>
+                                    <li> <a href="#"> About</a> </li>
+                                    <li> <a href="#"> Service</a> </li>
+                                    <li> <a href="#"> Team</a> </li>
+                                    <li> <a href="#"> Help</a> </li>
+                                    <li> <a href="#"> Contact</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 px-4">
+                                <ul>
+                                    <li> <a href="#"> Cab Faciliy</a> </li>
+                                    <li> <a href="#"> Fax</a> </li>
+                                    <li> <a href="#"> Terms</a> </li>
+                                    <li> <a href="#"> Policy</a> </li>
+                                    <li> <a href="#"> Refunds</a> </li>
+                                    <li> <a href="#"> Paypal</a> </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-        
-                    <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                    </ul>
-                    </div>
-        
-                    <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-                    </ul>
-                    </div>
-                </div>
-                <hr>
-                </div>
-                <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-                <a href="#">Scanfcode</a>.
-                    </p>
-                    </div>
-        
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-                    </ul>
+                    <div class="col-md-6 ">
+                        <h6> Newsletter</h6>
+                        <div class="social">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                        <form class="form-footer my-3">
+                            <input type="text"  placeholder="search here...." name="search">
+                            <input type="button" value="Go" >
+                        </form>
+                        <p>That's technology limitation of LCD monitors</p>
                     </div>
                 </div>
-                </div>
-        </footer>
+            </div>
+        </div>
+    </footer>
         <!-- Footer -->
             
     </div>
