@@ -110,11 +110,13 @@
             <a href="#" class="dana"><img src="img/dana.png"></a></li>
         </section>
         <section class="Hour">
+            <pre>
             <li><h2>Operational Hour</h2></li>
             <li><br></li>
             <li>Monday-Saturday: 6AM - 6PM</li>
-            <li>Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 6AM - 9PM</li>
+            <li>Sunday         : 6AM - 9PM</li>
             <li><br></li>
+            </pre>
         </section>
     
         <!-- Copyrights -->
