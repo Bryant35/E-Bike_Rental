@@ -282,6 +282,7 @@ body .container{
     width: 100%;
 }
 .menuf{
+    font-size: 12px;
     width: 20%;
     position: relative;
     display: inline-block;
@@ -298,7 +299,7 @@ body .container{
 }
 
 .Hour{
-    text-align: justify;
+    text-align: center;
     width: 25%;
     position: relative;
     display: inline-block;
