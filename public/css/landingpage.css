@@ -273,13 +273,19 @@ body .container{
     bottom: 0;
     padding-top: 5px;
 }   
-.footer section{
-    width: 20%;
+.logof{
+    width: 18%;
     position: relative;
     display: inline-block;
 }
 .logof img{
     width: 100%;
+}
+.menuf{
+    width: 20%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
 }
 .ovo img{
     width: 50px;
@@ -293,5 +299,8 @@ body .container{
 
 .Hour{
     text-align: justify;
+    width: 25%;
+    position: relative;
+    display: inline-block;
 }
 /*End Footer*/
