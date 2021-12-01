@@ -326,6 +326,9 @@ body .container{
 .tiktok img{
     width: 60px;
 }
+.logos{
+    padding: 1px;
+}
 
 .copyrights{
     text-align: center;
