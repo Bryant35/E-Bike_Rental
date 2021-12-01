@@ -166,13 +166,12 @@ span{
     
 }
 .howtopics{
-    justify-content: center;
     min-height: 100px;
     
 }
 .howtopics>img{
     width: 80%;
-    
+    height: 80%;
 }
 .ONEp1{
     font-size: 18px;
@@ -193,14 +192,17 @@ span{
 /*Footer*/
 .footer {
     display: block;
+    background-color: #59bfff;
 }
 
 /*End Footer*/
 
 /*Holiday Place*/
+.holiday{
+    background: blue;
+}
 .holiday-text h1{
     font-size: 20px;
-    background: blue;
 }
 .wrapper{
     position: relative;

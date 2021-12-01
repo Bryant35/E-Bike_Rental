@@ -70,31 +70,33 @@
 
     <!--Best Place For your Holdiday-->
     <section>
-    <div class="holiday-text">
-        <div style="text-align:center">
-            <h1 style="color: black;">Best Place for Your <span>Holiday</span></h1>
-        </div>  
-        <br>
-    </div>
-    <div class="wrapper">
-        <div class="box"><img src="img/gwk.png" alt=""></div>
-        <!--<div class="top-left">GWK</div>-->
-
-        <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
-        <!--<div class="top-left1">Pantai Kuta</div>-->
-
-        <div class="box"><img src="img/beach_walk.png" alt=""></div>
-        <!--<div class="top-left2">Beachwalk Mall</div>-->
-
-        <div class="box"><img src="img/pakuwon.png" alt=""></div>
-        <!--<div class="top-left3">Pakuwon Mall</div>-->
-
-        <div class="box"><img src="img/UC.png" alt=""></div>
-        <!--<div class="top-left4">Universitas Ciputra</div>-->
-
-        <div class="box"><img src="img/TP.png" alt=""></div>
-        <!--<div class="top-left5">Tunjungan plaza</div>-->
-
+    <div class="holiday">
+        <div class="holiday-text">
+            <div style="text-align:center">
+                <h1 style="color: black;">Best Place for Your <span>Holiday</span></h1>
+            </div>  
+            <br>
+        </div>
+        <div class="wrapper">
+            <div class="box"><img src="img/gwk.png" alt=""></div>
+            <!--<div class="top-left">GWK</div>-->
+    
+            <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
+            <!--<div class="top-left1">Pantai Kuta</div>-->
+    
+            <div class="box"><img src="img/beach_walk.png" alt=""></div>
+            <!--<div class="top-left2">Beachwalk Mall</div>-->
+    
+            <div class="box"><img src="img/pakuwon.png" alt=""></div>
+            <!--<div class="top-left3">Pakuwon Mall</div>-->
+    
+            <div class="box"><img src="img/UC.png" alt=""></div>
+            <!--<div class="top-left4">Universitas Ciputra</div>-->
+    
+            <div class="box"><img src="img/TP.png" alt=""></div>
+            <!--<div class="top-left5">Tunjungan plaza</div>-->
+    
+        </div>
     </div>
     </section>
     
