@@ -37,8 +37,7 @@
         <div class="row">
             <div class="banner">
                 <img src="img/bgpage.png" alt="img">
-                <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-                <a href="#"  class="rent" style="text-align: center">RENT NOW</a>
+                <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform<br><a href="#"  class="rent" style="text-align: center">RENT NOW</a></h2>          
             </div>
         </div>
     </div>
