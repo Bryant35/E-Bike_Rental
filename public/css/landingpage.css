@@ -272,7 +272,7 @@ body .container{
     position: relative;
     bottom: 0;
     padding-top: 5px;
-    border: black 5px;
+    border-top: 2px solid #000;
 }   
 .logof{
     width: 23%;
