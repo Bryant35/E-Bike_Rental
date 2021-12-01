@@ -120,7 +120,7 @@
         <!-- Copyrights -->
         <div class="copyrights">
             <p>
-            123 Plae Grownd Street
+            123 Plae Grownd Street<br>
             © 2021 E-Bike Rental All rights reserved.</p>
         </div>
     </footer>
