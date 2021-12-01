@@ -276,7 +276,6 @@ body .container{
     align-items: center;
 }   
 .logof{
-    top: 20;
     width: 23%;
     position: relative;
     display: inline-block;
@@ -288,7 +287,7 @@ body .container{
     margin-left: -30px;
 }
 .menuf{
-    top: 20;
+    height: 293px;
     font-size: 18px;
     width: 25%;
     position: relative;
@@ -306,7 +305,7 @@ body .container{
 }
 
 .Hour{
-    top: 20;
+    height: 293px;
     text-align: center;
     width: 25%;
     position: relative;
@@ -314,7 +313,7 @@ body .container{
 }
 
 .SosMed{
-    top: 20;
+    height: 293px;
     width: 25%;
     position: relative;
     display: inline-block;
