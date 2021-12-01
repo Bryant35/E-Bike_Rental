@@ -309,6 +309,24 @@ body .container{
     display: inline-block;
 }
 
+.SosMed{
+    font-size: 18px;
+    width: 23%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+
+.Fb{
+    width: 70px;
+}
+.ig{
+    width: 70px;
+}
+.tiktok{
+    width: 70px;
+}
+
 .copyrights{
     text-align: center;
 }

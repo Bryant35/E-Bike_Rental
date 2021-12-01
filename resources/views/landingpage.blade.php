@@ -116,7 +116,15 @@
             <li>Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 6AM - 9PM</li>
             <li><br></li>
         </section>
-    
+        <section class="SosMed">
+            <li><h2>Follow Us</h2></li>
+            <li><br></li>
+            <li>
+                <a href="#" class="Fb"><img src="img/Fb.png"></a>
+                <a href="#" class="ig"><img src="img/ig.png"></a>
+                <a href="#" class="tiktok"><img src="img/TikTok.png"></a>
+            </li>
+        </section>
         <!-- Copyrights -->
         <div class="copyrights">
             <p>
