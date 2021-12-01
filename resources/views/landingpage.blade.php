@@ -47,7 +47,7 @@
  
     <section id="howto">
             <div class="howtopics">
-            <img class="ONE" src="img/one.png" width: "100px" height: "100px" alt="">
+            <img class="ONE" src="img/one.png" style=" width: '100px height: 100px alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
             <p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p>
             </div>
@@ -76,22 +76,22 @@
         <br>
     </div>
     <div class="wrapper">
-        <div class="box"><img src="img/gwk.jpg" alt=""></div>
+        <div class="box"><img src="img/gwk.png" alt=""></div>
         <div class="top-left">GWK</div>
 
-        <div class="box"><img src="img/pantai_kuta.jpg" alt=""></div>
+        <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
         <div class="top-left1">Pantai Kuta</div>
 
-        <div class="box"><img src="img/beach_walk.jpg" alt=""></div>
+        <div class="box"><img src="img/beach_walk.png" alt=""></div>
         <div class="top-left2">Beachwalk Mall</div>
 
-        <div class="box"><img src="img/pakuwon.jpg" alt=""></div>
+        <div class="box"><img src="img/pakuwon.png" alt=""></div>
         <div class="top-left3">Pakuwon Mall</div>
 
-        <div class="box"><img src="img/UC.jpg" alt=""></div>
+        <div class="box"><img src="img/UC.png" alt=""></div>
         <div class="top-left4">Universitas Ciputra</div>
 
-        <div class="box"><img src="img/TP.jpg" alt=""></div>
+        <div class="box"><img src="img/TP.png" alt=""></div>
         <div class="top-left5">Tunjungan plaza</div>
 
 
