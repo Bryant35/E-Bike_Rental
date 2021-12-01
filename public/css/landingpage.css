@@ -199,6 +199,8 @@ span{
 
 /*Holiday Place*/
 .holiday{
+    padding: 0;
+    margin: 0;
     position: relative;
     display: block;
     width: 100%;
