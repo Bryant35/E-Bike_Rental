@@ -304,4 +304,8 @@ body .container{
     position: relative;
     display: inline-block;
 }
+
+.copyrights{
+    text-align: center;
+}
 /*End Footer*/
