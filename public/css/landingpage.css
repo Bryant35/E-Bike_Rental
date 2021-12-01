@@ -273,13 +273,8 @@ body .container{
     bottom: 0;
     padding-top: 5px;
 }   
-.footer ul{
-    position: relative;
-    text-align: center;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 5px;
+.footer section{
+    width: 20%;
 }
 .logof img{
     width: 10%;
