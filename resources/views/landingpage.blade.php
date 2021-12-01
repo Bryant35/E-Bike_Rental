@@ -47,19 +47,19 @@
  
     <section id="howto">
             <div class="howtopics">
-            <img class="ONE" src="img/one.png" style=" width: '100px height: 100px alt="">
+            <img class="ONE" src="img/one.png" style=" width: '100px'; height: '100px'" alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
             <p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p>
             </div>
 
             <div class="howtopics">
-            <img class="ONE" src="img/two.png" width: "100px" height: "100px" alt="">
+            <img class="ONE" src="img/two.png" style=" width: '100px'; height: '100px'" alt="">
             <p class="ONEp1">RENT YOUR BIKE!</p>
             <p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p>
             </div>
 
             <div class="howtopics">
-            <img class="ONE" src="img/three.png" width: "100px" height: "100px" alt="">
+            <img class="ONE" src="img/three.png" style=" width: '100px'; height: '100px'" alt="">
             <p class="ONEp1">THE BIKE IS READY TO GO!</p>
             <p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p>
             </div>
