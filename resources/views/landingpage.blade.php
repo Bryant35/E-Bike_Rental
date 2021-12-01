@@ -33,7 +33,7 @@
     <!--home-->
  
     <section class="banner">
-		<h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">WELCOME TO MY WEBSITE</h2>
+		<h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">WELCOME</h2>
         <h2 style="font-family: 'Audiowide'; color:rgb(33, 57, 73);">Quick Access E-Bike Rental Platform</h2>
         <a href="#" class="rent">RENT NOW</a>
 	</section>
@@ -52,7 +52,7 @@
             <div class="howtopics">
             <img class="ONE" src="img/two.png" alt="">
             <p class="ONEp1">RENT YOUR BIKE!</p>
-            <p class="TWOpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p>
+            <p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p>
             </div>
 
             <div class="howtopics">
