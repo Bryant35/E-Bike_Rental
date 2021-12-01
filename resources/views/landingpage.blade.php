@@ -35,8 +35,7 @@
     <div class="container"> 
         <div class="row">
             <div class="banner">
-                <img src="img/bgpage.png" alt="img">
-                <h2 class="heading"> 
+                <img src=""
 	
     
     <!--how to rent bek-->
@@ -73,7 +72,7 @@
         </div>  
         <br>
     </div>
-    <div class="wrapper">
+    <div class="container">
         <div class="box"><img src="img/gwk.jpg" alt=""></div>
         <div class="top-left">GWK</div>
 
