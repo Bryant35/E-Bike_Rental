@@ -157,6 +157,12 @@ span{
     font-size: 30px;
     background: #fff transparent;
 }
+.rent{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
 /*endHome*/
 
 /*howto*/
@@ -198,10 +204,15 @@ span{
 .footer {
     display: block;
     background-color: #59bfff;
+    height: 40px;
+    margin: 0px, auto;
+    position: relative;
+    bottom: 0;
 }
 .logof img{
     width: 10%;
 }
+
 /*End Footer*/
 
 /*Holiday Place*/
