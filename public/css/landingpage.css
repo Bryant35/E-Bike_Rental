@@ -278,6 +278,7 @@ body .container{
 }
 .logof img{
     width: 200%;
+    margin: auto;
 }
 
 /*End Footer*/
