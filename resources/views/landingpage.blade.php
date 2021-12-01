@@ -74,6 +74,7 @@
     </div>
     <div class="wrapper">
         <div class="box"><img src="" alt=""></div>
+        <p></p>
         <div class="box"><img src="" alt=""></div>
         <div class="box"><img src="" alt=""></div>
         <div class="box"><img src="" alt=""></div>
