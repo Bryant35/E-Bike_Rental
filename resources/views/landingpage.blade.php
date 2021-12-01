@@ -109,6 +109,11 @@
             <a href="#" class="gopay"><img src="img/GoPay.png"></a>
             <a href="#" class="dana"><img src="img/dana.png"></a></li>
         </section>
+        <section class="Hour">
+            <li><h3>Operational Hour</h3></li>
+            <li>Monday - Saturday: 6 AM - 6 PM</li>
+            <li>Sunday: 6 AM - 9 PM</li>
+        </section>
     
         <!-- Copyrights -->
         <div class="bg-light py-4">
