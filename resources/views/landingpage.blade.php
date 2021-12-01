@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <!--For Footer-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--For Footer--> 
 </head>
 <body>
 
@@ -40,7 +38,7 @@
             <div class="banner">
                 <img src="img/bgpage.png" alt="img">
                 <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-                <h2 href="#"  class="heading" >RENT NOW</a>
+                <a href="#"  class="heading" >RENT NOW</a>
             </div>
         </div>
     </div>
@@ -48,7 +46,7 @@
     
     <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
  
-    <section id="howto" class ="col-lg-4 col-md-6 mb-4 mb-lg-0 col-xl-12">
+    <section id="howto" class ="wrapper">
             <div class="howtopics">
             <img class="ONE" src="img/one.png"  alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
