@@ -35,13 +35,16 @@
     <div class="container"> 
         <div class="row">
             <div class="banner">
-                <img src=""
-	
-    
+                <img src="img/bgpage.png" alt="img">
+                <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
+                <a href="#" class="rent">RENT NOW</a>
+            </div>
+        </div>
+    </div>
     <!--how to rent bek-->
     
-    <h1 id="howtop">HOW TO RENT OUR BIKE</h1>
-  
+    <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
+ 
     <section id="howto">
             <div class="howtopics">
             <img class="ONE" src="img/one.png" alt="">
@@ -72,7 +75,7 @@
         </div>  
         <br>
     </div>
-    <div class="container">
+    <div class="wrapper">
         <div class="box"><img src="img/gwk.jpg" alt=""></div>
         <div class="top-left">GWK</div>
 
