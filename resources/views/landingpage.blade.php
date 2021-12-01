@@ -37,7 +37,7 @@
             <div class="banner">
                 <img src="img/bgpage.png" alt="img">
                 <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-                <p><a href="#"><img src="img/RentNow.jpg"  style="width: 200px; height: 120px;" align="middle" ></a></p>
+                <a href="#" class="rent">RENT NOW</a>
             </div>
         </div>
     </div>
@@ -48,8 +48,8 @@
     <section id="howto">
             <div class="howtopics">
             <img class="ONE" src="img/one.png"  alt="">
-            <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
-            <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
+            <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
+            <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></
             </div>
 
             <div class="howtopics">
