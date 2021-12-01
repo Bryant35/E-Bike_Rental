@@ -33,14 +33,12 @@
 
     <!--home-->
  
-    <div class="container"> 
-        <div class="row">
-            <div class="banner">
-                <img src="img/bgpage.png" alt="img">
-                <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform<br><a href="#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>          
-            </div>
-        </div>
+    
+    <div class="banner">
+        <img src="img/bgpage.png" alt="img">
+        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform<br><a href="#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>          
     </div>
+    
     <!--how to rent bek-->
     
     <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
