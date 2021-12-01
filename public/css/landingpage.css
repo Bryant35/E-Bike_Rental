@@ -295,9 +295,11 @@ body .container{
 }
 .ovo img{
     width: 60px;
+    padding-right: 3px;
 }
 .gopay img{
     width: 60px;
+    padding-right: 3px;
 }
 .dana img{
     width: 60px;
