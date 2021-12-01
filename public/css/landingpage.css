@@ -287,7 +287,6 @@ body .container{
     margin-left: -30px;
 }
 .menuf{
-    height: 293px;
     font-size: 18px;
     width: 25%;
     position: relative;
@@ -305,7 +304,6 @@ body .container{
 }
 
 .Hour{
-    height: 293px;
     text-align: center;
     width: 25%;
     position: relative;
@@ -313,7 +311,6 @@ body .container{
 }
 
 .SosMed{
-    height: 293px;
     width: 25%;
     position: relative;
     display: inline-block;
