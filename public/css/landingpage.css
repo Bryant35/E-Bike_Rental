@@ -282,5 +282,14 @@ body .container{
     width: 100%;
     margin-left: -25%;
 }
+.ig{
+    width: 10px;
+}
+.fb{
+    width: 10px;
+}
+.tweet{
+    width: 10px;
+}
 
 /*End Footer*/
