@@ -36,8 +36,8 @@
     
     <div class="banner">
         <img src="img/bgpage.png" alt="img">
-        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform<br><br></h2>          
-        <h2 class="buttonrent"><a href="#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
+        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>          
+        <h2 class="buttonrent"><a href="#"  class="rent" style="font-size: 45%"><br><br>RENT NOW</a></h2>
     </div>
     
     <!--how to rent bek-->
