@@ -276,6 +276,7 @@ body .container{
 .footer section{
     width: 20%;
     position: relative;
+    display: inline-block;
 }
 .logof img{
     width: 100%;

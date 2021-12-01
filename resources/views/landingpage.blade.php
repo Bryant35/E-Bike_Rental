@@ -105,6 +105,9 @@
             <li><a href="#" class="aboutusf">About Us</a></li>
             <li><a href="#" class="contactusf">Contact Us</a></li>
             <li>Payment Method</li>
+            <li><a href="#" class="ig"><img src="img/ig.png"></a>
+            <a href="#" class="fb"><img src="img/Fb.png"></a>
+            <a href="#" class="tweet"><img src="img/Twitter.png"></a></li>
         </section>
     
         <!-- Copyrights -->
