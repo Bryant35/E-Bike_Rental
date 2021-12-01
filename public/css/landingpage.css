@@ -142,6 +142,11 @@ span{
 .banner img{
     width: 100%
 }
+.banner .heading{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
 .heading{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
@@ -150,7 +155,7 @@ span{
     width: 100%;
     text-align: center;
     font-size: 30px;
-    background:#fff transparent;
+    background: #fff transparent;
 }
 /*endHome*/
 
@@ -193,6 +198,9 @@ span{
 .footer {
     display: block;
     background-color: #59bfff;
+}
+.logof img{
+    width: 30%;
 }
 /*End Footer*/
 
