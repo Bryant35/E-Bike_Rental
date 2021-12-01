@@ -74,6 +74,11 @@
     </div>
     <div class="wrapper">
         <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="" alt=""></div>
+        <div class="box"><img src="" alt=""></div>
 
     </div>
     </section>
