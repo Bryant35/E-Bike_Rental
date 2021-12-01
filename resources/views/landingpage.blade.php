@@ -7,7 +7,7 @@
     <title>E-Bike Rental Website</title>
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body>
 
@@ -41,9 +41,9 @@
     
     <!--how to rent bek-->
     
-        <section id="howto">
-            <h1 id="howtop">HOW TO RENT OUR BIKE</h1>
-            <br></br>
+    <section><h1 id="howtop">HOW TO RENT OUR BIKE</h1></section>
+    <br></br>
+    <section id="howto">
             <div class="howtopics">
             <img class="ONE" src="img/one.png" alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S) FOR YOU</p>
@@ -84,13 +84,13 @@
         <div class="top-left">Beachwalk Mall</div>
 
         <div class="box"><img src="img/pakuwon.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left">Pakuwon Mall</div>
 
         <div class="box"><img src="img/UC.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left">Universitas Ciputra</div>
 
         <div class="box"><img src="img/TP.jpg" alt=""></div>
-        <div class="top-left">Top Left</div>
+        <div class="top-left">Tunjungan plaza</div>
 
 
     </div>
