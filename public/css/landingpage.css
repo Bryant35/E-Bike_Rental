@@ -247,7 +247,7 @@ ul, ol {
 .holiday-text h1{
     font-size: 20px;
 }
-.container{
+.wrapper{
     position: relative;
     text-align: center;
     color: white;
@@ -288,7 +288,7 @@ ul, ol {
 body .container{
     padding: 10px;
 }
-.container img{
-    width: 50%;
+.wrapper img{
+    width: 70%;
     border-radius: 20px;
 }
