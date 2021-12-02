@@ -11,7 +11,24 @@
     <title>Login</title>
 </head>
 <body>
-    <a href="https://front.codes/" class="logo" target="_blank"> <img src="img/ebike_logo.png" alt=""> </a>
+    <!--header-->
+    <nav>
+        <a href="#" class="logo"><img src="img/ebike_logo.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ourservice">Our Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-btn">
+            <a href="login.php" class="log-in">Log In</a>
+            <a href="#register" class="register">Register</a>
+        </div>
+    </nav>
+    <a href="https://front.codes/" class="logot" target="_blank"> <img src="img/ebike_logo.png" alt=""> </a>
     <div class="section">
         <div class="container">
             <div class="row full-height justify-content-center">
