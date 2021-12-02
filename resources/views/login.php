@@ -11,7 +11,6 @@
     <title>Login</title>
 </head>
 <body>
-    <a href="https://front.codes/" class="logo" target="_blank"> <img src="img/bgpage.png" alt=""> </a>
     <div class="section">
         <div class="container">
             <div class="row full-height justify-content-center">
