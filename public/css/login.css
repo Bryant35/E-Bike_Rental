@@ -302,7 +302,7 @@
  .logo {
      position: absolute;
      top: 70px;
-     right: 70px;
+     left: 70px;
      display: block;
      z-index: 100;
      transition: all 250ms linear
