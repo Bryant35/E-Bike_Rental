@@ -25,5 +25,5 @@ Route::get('/signup', function () {
     return view('signuppage');
 });
 Route::get('/order', function () {
-    return view('orderpage')
+    return view('orderpage');
 });
