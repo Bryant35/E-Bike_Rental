@@ -27,7 +27,7 @@
         <div class="nav-btn">
             <a href="#" class="account"><img src="img/Avatar.png" alt=""></a>
             <a href=#Acc" class="Acc-page">Nama</a>
-            <a href="{{ url('/landingpage') }}" class="log-out">Log Out</a>
+            <a href="{{ url('/') }}" class="log-out">Log Out</a>
         </div>
     </nav>
 
