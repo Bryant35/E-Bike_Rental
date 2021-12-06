@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Multi Step Form | CodingNepal</title>
-        <link rel="stylesheet" href="css/signuppage.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <script src="js/signuppage.js"></script>
-    </head>
+      <head>
+         <meta charset="utf-8">
+         <title>Multi Step Form | CodingNepal</title>
+         <link rel="stylesheet" href="css/signuppage.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      </head>
    <body>  
       <div class="container">
          <header>Signup Form</header>
@@ -141,6 +140,6 @@
             </form>
          </div>
       </div>
-      <script src="script.js"></script>
+      <script src="js/signuppage.js"></script>
    </body>
 </html>
