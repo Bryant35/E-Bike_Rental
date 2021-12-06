@@ -27,3 +27,6 @@ Route::get('/signup', function () {
 Route::get('/order', function () {
     return view('orderpage');
 });
+Route::get('/home', function () {
+    return view('homepage');
+});
