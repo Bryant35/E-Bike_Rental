@@ -43,7 +43,7 @@
                                         <div class="section text-center">
                                             <h4 class="mb-4 pb-3">Log In</h4>
                                             <div class="form-group"> <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off"> <i class="input-icon uil uil-at"></i> </div>
-                                            <div class="form-group mt-2"> <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off"> <i class="input-icon uil uil-lock-alt"></i> </div> <a href="{{ url('/homepage') }}" class="btn mt-4">submit</a>
+                                            <div class="form-group mt-2"> <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off"> <i class="input-icon uil uil-lock-alt"></i> </div> <a href="{{ url('/home') }}" class="btn mt-4">submit</a>
                                             <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
                                         </div>
                                     </div>
