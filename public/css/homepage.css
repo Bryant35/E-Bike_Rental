@@ -45,6 +45,9 @@ nav{
 .logo img{
     width: 60px;
 }
+.account img{
+    width: 60px;
+}
 .navbar{
     display: flex;
 }

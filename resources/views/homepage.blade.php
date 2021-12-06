@@ -25,7 +25,7 @@
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
-            <a href="#" class="account"><img src="img/" alt=""></a>
+            <a href="#" class="account"><img src="img/Avatar" alt=""></a>
             <a href=#Acc" class="Account-page">Nama</a>
             <a href="{{ url('/landingpage') }}" class="log-out">Log Out</a>
         </div>
