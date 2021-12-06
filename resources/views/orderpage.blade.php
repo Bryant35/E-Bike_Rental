@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blade.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="orderpage.css">
+    <title>Order</title>
 </head>
 <body>
     <!--header-->
@@ -29,11 +29,10 @@
 <section id ="locationsect"> 
     <label for="locations">Choose a Location</label>
     <div><select name="locations" id="location">
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="c">c</option>
-        <option value="d">d</option>
-        <option value="e">e</option>
+        <option value="Iron">Iron Bikes</option>
+        <option value="Emerald">Emerald Bikes</option>
+        <option value="Gold">Gold Bikes</option>
+        <option value="Ruby">Ruby Bikes</option>
     </select>
     </div>
     <!--date and time-->
@@ -49,11 +48,14 @@
 <section id ="bikesect"> 
     <label for="Bikes">Choose your preferred bike.</label>
     <div><select name="Bikepick" id="bikepick">
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="c">c</option>
-        <option value="d">d</option>
-        <option value="e">e</option>
+        <option value="biru">Biru</option>
+        <option value="hitam">Hitam</option>
+        <option value="hijau">Hijau</option>
+        <option value="jingga">Jingga</option>
+        <option value="kuning">Kuning</option>
+        <option value="merah">Merah</option>
+        <option value="pink">Pink</option>
+        <option value="ungu">Ungu</option>
     </select>
     </div>
  <!--footer-->
