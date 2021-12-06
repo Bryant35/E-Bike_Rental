@@ -1,119 +1,94 @@
-/*CSS Top-Nav*/
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
-.navbar-icon-top .navbar-nav .nav-link > .fa {
-  position: relative;
-  width: 36px;
-  font-size: 24px;
-}
-
-.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
-  font-size: 0.75rem;
-  position: absolute;
-  right: 0;
-  font-family: sans-serif;
-}
-
-.navbar-icon-top .navbar-nav .nav-link > .fa {
-  top: 3px;
-  line-height: 12px;
-}
-
-.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
-  top: -10px;
-}
-
-@media (min-width: 576px) {
-  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link {
-    text-align: center;
-    display: table-cell;
-    height: 70px;
-    vertical-align: middle;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa {
-    display: block;
-    width: 48px;
-    margin: 2px auto 4px auto;
-    top: 0;
-    line-height: 24px;
-  }
-
-  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
-    top: -7px;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
-    text-align: center;
-    display: table-cell;
-    height: 70px;
-    vertical-align: middle;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa {
-    display: block;
-    width: 48px;
-    margin: 2px auto 4px auto;
-    top: 0;
-    line-height: 24px;
-  }
-
-  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa > .badge {
-    top: -7px;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
-    text-align: center;
-    display: table-cell;
-    height: 70px;
-    vertical-align: middle;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
-    display: block;
-    width: 48px;
-    margin: 2px auto 4px auto;
-    top: 0;
-    line-height: 24px;
-  }
-
-  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa > .badge {
-    top: -7px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link {
-    text-align: center;
-    display: table-cell;
-    height: 70px;
-    vertical-align: middle;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa {
-    display: block;
-    width: 48px;
-    margin: 2px auto 4px auto;
-    top: 0;
-    line-height: 24px;
-  }
-
-  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
-    top: -7px;
-  }
-}
+ /*CSS Top-Nav*/
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Audiowide');
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     scroll-padding-top: 2rem;
+     scroll-behavior: smooth;
+     list-style: none;
+     text-decoration: none;
+     font-family: 'Poppins', sans-serif;
+ }
+ :root{
+     --main-color :#fe5b3d;
+     --second-color :#ffac38;
+     --text-color: #444;
+     --gradient: linear-gradient(#fe5b3d, #ffac38);
+ }
+ html::-webkit-scrollbar{
+     width: 0,5rem;
+ }
+ html::-webkit-scrollbar-track{
+     background: transparent;
+ }
+ html::-webkit-scrollbar-thumb{
+     background: var(--main-color);
+     border-radius: 5rem;
+ }
+ section{
+     padding: 50px 100px;
+ }
+ nav{
+     position: fixed;
+     width: 100%;
+     top: 0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: #eeeff1;
+     padding: 15px 100px;
+ }
+ .logo img{
+     width: 60px;
+ }
+ .navbar{
+     display: flex;
+ }
+ .navbar li{
+     position: relative;
+ }
+ .navbar a{
+     font-size: 1rem;
+     padding: 1rem;
+     color: var(--text-color);
+     font-weight: 500;
+ }
+ .navbar a::after{
+     content: "";
+     width: 0;
+     height: 3px;
+     background: var(--gradient);
+     position: absolute;
+     bottom: -4px;
+     left: 0;
+     transition: 0.5s;
+ }
+ .navbar a:hover::after{
+     width: 100%;
+ }
+ #menu-icon {
+     font-size: 24px;
+     cursor: pointer;
+     z-index: 10001;
+     display: none;
+ }
+ .nav-btn a{
+     padding: 10px 20px;
+     color: var(--text-color);
+     font-weight: 500;
+ }
+ .nav-btn .log-in{
+     background: #474fa0;
+     color: white;
+     border-radius: 0.5rem;
+ }
+ .nav-btn .log-in:hover{
+     background: var(--main-color);
+ }
 /*End Top Nav*/
 
 
