@@ -63,6 +63,8 @@
                 <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
             </div>
 
+
+            <div><h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2></div>
         </section>
     
 

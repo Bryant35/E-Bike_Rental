@@ -46,7 +46,8 @@ nav{
     width: 60px;
 }
 .account img{
-    width: 40px;
+    margin-top: 0;
+    width: 20%;
 }
 .navbar{
     display: flex;
