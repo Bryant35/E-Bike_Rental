@@ -43,5 +43,46 @@
       </form>
 </section>
 
+ <!--footer-->
+ <footer class="footer">
+        <section class="logof">
+            <img src="img/ebike_logo.png" class="foot">
+        </section>
+        <section class="menuf">
+            <li><a href="#" class="aboutusf">About Us</a></li>
+            <li><a href="#" class="contactusf">Contact Us</a></li>
+            <li>Payment Method</li>
+            <li><a href="#" class="ovo"><img src="img/OVO.png"></a>
+            <a href="#" class="gopay"><img src="img/GoPay.png"></a>
+            <a href="#" class="dana"><img src="img/dana.png"></a></li>
+        </section>
+        <section class="Hour">
+            <li><h2>Operational Hour</h2></li>
+            <li><br></li>
+            <li>Monday-Saturday: 6AM - 6PM</li>
+            <li>Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 6AM - 9PM</li>
+            <li><br></li>
+            <li><br></li>
+        </section>
+        <section class="SosMed">
+            <li><h2>Follow Us</h2></li>
+            <li><br></li>
+            <li class="logos">
+                <a href="#" class="Fb"><img src="img/Fb.png"></a>
+                <a href="#" class="ig"><img src="img/ig.png"></a>
+                <a href="#" class="tiktok"><img src="img/TikTok.png"></a>
+            </li>
+            <li><br></li>
+        </section>
+        <!-- Copyrights -->
+        <div class="copyrights">
+            <p>
+            123 Plae Grownd Street<br>
+            © 2021 E-Bike Rental All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
 </body>
 </html>
