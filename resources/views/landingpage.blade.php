@@ -26,7 +26,7 @@
         </ul>
         <div class="nav-btn">
             <a href="{{ url('/login') }}" class="log-in">Log In</a>
-            <a href="#register" class="register">Register</a>
+            <a href="{{ url('/signup') }}" class="register">Register</a>
         </div>
     </nav>
 
