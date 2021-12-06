@@ -81,14 +81,6 @@
      color: var(--text-color);
      font-weight: 500;
  }
- .nav-btn .log-in{
-     background: #474fa0;
-     color: white;
-     border-radius: 0.5rem;
- }
- .nav-btn .log-in:hover{
-     background: var(--main-color);
- }
 /*End Top Nav*/
 
 /*Login*/
