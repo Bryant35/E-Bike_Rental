@@ -276,7 +276,7 @@ body .container{
     align-items: center;
 }   
 .logof{
-    width: 23%;
+    width: 23vw;
     position: static;
     display: inline-block;
 }
@@ -284,49 +284,49 @@ body .container{
     width: 100%;
     align-items: center;
     text-align: center;
-    margin-left: -30px;
+    margin-left: -30vw;
 }
 .menuf{
-    font-size: 18px;
-    width: 25%;
+    font-size: 18vw;
+    width: 25vw;
     position: relative;
     display: inline-block;
     text-decoration: black;
 }
 .ovo img{
-    width: 60px;
+    width: 3vw;
     padding-right: 3px;
 }
 .gopay img{
-    width: 60px;
+    width: 3vw;
     padding-right: 3px;
 }
 .dana img{
-    width: 60px;
+    width: 3vw;
 }
 
 .Hour{
     text-align: center;
-    width: 25%;
+    width: 25vw;
     position: relative;
     display: inline-block;
 }
 
 .SosMed{
-    width: 25%;
+    width: 23vw;
     position: relative;
     display: inline-block;
     text-decoration: black;
 }
 
 .Fb img{
-    width: 60px;
+    width: 3vw;
 }
 .ig img{
-    width: 60px;
+    width: 3vw;
 }
 .tiktok img{
-    width: 60px;
+    width: 3vw;
 }
 .logos{
     padding-right: 5px;

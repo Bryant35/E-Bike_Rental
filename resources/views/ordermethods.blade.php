@@ -39,6 +39,22 @@
     </div>
 
 
+    <!--duit mas duit-->
+    <form>
+        <label for="inputduit">Amount</label><br>
+        <input type="text" id="duitamount" name="inputduit">
+    </form>
+    <!--oh no... TAXES!!!-->
+    <form>
+        <label for="taxes">Taxes</label><br>
+        <input type="text" id="taxamount" name="taxes">
+    </form>
+    <!--confirmbutton-->
+    <section>
+        <button type="button" id="butconf">Confirm</button>
+    </section>
+
+
   <!--footer-->
   <footer class="footer">
         <section class="logof">
