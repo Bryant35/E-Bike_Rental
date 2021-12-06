@@ -46,7 +46,7 @@ nav{
     width: 60px;
 }
 .account img{
-    margin-top: -10%;
+    margin-top: 0;
     width: 40px;
 }
 .navbar{
@@ -86,6 +86,7 @@ nav{
     font-weight: 500;
 }
 .nav-btn .log-out{
+    margin-top: -10%;
     background: #474fa0;
     color: white;
     border-radius: 0.5rem;
