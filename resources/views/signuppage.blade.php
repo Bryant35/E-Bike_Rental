@@ -10,6 +10,9 @@
    <body>  
       <div class="container">
          <header>Signup Form</header>
+         <div class="loginlink">
+            Already have an account?<a href="{{ url('/login') }}">Login</a>
+         </div>
          <div class="progress-bar">
             <div class="step">
                <p>
@@ -136,9 +139,6 @@
                      <button class="prev-3 prev">Previous</button>
                      <button class="submit"><a href="{{ url('/login') }}">Submit</a></button>
                   </div>
-               </div>
-               <div class="loginlink">
-                  Already have an account?<a href="{{ url('/login') }}">Login</a>
                </div>
             </form>
          </div>
