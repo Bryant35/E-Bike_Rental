@@ -88,14 +88,11 @@ nav{
     color: var(--text-color);
     font-weight: 500;
 }
-.nav-btn .log-out{
+.log-out{
     margin-top: 0%;
     background: #474fa0;
     color: white;
     border-radius: 0.5rem;
-}
-.log-out{
-    margin-top: -10px;
 }
 .nav-btn .log-out:hover{
     background: var(--main-color);
