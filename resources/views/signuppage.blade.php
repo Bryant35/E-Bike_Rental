@@ -9,8 +9,8 @@
       </head>
    <body>  
       <div class="container">
-         <header>Signup Form<br></header>
-         Already have an account?<a href="{{ url('/login') }}">Login</a>
+         <header>Signup Form<br><h3>Already have an account?<a href="{{ url('/login') }}">Login</a></h3></header>
+         
          <div class="progress-bar">
             <div class="step">
                <p>
