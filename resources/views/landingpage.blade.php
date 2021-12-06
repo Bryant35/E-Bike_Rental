@@ -25,7 +25,7 @@
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
-            <a href="login.php" class="log-in">Log In</a>
+            <a href="{{ url('/login') }}" class="log-in">Log In</a>
             <a href="#register" class="register">Register</a>
         </div>
     </nav>
