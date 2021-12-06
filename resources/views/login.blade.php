@@ -23,7 +23,7 @@
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
-            
+
         </div>
     </nav>
     <div class="center">
@@ -42,7 +42,7 @@
             <div class="pass">Forgot Password?</div>
             <input type="submit" value="Login">
             <div class="signup_link">
-                Not a member? <a href="#">Signup</a>
+                Don't have an account? <a href="{{ url('/signup') }}">Sign Up</a>
             </div>
         </form>
     </div>
