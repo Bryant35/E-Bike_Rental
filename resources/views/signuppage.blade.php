@@ -9,10 +9,8 @@
       </head>
    <body>  
       <div class="container">
-         <header>Signup Form</header>
-         <div class="loginlink">
-            Already have an account?<a href="{{ url('/login') }}">Login</a>
-         </div>
+         <header>Signup Form<br>Already have an account?<a href="{{ url('/login') }}">Login</a></header>
+         
          <div class="progress-bar">
             <div class="step">
                <p>
