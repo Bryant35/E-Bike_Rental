@@ -1,0 +1,165 @@
+/*Header*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color :#fe5b3d;
+    --second-color :#ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+html::-webkit-scrollbar{
+    width: 0,5rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+section{
+    padding: 50px 100px;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.nav-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.nav-btn .log-in{
+    background: #474fa0;
+    color: white;
+    border-radius: 0.5rem;
+}
+.nav-btn .log-in:hover{
+    background: var(--main-color);
+}
+/*End Header*/
+
+/*Footer*/
+.footer {
+    display: block;
+    background-color: #59bfff;
+    margin: 0px, auto;
+    position: relative;
+    bottom: 0;
+    padding-top: 5px;
+    border-top: 2px solid #000;
+    align-items: center;
+}   
+.logof{
+    width: 23%;
+    position: static;
+    display: inline-block;
+}
+.logof img{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-left: -30px;
+}
+.menuf{
+    font-size: 18px;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+.ovo img{
+    width: 60px;
+    padding-right: 3px;
+}
+.gopay img{
+    width: 60px;
+    padding-right: 3px;
+}
+.dana img{
+    width: 60px;
+}
+
+.Hour{
+    text-align: center;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+}
+
+.SosMed{
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+
+.Fb img{
+    width: 60px;
+}
+.ig img{
+    width: 60px;
+}
+.tiktok img{
+    width: 60px;
+}
+.logos{
+    padding-right: 5px;
+}
+
+.copyrights{
+    text-align: center;
+}
+/*End Footer*/
