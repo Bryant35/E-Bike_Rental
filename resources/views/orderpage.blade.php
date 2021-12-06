@@ -43,6 +43,19 @@
       </form>
 </section>
 
+
+<!--bikepick-->
+<!--location -->
+<section id ="bikesect"> 
+    <label for="Bikes">Choose your preferred bike.</label>
+    <div><select name="Bikepick" id="bikepick">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+        <option value="d">d</option>
+        <option value="e">e</option>
+    </select>
+    </div>
  <!--footer-->
  <footer class="footer">
         <section class="logof">

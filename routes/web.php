@@ -24,6 +24,6 @@ Route::get('/login', function () {
 Route::get('/signup', function () {
     return view('signuppage');
 });
-Route::get('/order', function ($id) {
+Route::get('/order', function () {
     return view('orderpage')
 });
