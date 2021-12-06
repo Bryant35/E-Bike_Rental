@@ -1,0 +1,341 @@
+/*Header*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color :#fe5b3d;
+    --second-color :#ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+html::-webkit-scrollbar{
+    width: 0,5rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+section{
+    padding: 50px 100px;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.nav-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.nav-btn .log-out{
+    background: #474fa0;
+    color: white;
+    border-radius: 0.5rem;
+}
+.nav-btn .log-out:hover{
+    background: var(--main-color);
+}
+/*End Header*/
+
+
+/*Home*/
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: block;
+}
+.home .text{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 18px;
+    margin: 30x 0;
+    border-radius: 5px;
+    align-items: center;
+}
+.home img{
+    padding: 0px;
+    width: 100%;
+    margin-top: 80px;
+}
+.text{
+    /*background-repeat: no-repeat;
+    background-position: center;*/
+    margin-top: -20%;
+}
+.text h1{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.banner a{
+    background: #33B1FF;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+span{
+    color: navy;
+}
+.banner{
+    position: relative; width: 100%; margin: 0 auto;
+}
+.banner img{
+    width: 100%
+}
+.banner .heading{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+.heading{
+    color: rgb(173, 168, 168);
+    font-family: 'Audiowide';
+    position: absolute; 
+    top: 50%; 
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background: #fff transparent;
+}
+.buttonrent{
+    color: rgb(173, 168, 168);
+    font-family: 'Audiowide';
+    position: absolute; 
+    top: 63%; 
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background: #fff transparent;
+}
+/*endHome*/
+
+/*howto*/
+#howto{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+#howtop{
+    font-size: 24px;
+    text-align  : center;
+    
+}
+.howtopics{
+    min-height: 100px;
+    
+}
+.howtopics>img{
+    width: 80%;
+    height: 80%;
+}
+.ONEp1{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: solid;
+    font-weight: bold;
+    text-align: center;
+}
+.ONEpsmall{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+/*endhowto*/
+
+/*Holiday Place*/
+.holiday{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8cd3ff;
+}
+.holiday-text h1{
+    font-size: 20px;
+}
+.wrapper{
+    position: relative;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5px;
+}
+.top-left{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left1{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left2{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left3{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left4{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left5{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+body .container{
+    padding: 10px;
+}
+.wrapper img{
+    width: 70%;
+    border-radius: 20px;
+}
+.box{
+    padding: 10px;
+}
+
+
+
+/*Footer*/
+.footer {
+    display: block;
+    background-color: #59bfff;
+    margin: 0px, auto;
+    position: relative;
+    bottom: 0;
+    padding-top: 5px;
+    border-top: 2px solid #000;
+    align-items: center;
+}   
+.logof{
+    width: 23%;
+    position: static;
+    display: inline-block;
+}
+.logof img{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-left: -30px;
+}
+.menuf{
+    font-size: 18px;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+.ovo img{
+    width: 60px;
+    padding-right: 3px;
+}
+.gopay img{
+    width: 60px;
+    padding-right: 3px;
+}
+.dana img{
+    width: 60px;
+}
+
+.Hour{
+    text-align: center;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+}
+.Hour li{
+    font-size: auto;
+}
+
+.SosMed{
+    width: 23%;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+
+.Fb img{
+    width: 60px;
+}
+.ig img{
+    width: 60px;
+}
+.tiktok img{
+    width: 60px;
+}
+.logos{
+    padding-right: 5px;
+}
+
+.copyrights{
+    text-align: center;
+}
+/*End Footer*/

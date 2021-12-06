@@ -287,11 +287,11 @@ body .container{
     margin-left: -30px;
 }
 .menuf{
-    font-size: 18px;
+    font-size: 0.9375%;
     width: 25%;
     position: relative;
     display: inline-block;
-    text-decoration: black;
+    text-decoration: rgb(207, 191, 191);
 }
 .ovo img{
     width: 60px;
