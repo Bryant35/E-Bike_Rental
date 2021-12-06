@@ -311,6 +311,9 @@ body .container{
     position: relative;
     display: inline-block;
 }
+.Hour li{
+    font-size: auto;
+}
 
 .SosMed{
     width: 23%;
