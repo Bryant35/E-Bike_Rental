@@ -284,10 +284,10 @@ body .container{
     width: 100%;
     align-items: center;
     text-align: center;
-    margin-left: -30vw;
+    margin-left: -30px;
 }
 .menuf{
-    font-size: 18%;
+    font-size: 18px;
     width: 25%;
     position: relative;
     display: inline-block;
