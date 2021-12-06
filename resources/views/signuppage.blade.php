@@ -6,6 +6,7 @@
         <title>Multi Step Form | CodingNepal</title>
         <link rel="stylesheet" href="css/signuppage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="js/signuppage.js"></script>
     </head>
    <body>  
       <div class="container">
