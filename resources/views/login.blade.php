@@ -22,6 +22,9 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
         </ul>
+        <div class="nav-btn">
+            
+        </div>
     </nav>
     <div class="center">
         <h1>Login</h1>
