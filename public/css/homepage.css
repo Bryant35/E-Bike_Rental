@@ -86,7 +86,7 @@ nav{
     font-weight: 500;
 }
 .nav-btn .log-out{
-    margin-top: -10%;
+    margin-top: 0;
     background: #474fa0;
     color: white;
     border-radius: 0.5rem;
