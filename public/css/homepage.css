@@ -94,6 +94,9 @@ nav{
     color: white;
     border-radius: 0.5rem;
 }
+.log-out{
+    margin-top: -10px;
+}
 .nav-btn .log-out:hover{
     background: var(--main-color);
 }
