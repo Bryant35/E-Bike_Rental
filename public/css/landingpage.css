@@ -312,7 +312,7 @@ body .container{
     display: inline-block;
 }
 .Hour li{
-    font-size: auto;
+    font-size: 100%;
 }
 
 .SosMed{
@@ -321,15 +321,18 @@ body .container{
     display: inline-block;
     text-decoration: black;
 }
+.SosMed li h2{
+    font-size: 100%;
+}
 
 .Fb img{
-    width: 60px;
+    width: 30%;
 }
 .ig img{
-    width: 60px;
+    width: 30%;
 }
 .tiktok img{
-    width: 60px;
+    width: 30%;
 }
 .logos{
     padding-right: 5px;
