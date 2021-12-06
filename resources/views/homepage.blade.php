@@ -23,10 +23,10 @@
             <li><a href="#ourservice">Our Service</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
-        </ul>
+        </ul>    
         <div class="nav-btn">
             <a href="#" class="account"><img src="img/Avatar.png" alt=""></a>
-            <a href=#Acc" class="Account-page">Nama</a>
+            <a href=#Acc" class="Acc-page">Nama</a>
             <a href="{{ url('/landingpage') }}" class="log-out">Log Out</a>
         </div>
     </nav>
