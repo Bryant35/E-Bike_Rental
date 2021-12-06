@@ -134,7 +134,7 @@
                   </div>
                   <div class="field btns">
                      <button class="prev-3 prev">Previous</button>
-                     <button class="submit">Submit</button>
+                     <button class="submit" href="{{ url('/login') }}">Submit</button>
                   </div>
                </div>
             </form>
