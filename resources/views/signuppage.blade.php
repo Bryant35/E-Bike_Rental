@@ -69,9 +69,6 @@
                   <div class="field">
                      <button class="firstNext next">Next</button>
                   </div>
-                  <div class="loginlink">
-                     Already have an account?<a href="{{ url('/login') }}">Login</a>
-                  </div>
                </div>
                <div class="page">
                   <div class="title">
@@ -139,6 +136,9 @@
                      <button class="prev-3 prev">Previous</button>
                      <button class="submit"><a href="{{ url('/login') }}">Submit</a></button>
                   </div>
+               </div>
+               <div class="loginlink">
+                  Already have an account?<a href="{{ url('/login') }}">Login</a>
                </div>
             </form>
          </div>
