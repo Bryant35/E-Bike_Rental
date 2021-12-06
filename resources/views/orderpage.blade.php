@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
     <form id="datetime">
         <label for="pickuptime">Date and Time:</label>
         <input type="datetime-local" id="pickuptime"> 
-      </form>
+      </form>   
 </section>
 
 
