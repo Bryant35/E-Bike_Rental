@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-Bike Rental Website</title>
-    <link rel="stylesheet" href="css/landingpage.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <!--For Footer--> 
