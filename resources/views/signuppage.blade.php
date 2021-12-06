@@ -69,6 +69,9 @@
                   <div class="field">
                      <button class="firstNext next">Next</button>
                   </div>
+                  <div class="loginlink">
+                     Already have an account?<a href="{{ url('/login') }}">Login</a>
+                  </div>
                </div>
                <div class="page">
                   <div class="title">
