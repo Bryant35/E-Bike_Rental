@@ -114,7 +114,6 @@
             <li><br></li>
             <li>Monday-Saturday: 6AM - 6PM</li>
             <li>Sunday: 6AM - 9PM</li>
-            <li><br></li>
         </section>
         <section class="SosMed">
             <li><h2>Follow Us</h2></li>
