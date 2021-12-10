@@ -278,7 +278,7 @@ body .container{
 .logof{
     width: 23vw;
     height: 30vh;
-    position: static;
+    position: relative;
     display: inline-block;
 }
 .logof img{
