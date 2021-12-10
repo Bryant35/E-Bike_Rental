@@ -277,7 +277,7 @@ body .container{
 }   
 .logof{
     width: 23vw;
-    height: 20vh;
+    height: 25vh;
     position: static;
     display: inline-block;
 }
@@ -289,7 +289,7 @@ body .container{
 .menuf{
     font-size: 100%;
     width: 25vw;
-    height: 20vh;
+    height: 25vh;
     position: relative;
     display: inline-block;
     text-decoration: rgb(207, 191, 191);
@@ -309,7 +309,7 @@ body .container{
 .Hour{
     text-align: center;
     width: 25vw;
-    height: 20vh;
+    height: 25vh;
     position: relative;
     display: inline-block;
 }
@@ -319,7 +319,7 @@ body .container{
 
 .SosMed{
     width: 23vw;
-    height: 20vh;
+    height: 25vh;
     position: relative;
     display: inline-block;
     text-decoration: black;
