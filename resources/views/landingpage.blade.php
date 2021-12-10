@@ -64,7 +64,7 @@
             </div>
 
 
-            <div><h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2></div>
+            <div><h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent2" style="font-size: 45%">RENT NOW</a></h2></div>
         </section>
     
 
