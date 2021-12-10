@@ -51,9 +51,9 @@
         <input type="text" id="taxamount" name="taxes">
     </form>
     <!--confirmbutton-->
-    <section>
+    <div>
         <button type="button" id="butconf">Confirm</button>
-    </section>
+    </div>
 
 
   <!--footer-->

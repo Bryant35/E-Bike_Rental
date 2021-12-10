@@ -40,9 +40,9 @@
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>
-            <input type="submit" value="Login" onClick="myFunction()">
+            <!--<input type="submit" value="Login" onClick="login()">--><button class="submit"><a href="{{ url('/home') }}">login</a></button>
             <script>
-            function myFunction() {
+            function login() {
                 window.location.href="href="{{ url('/home') }}"";
             }
             </script>
