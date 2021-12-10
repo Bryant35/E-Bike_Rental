@@ -29,7 +29,7 @@ Route::get('/order', function () {
 });
 
 Route::get('/orderm', function () {
-    return view('ordermethods')
+    return view('ordermethods');
 });
 
 Route::get('/home', function () {
