@@ -161,6 +161,7 @@ span{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
     position: absolute; 
+    top: 63%;
     width: 100vw;
     text-align: center;
     font-size: 30px;
