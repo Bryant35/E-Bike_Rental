@@ -45,27 +45,27 @@
     <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
  
     <section id="howto" >
-            <div class="howtopics">
-                <img class="ONE" src="img/one.png"  alt="">
-                <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
-                <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
-            </div>
+        <div class="howtopics">
+            <img class="ONE" src="img/one.png"  alt="">
+            <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
+            <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
+        </div>
 
-            <div class="howtopics">
-                <img class="ONE" src="img/two.png"  alt="">
-                <p class="ONEp1">RENT YOUR BIKE!</p>
-                <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
-            </div>
+        <div class="howtopics">
+            <img class="ONE" src="img/two.png"  alt="">
+            <p class="ONEp1">RENT YOUR BIKE!</p>
+            <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
+        </div>
 
-            <div class="howtopics">
-                <img class="ONE" src="img/three.png"  alt="">
-                <p class="ONEp1">THE BIKE IS READY TO GO!</p>
-                <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
-            </div>
+        <div class="howtopics">
+            <img class="ONE" src="img/three.png"  alt="">
+            <p class="ONEp1">THE BIKE IS READY TO GO!</p>
+            <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
+        </div>
 
 
-            <div><h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent2" style="font-size: 45%">RENT NOW</a></h2></div>
-        </section>
+        <div><h2 class="buttonrent2"><a href="{{ url('/order') }}#"  class="rent2" style="font-size: 45%">RENT NOW</a></h2></div>
+    </section>
     
 
     <!--Best Place For your Holdiday-->
