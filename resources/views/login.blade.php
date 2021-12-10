@@ -40,7 +40,12 @@
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" onClick="myFunction()">
+            <script>
+            function myFunction() {
+                window.location.href="href="{{ url('/home') }}"";
+            }
+            </script>
             <div class="signup_link">
                 Don't have an account? <a href="{{ url('/signup') }}">Sign Up</a>
             </div>
