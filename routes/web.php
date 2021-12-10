@@ -35,3 +35,7 @@ Route::get('/orderm', function () {
 Route::get('/home', function () {
     return view('homepage');
 });
+
+Route::get('/account', function () {
+    return view('account');
+});
