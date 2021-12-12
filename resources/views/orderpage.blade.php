@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/orderpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="js/orderpage.js">
     <title>Order</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
         </div>
     </nav>
 <!--location -->
-<section id ="locationsect"> 
+<section id ="locationsect">
     <label for="locations">Choose a Location</label>
     <div><select name="locations" id="location">
         <option value="Iron">Iron Bikes</option>
@@ -34,18 +36,18 @@
         <option value="Gold">Gold Bikes</option>
         <option value="Ruby">Ruby Bikes</option>
     </select>
+
     </div>
     <!--date and time-->
     <form id="datetime">
         <label for="pickuptime">Date and Time:</label>
-        <input type="datetime-local" id="pickuptime"> 
-      </form>   
-</section>
+        <input type="datetime-local" id="pickuptime">
+      </form>
 
 
 <!--bikepick-->
 <!--location -->
-<section id ="bikesect"> 
+
     <label for="Bikes">Choose your preferred bike.</label>
     <div><select name="Bikepick" id="bikepick">
         <option value="biru">Biru</option>

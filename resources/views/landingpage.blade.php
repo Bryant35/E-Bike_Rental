@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-Bike Rental Website</title>
+    <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/landingpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <!--For Footer--> 
+    <!--For Footer-->
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
-            <li><a href="#home">Home</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="#ourservice">Our Service</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
@@ -32,18 +33,18 @@
 
 
     <!--home-->
- 
-    
+
+
     <div class="banner">
         <img src="img/bgpage.png" alt="img">
-        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>          
+        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
         <h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
     </div>
-    
+
     <!--how to rent bek-->
-    
+
     <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
- 
+
     <section id="howto" >
         <div class="howtopics">
             <img class="ONE" src="img/one.png"  alt="">
@@ -66,37 +67,37 @@
 
         <div><h2 class="buttonrent2"><a href="{{ url('/order') }}#"  class="rent2" style="font-size: 45%">RENT NOW</a></h2></div>
     </section>
-    
+
 
     <!--Best Place For your Holdiday-->
     <div class="holiday">
         <div class="holiday-text">
             <div style="text-align:center">
                 <h1 style="color: black;">Best Place for Your <span>Holiday</span></h1>
-            </div>  
+            </div>
             <br>
         </div>
         <div class="wrapper">
             <div class="box"><img src="img/gwk.png" alt=""></div>
             <!--<div class="top-left">GWK</div>-->
-    
+
             <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
             <!--<div class="top-left1">Pantai Kuta</div>-->
-    
+
             <div class="box"><img src="img/beach_walk.png" alt=""></div>
             <!--<div class="top-left2">Beachwalk Mall</div>-->
-    
+
             <div class="box"><img src="img/pakuwon.png" alt=""></div>
             <!--<div class="top-left3">Pakuwon Mall</div>-->
-    
+
             <div class="box"><img src="img/UC.png" alt=""></div>
             <!--<div class="top-left4">Universitas Ciputra</div>-->
-    
+
             <div class="box"><img src="img/TP.png" alt=""></div>
-            <!--<div class="top-left5">Tunjungan plaza</div>-->   
+            <!--<div class="top-left5">Tunjungan plaza</div>-->
         </div>
     </div>
-    
+
 
     <!--footer-->
     <footer class="footer">
@@ -135,7 +136,7 @@
         </div>
     </footer>
     <!-- Footer -->
-    
+
     </div>
 </body>
 

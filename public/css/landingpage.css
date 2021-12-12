@@ -131,7 +131,7 @@ nav{
     color: white;
     border-radius: 5px;
     text-align: center;
-    
+
 }
 span{
     color: navy;
@@ -150,8 +150,8 @@ span{
 .heading{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
-    position: absolute; 
-    top: 50%; 
+    position: absolute;
+    top: 50%;
     width: 100%;
     text-align: center;
     font-size: 30px;
@@ -160,7 +160,7 @@ span{
 .buttonrent{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
-    position: absolute; 
+    position: absolute;
     top: 63%;
     width: 100vw;
     text-align: center;
@@ -178,11 +178,11 @@ span{
 #howtop{
     font-size: 24px;
     text-align  : center;
-    
+
 }
 .howtopics{
     min-height: 100px;
-    
+
 }
 .howtopics>img{
     width: 80%;
@@ -204,8 +204,8 @@ span{
 .buttonrent2{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
-    position: absolute; 
-    top: 63%; 
+    position: absolute;
+    top: 63%;
     width: 100vw;
     text-align: center;
     font-size: 30px;
@@ -284,7 +284,7 @@ body .container{
     padding-top: 5px;
     border-top: 2px solid #000;
     align-items: center;
-}   
+}
 .logof{
     width: 23vw;
     height: 30vh;
@@ -292,12 +292,12 @@ body .container{
     display: inline-block;
 }
 .logof img{
-    width: 100%;
+    width: 15vw;
     align-items: center;
     text-align: center;
 }
 .menuf{
-    font-size: 16px;
+    font-size: 1vw;
     width: 25vw;
     height: 30vh;
     position: relative;
@@ -317,14 +317,17 @@ body .container{
 }
 
 .Hour{
+    padding: auto;
     text-align: center;
     width: 25vw;
+    max-width: 25vw;
+    min-width: 25vw;
     height: 30vh;
     position: relative;
     display: inline-block;
 }
 .Hour li{
-    font-size: auto;
+    font-size: 1vw;
 }
 
 .SosMed{
@@ -335,7 +338,7 @@ body .container{
     text-decoration: black;
 }
 .SosMed li h2{
-    font-size: auto;
+    font-size: 1vw;
 }
 
 .Fb img{
@@ -350,7 +353,6 @@ body .container{
 .logos{
     padding-right: 5px;
 }
-
 .copyrights{
     text-align: center;
 }

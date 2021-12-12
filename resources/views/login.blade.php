@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/login.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
@@ -39,9 +40,10 @@
                 <span></span>
                 <label>Password</label>
             </div>
-            <div class="pass">Forgot Password?</div>
-            <!--<input type="submit" value="Login" onClick="login()">--><button class="submit"><a href="{{ url('/home') }}">login</a></button>
+            <div class="pass" href="{{ url('/forgotpassword') }}"><a href="{{ url('/forgotpassword') }}">Forgot Password?</a></div>
+            <input type="submit" value="Login" id="submitBtn">
             <script>
+            document.getElementById("submitBtn").addEventListener("click", login);
             function login() {
                 window.location.href="href="{{ url('/home') }}"";
             }

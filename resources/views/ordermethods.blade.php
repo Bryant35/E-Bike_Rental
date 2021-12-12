@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/ordermethods.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <title>Document</title>
-    
+
 </head>
 <body>
     <!--header-->
@@ -29,7 +31,7 @@
 
 
     <!--payment method-->
-    <section id ="paymeth"> 
+    <section id ="paymeth">
     <label for="pay">Payment Method</label>
     <div><select name="pay" id="payment">
         <option value="dana">Dana</option>
@@ -97,3 +99,4 @@
     <!-- Footer -->
 </body>
 </html>
+
