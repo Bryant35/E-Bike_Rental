@@ -81,21 +81,12 @@
      font-weight: 500;
  }
 /*End Top Nav*/
-
-#wrap {
-    width:600px;
-    margin:0 auto;
- }
- #left_col {
-    float:left;
-    width:300px;
- }
- #right_col {
-    float:right;
-    width:300px;
- }
-
- .about p {
+.container {
+	width:80%;
+	margin:0 auto;
+}
+.about .container .left_col{float : left; width: 450px; background-color: blue; padding : 20px}
+.about p {
 	color: #000000;
 	word-spacing: 2px;
 	line-height: 25px;
