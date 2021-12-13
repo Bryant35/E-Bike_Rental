@@ -51,7 +51,3 @@ Route::get('/contact', function () {
 Route::get('/aboutus', function () {
     return view('aboutus');
 });
-
-Route::get('/footer', function () {
-    return view('footer');
-});
