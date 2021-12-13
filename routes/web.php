@@ -43,3 +43,15 @@ Route::get('/account', function () {
 Route::get('/forgotpassword', function () {
     return view('forgotpassword');
 });
+
+Route::get('/contact', function () {
+    return view('contactpage');
+});
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+
+Route::get('/footer', function () {
+    return view('footer');
+});

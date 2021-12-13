@@ -22,7 +22,7 @@
         <ul class="navbar">
             <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="#ourservice">Our Service</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url('/contact') }}">Contact</a></li>
             <li><a href="#about">About</a></li>
         </ul>
         <div class="nav-btn">
@@ -43,9 +43,9 @@
 
     <!--how to rent bek-->
 
-    <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
+    <div><h1 class="howtop">HOW TO RENT OUR BIKE</h1></div>
 
-    <section id="howto" >
+    <div class ="howto" >
         <div class="howtopics">
             <img class="ONE" src="img/one.png"  alt="">
             <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
@@ -63,11 +63,13 @@
             <p class="ONEp1">THE BIKE IS READY TO GO!</p>
             <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
         </div>
-
-
-        <div><h2 class="buttonrent2"><a href="{{ url('/order') }}#"  class="rent2" style="font-size: 45%">RENT NOW</a></h2></div>
-    </section>
-
+        <br>
+    </div>
+    <div class="howtobtn" style="align-items: center;">
+        <h2 class="buttonrent2"><a href="{{ url('/order') }}"  class="rent2" style="font-size: 0.7vw">RENT NOW</a></h2>
+    </div>
+    <br>
+    <br>
 
     <!--Best Place For your Holdiday-->
     <div class="holiday">
@@ -100,7 +102,7 @@
 
 
     <!--footer-->
-    <footer class="footer">
+    {{-- <footer class="footer">
         <section class="logof">
             <img src="img/ebike_logo.png" class="foot">
         </section>
@@ -134,9 +136,41 @@
             123 Plae Grownd Street<br>
             © 2021 E-Bike Rental All rights reserved.</p>
         </div>
-    </footer>
+    </footer> --}}
     <!-- Footer -->
-
+    <div class="footer-container">
+        <div class="grid-logo">
+            <img src="img/ebike_logo.png" alt="" style="width: 7vw">
+        </div>
+        <div class="grid-menu-footer">
+            <li><a href="#" class="aboutusf">About Us</a></li>
+            <li><a href="#" class="contactusf">Contact Us</a></li>
+            <li>Payment Method</li>
+            <li><a href="#" class="ovo"><img src="img/OVO.png" style="width: 2vw"></a>
+            <a href="#" class="gopay"><img src="img/GoPay.png" style="width: 2vw"></a>
+            <a href="#" class="dana"><img src="img/dana.png" style="width: 2vw"></a></li>
+        </div>
+        <div class="grid-hour">
+            <li>Operational Hour</li>
+            <li><br></li>
+            <li>Monday-Saturday: 6AM - 6PM</li>
+            <li>Sunday: 6AM - 9PM</li>
+        </div>
+        <div class="grid-sosmed">
+            <li>Follow Us</li>
+            <li><br></li>
+            <li class="logos">
+                <a href="#" class="Fb"><img src="img/Fb.png" style="width: 2vw"></a>
+                <a href="#" class="ig"><img src="img/ig.png" style="width: 2vw"></a>
+                <a href="#" class="tiktok"><img src="img/TikTok.png" style="width: 2vw"></a>
+            </li>
+        </div>
+    </div>
+    <!-- Copyrights -->
+    <div class="copyrights">
+        <p style="text-align: center;">
+        123 Plae Grownd Street<br>
+        © 2021 E-Bike Rental All rights reserved.</p>
     </div>
 </body>
 

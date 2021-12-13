@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <!--For Footer--> 
+    <!--For Footer-->
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <li><a href="#ourservice">Our Service</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About</a></li>
-        </ul>    
+        </ul>
         <div class="nav-btn">
             <a href="#" class="account"><img src="img/Avatar.png" alt=""></a>
             <a href="{{ url('/account') }}" class="Acc-page">Nama</a>
@@ -33,18 +33,18 @@
 
 
     <!--home-->
- 
-    
+
+
     <div class="banner">
         <img src="img/bgpage.png" alt="img">
-        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>          
+        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
         <h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
     </div>
-    
+
     <!--how to rent bek-->
-    
+
     <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
- 
+
     <section id="howto" >
             <div class="howtopics">
                 <img class="ONE" src="img/one.png"  alt="">
@@ -65,37 +65,37 @@
             </div>
 
         </section>
-    
+
 
     <!--Best Place For your Holdiday-->
     <div class="holiday">
         <div class="holiday-text">
             <div style="text-align:center">
                 <h1 style="color: black;">Best Place for Your <span>Holiday</span></h1>
-            </div>  
+            </div>
             <br>
         </div>
         <div class="wrapper">
             <div class="box"><img src="img/gwk.png" alt=""></div>
             <!--<div class="top-left">GWK</div>-->
-    
+
             <div class="box"><img src="img/pantai_kuta.png" alt=""></div>
             <!--<div class="top-left1">Pantai Kuta</div>-->
-    
+
             <div class="box"><img src="img/beach_walk.png" alt=""></div>
             <!--<div class="top-left2">Beachwalk Mall</div>-->
-    
+
             <div class="box"><img src="img/pakuwon.png" alt=""></div>
             <!--<div class="top-left3">Pakuwon Mall</div>-->
-    
+
             <div class="box"><img src="img/UC.png" alt=""></div>
             <!--<div class="top-left4">Universitas Ciputra</div>-->
-    
+
             <div class="box"><img src="img/TP.png" alt=""></div>
-            <!--<div class="top-left5">Tunjungan plaza</div>-->   
+            <!--<div class="top-left5">Tunjungan plaza</div>-->
         </div>
     </div>
-    
+
 
     <!--footer-->
     <footer class="footer">
@@ -136,7 +136,7 @@
         </div>
     </footer>
     <!-- Footer -->
-    
+
     </div>
 </body>
 

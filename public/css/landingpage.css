@@ -112,17 +112,17 @@ nav{
     width: 100%;
     margin-top: 80px;
 }
-.text{
+/* .text{
     /*background-repeat: no-repeat;
-    background-position: center;*/
+    background-position: center;*
     margin-top: -20%;
-}
-.text h1{
+} */
+/* .text h1{
     font-size: 50px;
     color: black;
     margin-bottom: 20px;
     text-align: center;
-}
+} */
 .banner a{
     background: #33B1FF;
     padding: 10px 18px;
@@ -154,7 +154,7 @@ span{
     top: 50%;
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5vw;
     background: #fff transparent;
 }
 .buttonrent{
@@ -170,15 +170,16 @@ span{
 /*endHome*/
 
 /*howto*/
-#howto{
-    display: flex;
+.howto{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
     justify-content: center;
     align-content: space-around;
 }
-#howtop{
+.howtop{
     font-size: 24px;
-    text-align  : center;
-
+    text-align: center;
 }
 .howtopics{
     min-height: 100px;
@@ -205,11 +206,24 @@ span{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
     position: absolute;
-    top: 63%;
     width: 100vw;
     text-align: center;
     font-size: 30px;
     background: #fff transparent;
+}
+.howtobtn a{
+    background: #33B1FF;
+    padding: 0.4vw 0.8vh;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+.howtobtn{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto;
 }
 /*endhowto*/
 
@@ -228,7 +242,8 @@ span{
     text-align: center;
     color: white;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: auto auto auto;
     grid-gap: 5px;
 }
 .top-left{
@@ -275,7 +290,7 @@ body .container{
 
 
 /*Footer*/
-.footer {
+/* .footer {
     display: block;
     background-color: #59bfff;
     margin: 0px, auto;
@@ -305,15 +320,15 @@ body .container{
     text-decoration: rgb(207, 191, 191);
 }
 .ovo img{
-    width: 25%;
+    width: 2vw;
     padding-right: 3px;
 }
 .gopay img{
-    width: 25%;
+    width: 2vw;
     padding-right: 3px;
 }
 .dana img{
-    width: 25%;
+    width: 2vw;
 }
 
 .Hour{
@@ -342,18 +357,39 @@ body .container{
 }
 
 .Fb img{
-    width: 25%;
+    width: 2vw;
 }
 .ig img{
-    width: 25%;
+    width: 2vw;
 }
 .tiktok img{
-    width: 25%;
+    width: 2vw;
 }
 .logos{
     padding-right: 5px;
 }
 .copyrights{
     text-align: center;
-}
+} */
 /*End Footer*/
+.footer-container{
+    border-top: 0.2vh solid #000;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-menu-footer li{
+    font-size: 1vw;
+}
+.grid-hour{
+    font-size: 1vw;
+}
+.grid-sosmed li{
+    font-size: 1vw;
+}
+.copyrights{
+    font-size: 1vw;
+    background-color: #2196F3;
+}

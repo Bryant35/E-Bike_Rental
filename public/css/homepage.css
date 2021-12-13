@@ -136,7 +136,7 @@ nav{
     color: white;
     border-radius: 5px;
     text-align: center;
-    
+
 }
 span{
     color: navy;
@@ -155,8 +155,8 @@ span{
 .heading{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
-    position: absolute; 
-    top: 50%; 
+    position: absolute;
+    top: 50%;
     width: 100%;
     text-align: center;
     font-size: 30px;
@@ -165,8 +165,8 @@ span{
 .buttonrent{
     color: rgb(173, 168, 168);
     font-family: 'Audiowide';
-    position: absolute; 
-    top: 63%; 
+    position: absolute;
+    top: 63%;
     width: 100%;
     text-align: center;
     font-size: 30px;
@@ -183,11 +183,11 @@ span{
 #howtop{
     font-size: 24px;
     text-align  : center;
-    
+
 }
 .howtopics{
     min-height: 100px;
-    
+
 }
 .howtopics>img{
     width: 80%;
@@ -216,14 +216,15 @@ span{
     background: #8cd3ff;
 }
 .holiday-text h1{
-    font-size: 20px;
+    font-size: 1vw;
 }
 .wrapper{
     position: relative;
     text-align: center;
     color: white;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: auto auto auto;
     grid-gap: 5px;
 }
 .top-left{
@@ -279,7 +280,7 @@ body .container{
     padding-top: 5px;
     border-top: 2px solid #000;
     align-items: center;
-}   
+}
 .logof{
     width: 23%;
     position: static;

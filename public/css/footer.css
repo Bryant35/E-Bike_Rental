@@ -1,0 +1,93 @@
+
+
+/*Footer*/
+.footer {
+    display: block;
+    background-color: #59bfff;
+    margin: 0px, auto;
+    position: relative;
+    bottom: 0;
+    padding-top: 5px;
+    border-top: 2px solid #000;
+    align-items: center;
+}
+.logof{
+    width: 23vw;
+    height: 30vh;
+    position: relative;
+    display: inline-block;
+}
+.logof img{
+    width: 15vw;
+    align-items: center;
+    text-align: center;
+}
+.menuf{
+    font-size: 1vw;
+    width: 25vw;
+    height: 30vh;
+    position: relative;
+    display: inline-block;
+    text-decoration: rgb(207, 191, 191);
+}
+.menuf li{
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+}
+.ovo img{
+    width: 25%;
+    padding-right: 3px;
+}
+.gopay img{
+    width: 25%;
+    padding-right: 3px;
+}
+.dana img{
+    width: 25%;
+}
+
+.Hour{
+    padding: auto;
+    text-align: center;
+    width: 25vw;
+    max-width: 25vw;
+    min-width: 25vw;
+    height: 30vh;
+    position: relative;
+    display: inline-block;
+}
+.Hour li{
+    font-size: 1vw;
+    list-style: none;
+}
+
+.SosMed{
+    width: 23vw;
+    height: 30vh;
+    position: relative;
+    display: inline-block;
+    text-decoration: black;
+}
+.SosMed li{
+    font-size: 1vw;
+    list-style: none;
+}
+
+.Fb img{
+    width: 25%;
+}
+.ig img{
+    width: 25%;
+}
+.tiktok img{
+    width: 25%;
+}
+.logos{
+    padding-right: 5px;
+}
+.copyrights{
+    text-align: center;
+}
+/*End Footer*/
