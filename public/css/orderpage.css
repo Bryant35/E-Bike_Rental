@@ -101,8 +101,13 @@ margin: 10%;
     margin-bottom: 20px;
 }
 
-
-
+.gmap_canvas{
+    margin-top: 20px;
+     overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:600px;
+}
 /*Footer*/
 .footer {
     display: block;

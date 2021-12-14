@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/orderpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="js/orderpage.js">
     <title>Order</title>
+    <script src="js/orderpage.js"></script>
+
 </head>
 <body>
     <!--header-->
@@ -37,12 +38,20 @@
         <option value="Ruby">Ruby Bikes</option>
     </select>
 
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pakuwon%20tower&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">embed google map html</a>
+        </div></div>
+
     </div>
     <!--date and time-->
     <form id="datetime">
         <label for="pickuptime">Date and Time:</label>
         <input type="datetime-local" id="pickuptime">
       </form>
+
+      <div id="map"></div>
 
 
 <!--bikepick-->
@@ -99,7 +108,6 @@
         </div>
     </footer>
     <!-- Footer -->
-
 
 </body>
 </html>
