@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* footer */
+.footer-container{
+    border-top: 0.2vh solid #000;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-menu-footer li{
+    font-size: 1vw;
+}
+.grid-hour{
+    font-size: 1vw;
+}
+.grid-sosmed li{
+    font-size: 1vw;
+}
+.copyrights{
+    font-size: 1vw;
+    background-color: #2196F3;
+}
+.row p a img{
+    max-width: 160px;
+}
+/* End footer */

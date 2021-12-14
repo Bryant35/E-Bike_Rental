@@ -51,3 +51,7 @@ Route::get('/contact', function () {
 Route::get('/aboutus', function () {
     return view('aboutus');
 });
+
+Route::get('/topup', function () {
+    return view('topup');
+});

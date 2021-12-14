@@ -31,23 +31,17 @@
         <h1>Login</h1>
         <form method="post">
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="uname" required>
                 <span></span>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" name="password" required>
                 <span></span>
                 <label>Password</label>
             </div>
             <div class="pass" href="{{ url('/forgotpassword') }}"><a href="{{ url('/forgotpassword') }}">Forgot Password?</a></div>
-            <input type="submit" value="Login" id="submitBtn">
-            <script>
-            document.getElementById("submitBtn").addEventListener("click", login);
-            function login() {
-                window.location.href="href="{{ url('/home') }}"";
-            }
-            </script>
+            <input type="submit" value="Login">
             <div class="signup_link">
                 Don't have an account? <a href="{{ url('/signup') }}">Sign Up</a>
             </div>

@@ -7,10 +7,10 @@
          <link rel="stylesheet" href="css/signuppage.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       </head>
-   <body>  
+   <body>
       <div class="container">
          <header>Signup Form<br><h6>Already have an account?<a href="{{ url('/login') }}">Login</a></h6></header>
-         
+
          <div class="progress-bar">
             <div class="step">
                <p>
