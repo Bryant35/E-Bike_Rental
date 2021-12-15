@@ -34,8 +34,8 @@
 <!--transaction-->
 
     <section id ="transinfo">
-        <h1>Transaction Total :</h1>
-        <h2>My Wallet after transaction</h2>
+        <p>Transaction Total :</p>
+        <p>My Wallet after transaction</p>
         <button id="confbutton">Confirm</button>
     </section>
 
