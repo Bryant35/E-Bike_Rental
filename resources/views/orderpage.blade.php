@@ -53,6 +53,7 @@
 
       <div id="map"></div>
 
+      <a href="{{ url('/orderm') }}#"><button>Confirm</button></a>
 
 <!--bikepick-->
 <!--location -->
