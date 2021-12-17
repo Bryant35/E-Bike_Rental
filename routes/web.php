@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
+
+
 });
 
 Route::get('/signup', function () {
@@ -55,3 +57,6 @@ Route::get('/aboutus', function () {
 Route::get('/topup', function () {
     return view('topup');
 });
+
+
+Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');

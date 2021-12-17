@@ -29,11 +29,11 @@
     </nav>
     <section class="about">
         <div class ="container">
-            <div class="right_col">
+            <div id ="right_col">
                 <h3>ABOUT US</h3>
                 <p>Ebike rental is trusted by people as the number one place in Indonesia to rent an ebike. Now we have more than 200 outlets all over Indonesia. You are going on holidays and would like to rent your bike beforehand? you can make sure that the bike of your choice will be available and ready for you upon arrival. When you book with our ebike rental, we get you in contact with rental point from more than 80 different countries across the globe, making sure that your bike rental experience os optimal. If you have any questions about your booking, to have more information, we are more than happy to help you, feel free to contact us</p>
             </div>
-            <div class="left_col">
+            <div id="left_col">
                 ...
             </div>
         </div>

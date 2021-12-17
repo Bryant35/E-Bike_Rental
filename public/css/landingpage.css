@@ -183,7 +183,7 @@ span{
 }
 .howtopics{
     min-height: 100px;
-
+    text-align: center;
 }
 .howtopics>img{
     width: 80%;
