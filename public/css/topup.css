@@ -13,28 +13,5 @@
 
 
 /* footer */
-.footer-container{
-    border-top: 0.2vh solid #000;
-    display: grid;
-    text-align: center;
-    grid-template-columns: auto auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-}
-.grid-menu-footer li{
-    font-size: 1vw;
-}
-.grid-hour{
-    font-size: 1vw;
-}
-.grid-sosmed li{
-    font-size: 1vw;
-}
-.copyrights{
-    font-size: 1vw;
-    background-color: #2196F3;
-}
-.row p a img{
-    max-width: 160px;
-}
+
 /* End footer */

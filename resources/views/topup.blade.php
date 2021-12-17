@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/topup.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Top Up - Ebike Rentals</title>
 </head>
@@ -50,7 +51,7 @@
     {{-- Topup --}}
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col border rounded p-3 mb-2 bg-info text-dark">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -82,7 +83,7 @@
                     </label>
                 </div>
             </div>
-            <div class="col">
+            <div class="col border rounded">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -114,7 +115,7 @@
     {{-- Footer --}}
         <div class="my-5">
             <!-- Footer -->
-            <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+            <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
             <!-- Grid container -->
             <div class="container p-4 pb-0">
                 <!-- Section: Links -->
@@ -138,10 +139,10 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                     <p>
-                        <a class="text-white">About Us</a>
+                        <a class="text-white" href="{{url('/aboutus')}}">About Us</a>
                     </p>
                     <p>
-                        <a class="text-white">Contact us</a>
+                        <a class="text-white" href="{{url('/contact')}}">Contact us</a>
                     </p>
                     <p>
                         <a class="text-white">Payment Method</a>
@@ -161,70 +162,70 @@
 
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
 
-                    <!-- Facebook -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #3b5998"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-facebook-f"></i
-                        ></a>
+                        <!-- Facebook -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #3b5998"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-facebook-f"></i
+                            ></a>
 
-                    <!-- Twitter -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #55acee"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-twitter"></i
-                        ></a>
+                        <!-- Twitter -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #55acee"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-twitter"></i
+                            ></a>
 
-                    <!-- Google -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #dd4b39"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-google"></i
-                        ></a>
+                        <!-- Google -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #dd4b39"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-google"></i
+                            ></a>
 
-                    <!-- Instagram -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #ac2bac"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-instagram"></i
-                        ></a>
+                        <!-- Instagram -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #ac2bac"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-instagram"></i
+                            ></a>
 
-                    <!-- Linkedin -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #0082ca"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-linkedin-in"></i
-                        ></a>
-                    <!-- Github -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #333333"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        <!-- Linkedin -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #0082ca"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-linkedin-in"></i
+                            ></a>
+                        <!-- Github -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #333333"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-github"></i
+                            ></a>
                     </div>
                 </div>
                 <!--Grid row-->
@@ -236,7 +237,7 @@
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
                 123 Plae Grownd Street<br>© 2021
-                <a class="text-white" href="http://127.0.0.1:8000">Ebike Rental</a>
+                <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
                 All rights reserved.
             </div>
             <!-- Copyright -->
