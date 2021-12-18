@@ -42,7 +42,14 @@
                 <form class="d-flex">
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 50px;"></a>
                     <button class="btn btn-light" type="submit">Nama</button>
-                    <button class="btn btn-primary" type="submit">Log Out</button>
+                    <a href="{{url('/')}}" onclick="logOut()"><button class="btn btn-primary" type="submit">Log Out</button></a>
+                    <script>
+                        function logOut() {
+                            if (confirm("Press a button!")) {
+                                location.href = "http://127.0.0.1:8000/";
+                            }
+                        }
+                    </script>
                 </form>
             </div>
         </div>
@@ -50,8 +57,8 @@
 
     {{-- Topup --}}
     <div class="container">
-        <div class="row">
-            <div class="col border rounded p-3 mb-2 bg-info text-dark">
+        <div class="row gap-3">
+            <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -83,7 +90,7 @@
                     </label>
                 </div>
             </div>
-            <div class="col border rounded">
+            <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
@@ -107,6 +114,13 @@
                     <label class="form-check-label" for="flexRadioDefault4">
                         Bank
                     </label>
+                </div>
+                <div class="position-relative">
+                    <div class="position-absolute bottom-0 end-0">
+                        <button type="button" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
