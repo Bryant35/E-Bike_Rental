@@ -17,7 +17,7 @@
 
         <div class="bx bx-menu" id="menu-icon"></div>
 
-        <ul class="navbar">
+        <ul class="navbar" >
             <li><a href="#home">Home</a></li>
             <li><a href="#ourservice">Our Service</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -31,6 +31,7 @@
 <!--location -->
 <section id ="locationsect">
     <label for="locations">Choose a Location</label>
+    <script src="map"></script>
     <div><select name="locations" id="location">
         <option value="Iron">Iron Bikes</option>
         <option value="Emerald">Emerald Bikes</option>
