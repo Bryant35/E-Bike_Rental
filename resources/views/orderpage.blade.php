@@ -31,12 +31,14 @@
 <!--location -->
 <section id ="locationsect">
     <label for="locations">Choose a Location</label>
-    <div><select name="locations" id="location">
-        <option value="Iron">Iron Bikes</option>
-        <option value="Emerald">Emerald Bikes</option>
-        <option value="Gold">Gold Bikes</option>
-        <option value="Ruby">Ruby Bikes</option>
-    </select>
+  
+        <div><select name="location" id="location" onchange="map()">
+            <option value="Iron">Iron Bikes</option>
+            <option value="Emerald">Emerald Bikes</option>
+            <option value="Gold">Gold Bikes</option>
+            <option value="Ruby">Ruby Bikes</option>
+        </select>
+ 
 
     <div class="mapouter">
         <div class="gmap_canvas">
