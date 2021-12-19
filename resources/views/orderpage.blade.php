@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/orderpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
     <title>Order</title>
-    <script src="js/orderpage.js"></script>
-
+    
 </head>
 <body>
     <!--header-->
@@ -31,7 +31,6 @@
 <!--location -->
 <section id ="locationsect">
     <label for="locations">Choose a Location</label>
-    <script src="map"></script>
     <div><select name="locations" id="location">
         <option value="Iron">Iron Bikes</option>
         <option value="Emerald">Emerald Bikes</option>
@@ -110,6 +109,13 @@
         </div>
     </footer>
     <!-- Footer -->
+
+
+    <!--jsreference-->
+
+    <script src="js/orderpage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
 </body>
 </html>

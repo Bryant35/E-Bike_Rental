@@ -1,6 +1,9 @@
 
 
-
+$ironloc = 
+$emeraldloc =
+$goldloc = 
+$rubyloc =
 
 
 function map (){
