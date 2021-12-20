@@ -35,7 +35,7 @@
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{{url('/aboutus')}}">About Us</a>
                     </li>
                 </ul>
 
@@ -57,61 +57,101 @@
 
     {{-- Topup --}}
     <div class="container">
+
+        <div class="text-center"><h1>Top Up Wallet</h1></div>
+        <p></p>
         <div class="row gap-3">
             <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Rp.10000
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Rp.20000
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                        Rp.20000
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                    <label class="form-check-label" for="flexRadioDefault4">
-                        Rp.30000
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                    <label class="form-check-label" for="flexRadioDefault5">
-                        Rp.50000
-                    </label>
+                <div class="row">
+                    <div class="col d-grid gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="10k" checked>
+                            <label class="form-check-label" for="10k">
+                                Rp.10000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="20k">
+                            <label class="form-check-label" for="20k">
+                                Rp.20000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="25k">
+                            <label class="form-check-label" for="25k">
+                                Rp.25000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="30k">
+                            <label class="form-check-label" for="30k">
+                                Rp.30000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="50k">
+                            <label class="form-check-label" for="50k">
+                                Rp.50000
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col d-grid gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="75k" checked>
+                            <label class="form-check-label" for="75k">
+                                Rp.75000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="100k">
+                            <label class="form-check-label" for="100k">
+                                Rp.100000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="125k">
+                            <label class="form-check-label" for="125k">
+                                Rp.125000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="150k">
+                            <label class="form-check-label" for="150k">
+                                Rp.150000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="nominal" id="200k">
+                            <label class="form-check-label" for="200k">
+                                Rp.200000
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault1" checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="method" id="dana" checked>
+                    <label class="form-check-label" for="dana">
                         Dana
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="method" id="ovo">
+                    <label class="form-check-label" for="ovo">
                         OVO
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
+                    <input class="form-check-input" type="radio" name="method" id="gopay">
+                    <label class="form-check-label" for="gopay">
                         Gopay
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioDefault4">
-                    <label class="form-check-label" for="flexRadioDefault4">
+                    <input class="form-check-input" type="radio" name="method" id="bank">
+                    <label class="form-check-label" for="bank">
                         Bank
                     </label>
                 </div>
@@ -153,18 +193,18 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                     <p>
-                        <a class="text-white" href="{{url('/aboutus')}}">About Us</a>
+                        <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
                     </p>
                     <p>
-                        <a class="text-white" href="{{url('/contact')}}">Contact us</a>
+                        <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                    </p>
+                    <p class="text-white">
+                        Payment Method
                     </p>
                     <p>
-                        <a class="text-white">Payment Method</a>
-                    </p>
-                    <p>
-                        <li><img src="OVO.png" alt="" style="width: 10px;"></li>
-                        <li><img src="GoPay.png" alt="" style="width: 10px;"></li>
-                        <li><img src="dana.png" alt="" style="width: 10px;"></li>
+                        <li><img src="OVO.png" alt="" style="width: 15px;"></li>
+                        <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
+                        <li><img src="dana.png" alt="" style="width: 15px;"></li>
                     </p>
                     </div>
                     <!-- Grid column -->
@@ -177,10 +217,10 @@
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                        <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                        <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
                     </div>
                     <!-- Grid column -->
 
@@ -192,54 +232,34 @@
                         <a
                             class="btn btn-primary btn-floating m-1"
                             style="background-color: #3b5998"
-                            href="#!"
+                            href="https://www.facebook.com"
                             role="button"
-                            ><i class="fab fa-facebook-f"></i
-                            ></a>
+                            ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
 
                         <!-- Twitter -->
                         <a
                             class="btn btn-primary btn-floating m-1"
                             style="background-color: #55acee"
-                            href="#!"
+                            href="https://www.twitter.com/"
                             role="button"
-                            ><i class="fab fa-twitter"></i
-                            ></a>
-
-                        <!-- Google -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #dd4b39"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-google"></i
-                            ></a>
+                            ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
 
                         <!-- Instagram -->
                         <a
                             class="btn btn-primary btn-floating m-1"
                             style="background-color: #ac2bac"
-                            href="#!"
+                            href="https://www.instagram.com"
                             role="button"
-                            ><i class="fab fa-instagram"></i
+                            ><img src="img/ig.png" alt="" style="width: 30px;"></i
                             ></a>
 
-                        <!-- Linkedin -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #0082ca"
-                            href="#!"
-                            role="button"
-                            ><i class="fab fa-linkedin-in"></i
-                            ></a>
                         <!-- Github -->
                         <a
                             class="btn btn-primary btn-floating m-1"
                             style="background-color: #333333"
-                            href="#!"
+                            href="https://www.tiktok.com/"
                             role="button"
-                            ><i class="fab fa-github"></i
-                            ></a>
+                            ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
                     </div>
                 </div>
                 <!--Grid row-->

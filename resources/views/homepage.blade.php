@@ -44,7 +44,7 @@
 
                 <form class="d-flex">
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 50px;"></a>
-                    <button class="btn btn-light" type="submit">Nama</button>
+                    <button class="btn btn-light" type="submit">Name</button>
                     <button class="btn btn-primary" type="submit">Log Out</button>
                 </form>
             </div>

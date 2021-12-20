@@ -290,7 +290,7 @@ body .container{
 
 
 /*Footer*/
-.footer-container{
+/* .footer-container{
     border-top: 0.2vh solid #000;
     display: grid;
     text-align: center;
@@ -310,5 +310,5 @@ body .container{
 .copyrights{
     font-size: 1vw;
     background-color: #2196F3;
-}
+} */
 /* End Footer */

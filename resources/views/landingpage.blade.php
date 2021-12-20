@@ -45,7 +45,7 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/register')}}" class="btn btn-light" style="text-decoration: none; color: #000">Register</a>
+                    <a href="{{url('/signup')}}" class="btn btn-light" style="text-decoration: none; color: #000">Register</a>
                     <a href="{{url('/login')}}" class="btn btn-primary" style="text-decoration: none; color: white">Log In</a>
                 </form>
             </div>

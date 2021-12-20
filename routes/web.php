@@ -36,6 +36,7 @@ Route::get('/orderm', function () {
 
 Route::get('/home', function () {
     return view('homepage');
+    // return view('homepage', ['username' => $uname]);
 });
 
 Route::get('/account', function () {
@@ -60,3 +61,6 @@ Route::get('/topup', function () {
 
 
 Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
+Route::get('/insertdata','App\Http\Contollers\RegController@insert');
+Route::post('/create','App\Http\Contollers\RegController@create');
+Route::get('/home/{uname}', 'App\Http\Controllers\LoginController@cek_login');
