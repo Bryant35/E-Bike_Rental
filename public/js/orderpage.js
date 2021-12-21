@@ -31,13 +31,5 @@ function map(){
 
 }
 
-function holder(){
-  $location = $choice;
-  alert($location);
-  $datetime = $("#datetime").data("datetimepicker").getDate(),
-  formatted = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-  alert($datetime);
-  $color = document.getElementById("bikepick").value;
-  alert($color);
-}
+
 

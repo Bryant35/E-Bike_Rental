@@ -41,7 +41,7 @@
     </select>
     </div>
 
-
+    
     <!--duit mas duit-->
     <form>
         <label for="inputduit">Amount</label><br>
