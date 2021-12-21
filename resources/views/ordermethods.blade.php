@@ -56,6 +56,7 @@
     <div>
         <button type="button" id="butconf">Confirm</button>
     </div>
+    </section>
 
 
   <!--footer-->
