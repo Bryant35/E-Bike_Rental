@@ -84,7 +84,7 @@
 
       <div id="map"></div>
 
-      <a href="{{ url('/orderm') }}#"><button>Confirm</button></a>
+      
 
 <!--bikepick-->
 <!--location -->
@@ -102,6 +102,7 @@
     </select>
     </div>
 
+    <a href="{{ url('/orderm') }}#" ><button id="confirmbut" onclick="holder()">Confirm</button></a>
 </section>
     {{-- Footer --}}
     <div class="my-5">
