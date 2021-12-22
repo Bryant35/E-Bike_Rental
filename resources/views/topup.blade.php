@@ -20,15 +20,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
                     <li class="nav-item">
@@ -40,16 +40,9 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 50px;"></a>
-                    <button class="btn btn-light" type="submit">Nama</button>
-                    <a href="{{url('/')}}" onclick="logOut()"><button class="btn btn-primary" type="submit">Log Out</button></a>
-                    <script>
-                        function logOut() {
-                            if (confirm("Press a button!")) {
-                                location.href = "http://127.0.0.1:8000/";
-                            }
-                        }
-                    </script>
+                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
+                    <a href="{{url('/')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>
@@ -133,17 +126,20 @@
             <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="method" id="dana" checked>
+                    <img src="img/dana.png" alt="" style="width: 20px;">
                     <label class="form-check-label" for="dana">
                         Dana
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="method" id="ovo">
+                    <img src="img/OVO.png" alt="" style="width: 20px;">
                     <label class="form-check-label" for="ovo">
                         OVO
                     </label>
                 </div>
                 <div class="form-check">
+                    <img src="img/GoPay.png" alt="" style="width: 20px;">
                     <input class="form-check-input" type="radio" name="method" id="gopay">
                     <label class="form-check-label" for="gopay">
                         Gopay

@@ -29,5 +29,21 @@ class Awal extends Model
         return null;
     }
 
+    public function regis($data){
+        $cmd = "CALL NewPenyewa(:name, :uname, :address, :phone, :email, :pass)";
+
+        $res = DB::insert($cmd,$data);
+
+        return $res;
+    }
+
+    public function akun($login){
+        $cmd = "SELECT * FROM penyewa WHERE USERNAME_PENYEWA =:username;";
+        $data=['username'=> $login];
+
+        $res = DB::select($cmd,$data);
+
+        return $res;
+    }
 }
 

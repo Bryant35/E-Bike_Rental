@@ -53,7 +53,26 @@
             </div>
         </div>
         <div class="form-outer">
-            <form action="{{ url('/insert')}}">
+            @if (Session::has('success'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ Session::get('success') }}</strong>
+                </div>
+                @endif
+
+            @if (Session::has('danger'))
+                <div class="alert alert-danger alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <ul>
+                        <?php
+                            $list_msg = Session::get('danger');
+                            foreach($list_msg as $msg){
+                                echo "<li>".$msg."</li>";
+                            }
+                        ?>
+            @endif
+            <form action="{{ url('/insert')}}" method="POST">
+                @csrf
                 <div class="page slide-page">
                     <div class="title">
                         Basic Info:
@@ -105,16 +124,16 @@
                         </div>
                         <input type="text" name="address" required>
                     </div>
-                    <div class="field">
+                    {{-- <div class="field">
                         <div class="label">
                             City
                         </div>
-                        <select>
+                        <select name="city">
                             <option>Surabaya</option>
                             <option>Bali</option>
                             <option>Jakarta</option>
                         </select>
-                    </div>
+                    </div> --}}
                     <div class="field btns">
                         <button class="prev-2 prev">Previous</button>
                         <button class="next-2 next">Next</button>
