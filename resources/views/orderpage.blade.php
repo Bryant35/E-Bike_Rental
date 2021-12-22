@@ -62,29 +62,33 @@
 <section id ="locationsect">
     <label for="locations">Choose a Location</label>
 
-        <div><select name="location" id="location" onchange="map()">
+
+    
+    <form action="{{url('/order')}}" method="get" id="formorder">
+        @csrf
+    <div><select name="location" id="location" onchange="map()">
             <option value="Iron">Iron Bikes</option>
             <option value="Emerald">Emerald Bikes</option>
             <option value="Gold">Gold Bikes</option>
             <option value="Ruby">Ruby Bikes</option>
         </select>
+                    
 
 
     <div class="mapouter">
         <div class="gmap_canvas">
             <iframe width="600" height="500"name="gmap" id="gmap" src="https://maps.google.com/maps?q=pakuwon%20tower&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div></div>
+        </div>
 
-    </div>
     <!--date and time-->
-    <form id="datetime">
-        <label for="pickuptime">Date and Time:</label>
-        <input type="datetime-local" id="pickuptime">
-      </form>
+
+        <label  for="pickuptime">Date and Time:</label>
+        <input name="inputmap" type="datetime-local" id="pickuptime">
+  
 
       <div id="map"></div>
 
-      <a href="{{ url('/orderm') }}#"><button>Confirm</button></a>
+      
 
 <!--bikepick-->
 <!--location -->
@@ -101,8 +105,13 @@
         <option value="ungu">Ungu</option>
     </select>
     </div>
+    </form>
 
+   <button type="submit" id="confirmbut" onclick="holder()">Confirm</button>
 </section>
+
+
+
     {{-- Footer --}}
     <div class="my-5">
         <!-- Footer -->

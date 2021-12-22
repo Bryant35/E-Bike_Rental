@@ -41,7 +41,7 @@
     </select>
     </div>
 
-
+    
     <!--duit mas duit-->
     <form>
         <label for="inputduit">Amount</label><br>
@@ -56,6 +56,7 @@
     <div>
         <button type="button" id="butconf">Confirm</button>
     </div>
+    </section>
 
 
   <!--footer-->

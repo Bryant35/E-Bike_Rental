@@ -92,7 +92,10 @@ nav{
 /*End Header*/
 
 
-
+#paymeth{
+    margin: 10%;
+    background-color: aqua;
+}
 
 /*Footer*/
 .footer {

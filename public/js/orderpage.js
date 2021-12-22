@@ -1,11 +1,12 @@
 
-
+$choice = "Iron Bikes";
 $ironloc = "https://maps.google.com/maps?q=pakuwon%20tower&t=&z=13&ie=UTF8&iwloc=&output=embed";
 $emeraldloc = "https://maps.google.com/maps?q=ciputra%20world&t=&z=13&ie=UTF8&iwloc=&output=embed";
 $goldloc = "https://maps.google.com/maps?q=tunjungan%20plaza&t=&z=13&ie=UTF8&iwloc=&output=embed";
 $rubyloc = "https://maps.google.com/maps?q=galaxy%20mall%203&t=&z=13&ie=UTF8&iwloc=&output=embed";
-
-
+$location = "";
+$datetime = "";
+$color = "";
 function map(){
     $mapchoice = document.getElementById("location");
     $choice = $mapchoice.options[$mapchoice.selectedIndex].text;
@@ -29,4 +30,6 @@ function map(){
   }
 
 }
+
+
 
