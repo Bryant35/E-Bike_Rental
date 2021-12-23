@@ -20,15 +20,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
                     <li class="nav-item">
@@ -40,16 +40,10 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 50px;"></a>
-                    <button class="btn btn-light" type="submit">Nama</button>
-                    <a href="{{url('/')}}" onclick="logOut()"><button class="btn btn-primary" type="submit">Log Out</button></a>
-                    <script>
-                        function logOut() {
-                            if (confirm("Press a button!")) {
-                                location.href = "http://127.0.0.1:8000/";
-                            }
-                        }
-                    </script>
+                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
+                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
+                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>
@@ -63,7 +57,7 @@
     <label for="locations">Choose a Location</label>
 
 
-    
+
     <form action="{{url('/order')}}" method="get" id="formorder">
         @csrf
     <div><select name="location" id="location" onchange="map()">
@@ -72,7 +66,7 @@
             <option value="Gold">Gold Bikes</option>
             <option value="Ruby">Ruby Bikes</option>
         </select>
-                    
+
 
 
     <div class="mapouter">
@@ -84,11 +78,11 @@
 
         <label  for="pickuptime">Date and Time:</label>
         <input name="inputmap" type="datetime-local" id="pickuptime">
-  
+
 
       <div id="map"></div>
 
-      
+
 
 <!--bikepick-->
 <!--location -->

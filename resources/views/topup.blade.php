@@ -43,7 +43,7 @@
                     <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
-                    <a href="{{url('/')}}" class="btn btn-primary">Log Out</a>
+                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>
@@ -147,10 +147,32 @@
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="bank">
-                    <label class="form-check-label" for="bank">
-                        Bank
+                    <label class="form-check-label" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Bank ⬇️
                     </label>
+                    <div class="collapse" id="collapseExample">
+                        <div class="form-check">
+                            <img src="" alt="" style="width: 20px;">
+                            <input class="form-check-input" type="radio" name="method" id="BCA">
+                            <label class="form-check-label" for="BCA">
+                                BCA
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <img src="" alt="" style="width: 20px;">
+                            <input class="form-check-input" type="radio" name="method" id="BRI">
+                            <label class="form-check-label" for="BRI">
+                                BRI
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <img src="" alt="" style="width: 20px;">
+                            <input class="form-check-input" type="radio" name="method" id="Mandiri">
+                            <label class="form-check-label" for="Mandiri">
+                                Mandiri
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="position-relative">
                     <div class="position-absolute bottom-0 end-0">
@@ -164,7 +186,7 @@
     </div>
 
     {{-- Footer --}}
-        <div class="my-5">
+    <div class="mt-4">
             <!-- Footer -->
             <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
             <!-- Grid container -->

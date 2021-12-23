@@ -92,27 +92,26 @@ class LoginController extends Controller
             'pass' => $pass
         ];
 
-        // $cek = new Awal;
-        // $cekdata = $cek->cekdata($data);
 
-        // if($cekdata == 0){
-            $user = new Awal;
-            $flag_exist = $user->regis($data);
+        $user = new Awal;
+        $flag_exist = $user->regis($data);
 
-            if($flag_exist==1){
-                //echo "Berhasil Insert Data User!";
-                Session::flash('success', 'Anda berhasil membuat akun!');
-                return redirect('/login');
-            }
-        // }
+        if($flag_exist==1){
+            //echo "Berhasil Insert Data User!";
+            Session::flash('success', 'Anda berhasil membuat akun!');
+            return redirect('/login');
+        }
     }
 
     public function akun(){
         $login = Session::get('login');
 
+        if($login == null)
+        {
+            return view('login');
+        }
         $user = new Awal;
         $tampil_data = $user->akun($login);
-
         // dd($tampil_data[0]->SALDO_PENYEWA);
         return view('account',compact('tampil_data'));
     }
@@ -120,11 +119,32 @@ class LoginController extends Controller
     public function profile(){
         $login = Session::get('login');
 
+        if($login == null)
+        {
+            return view('login');
+        }
         $user = new Awal;
         $tampil_data = $user->akun($login);
         Session::put('saldo', $tampil_data[0]->SALDO_PENYEWA);
-
         // dd($tampil_data[0]->SALDO_PENYEWA);
         return view('homepage',compact('tampil_data'));
+    }
+
+    public function end(Request $req){
+        session()->forget('login');
+        session()->forget('pass');
+        session()->forget('saldo');
+        return redirect('/');
+    }
+
+    public function cek_home(){
+        $login = Session::get('login');
+        if($login == null)
+        {
+            return view('landingpage');
+        }
+        else{
+            return view('homepage');
+        }
     }
 }

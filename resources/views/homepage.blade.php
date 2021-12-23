@@ -14,6 +14,7 @@
 <body>
 
     <!--header-->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a href="" class="logo"><img src="img/ebike_logo.png" alt="" style="width: 60px;"></a>
@@ -46,7 +47,7 @@
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}
                     </button>
-                    <a href="{{url('/')}}" class="btn btn-primary">Log Out</a>
+                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>
@@ -59,14 +60,16 @@
     <div class="banner">
         <img src="img/bgpage.png" alt="img">
         <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-        <h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
+        <h2 class="buttonrent"><a href="{{ url('/login') }}"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
     </div>
 
     <!--how to rent bek-->
+    <div class="container">
 
-    <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
 
-    <section id="howto" >
+        <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
+
+        <section id="howto" >
             <div class="howtopics">
                 <img class="ONE" src="img/one.png"  alt="">
                 <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
@@ -86,8 +89,33 @@
             </div>
 
         </section>
+        <a href="{{ url('/login') }}"  class="btn btn-primary position-relative start-50">RENT NOW</a>
 
+        <div class="fixed-bottom float-end">
+            <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        </div>
+    </div>
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
 
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
     <!--Best Place For your Holdiday-->
     <div class="holiday">
         <div class="container">

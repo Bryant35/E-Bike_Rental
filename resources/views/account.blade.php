@@ -43,7 +43,7 @@
                     <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
-                    <a href="{{url('/')}}" class="btn btn-primary">Log Out</a>
+                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>

@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/logout','App\Http\Controllers\LoginController@end');
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -61,5 +63,7 @@ Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
 Route::get('/order','App\Http\Controllers\ordercontroller@holder');
+
+Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 
 
