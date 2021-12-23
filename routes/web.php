@@ -32,10 +32,11 @@ Route::get('/orderm', function () {
     return view('ordermethods');
 });
 
-Route::get('/home', function () {
-    return view('homepage');
-    // return view('homepage', ['username' => $uname]);
-});
+// Route::get('/home', function () {
+//     return view('homepage');
+// });
+
+Route::get('/home','App\Http\Controllers\LoginController@profile');
 
 Route::get('/account','App\Http\Controllers\LoginController@akun');
 
@@ -59,9 +60,6 @@ Route::get('/topup', function () {
 Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
-Route::get('/insertdata','App\Http\Contollers\RegController@insert');
-Route::post('/create','App\Http\Contollers\RegController@create');
-Route::get('/home/{uname}', 'App\Http\Controllers\LoginController@cek_login');
 Route::get('/order','App\Http\Controllers\ordercontroller@holder');
 
 

@@ -43,10 +43,10 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 50px;"></a>
+                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}
                     </button>
-                    <button class="btn btn-primary" type="submit">Log Out</button>
+                    <a href="{{url('/')}}" class="btn btn-primary">Log Out</a>
                 </form>
             </div>
         </div>

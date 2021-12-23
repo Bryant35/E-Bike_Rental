@@ -34,6 +34,7 @@
     <section id ="paymeth">
     <label for="pay">Payment Method</label>
     <div><select name="pay" id="payment">
+        <option value="wallet">My Wallet</option>
         <option value="dana">Dana</option>
         <option value="ovo">OVO</option>
         <option value="gopay">Gopay</option>
@@ -41,7 +42,7 @@
     </select>
     </div>
 
-    
+
     <!--duit mas duit-->
     <form>
         <label for="inputduit">Amount</label><br>

@@ -25,8 +25,6 @@ class LoginController extends Controller
             //2.a. Jika KETEMU, maka session LOGIN dibuat
             Session::put('login', $uname);
             Session::put('pass', $pass);
-            // view('homepage', ['user',
-            //       $uname]);
 
             Session::flash('success', 'Anda berhasil Login!');
 
@@ -94,14 +92,19 @@ class LoginController extends Controller
             'pass' => $pass
         ];
 
-        $user = new Awal;
-        $flag_exist = $user->regis($data);
+        // $cek = new Awal;
+        // $cekdata = $cek->cekdata($data);
 
-        if($flag_exist==1){
-            //echo "Berhasil Insert Data User!";
-            Session::flash('success', 'Anda berhasil membuat akun!');
-            return redirect('/login');
-        }
+        // if($cekdata == 0){
+            $user = new Awal;
+            $flag_exist = $user->regis($data);
+
+            if($flag_exist==1){
+                //echo "Berhasil Insert Data User!";
+                Session::flash('success', 'Anda berhasil membuat akun!');
+                return redirect('/login');
+            }
+        // }
     }
 
     public function akun(){
@@ -109,8 +112,19 @@ class LoginController extends Controller
 
         $user = new Awal;
         $tampil_data = $user->akun($login);
-        // dd($tampil_data);
-        return view('account',compact('tampil_data'));
 
+        // dd($tampil_data[0]->SALDO_PENYEWA);
+        return view('account',compact('tampil_data'));
+    }
+
+    public function profile(){
+        $login = Session::get('login');
+
+        $user = new Awal;
+        $tampil_data = $user->akun($login);
+        Session::put('saldo', $tampil_data[0]->SALDO_PENYEWA);
+
+        // dd($tampil_data[0]->SALDO_PENYEWA);
+        return view('homepage',compact('tampil_data'));
     }
 }

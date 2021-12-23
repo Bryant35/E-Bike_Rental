@@ -10,6 +10,9 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    min-height: 100vh;
+}
 /* footer */
 
 /* End footer */

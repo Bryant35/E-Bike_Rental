@@ -37,6 +37,19 @@ class Awal extends Model
         return $res;
     }
 
+    public function cekdata($data){
+        $cmdd = "SELECT count(*) FROM penyewa WHERE USERNAME_PENYEWA =:uname OR EMAIL_ADDRESS =:email;";
+
+        $ress = DB::select($cmdd,$data);
+
+        return $ress;
+
+        // if(isset($res) && count($res) > 0){
+        //     return $res;
+        // }
+        // return null;
+    }
+
     public function akun($login){
         $cmd = "SELECT * FROM penyewa WHERE USERNAME_PENYEWA =:username;";
         $data=['username'=> $login];
