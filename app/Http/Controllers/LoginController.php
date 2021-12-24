@@ -152,7 +152,7 @@ class LoginController extends Controller
         $login = Session::get('login');
         if($login == null)
         {
-            return view('login  ');
+            return view('login');
         }
         else{
             return view('topup');
