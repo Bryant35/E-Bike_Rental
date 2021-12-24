@@ -147,4 +147,15 @@ class LoginController extends Controller
             return view('homepage');
         }
     }
+
+    public function cek_topup(){
+        $login = Session::get('login');
+        if($login == null)
+        {
+            return view('login  ');
+        }
+        else{
+            return view('topup');
+        }
+    }
 }

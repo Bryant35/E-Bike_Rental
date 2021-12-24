@@ -54,10 +54,10 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-Route::get('/topup', function () {
-    return view('topup');
-});
-
+// Route::get('/topup', function () {
+//     return view('topup');
+// });
+Route::get('/topup','App\Http\Controllers\LoginController@cek_topup');
 
 Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 

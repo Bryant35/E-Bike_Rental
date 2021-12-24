@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/aboutus.css"/>
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>About Us</title>
 </head>
@@ -26,10 +27,9 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
@@ -41,6 +41,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="row">
             <div class="col" >
@@ -57,10 +58,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!--footer-->
-{{-- Footer --}}
-    {{-- <div class="my-5"> --}}
+    <div class="mt-4">
         <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
+        <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
@@ -73,7 +73,7 @@
                     Ebike Rental
                 </h6>
                 <p>
-                    <a href="/home"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
+                    <a href="/homee"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
                 </p>
                 </div>
                 <!-- Grid column -->
@@ -84,18 +84,18 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                 <p>
-                    <a class="text-white" href="{{url('/aboutus')}}">About Us</a>
+                    <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
                 </p>
                 <p>
-                    <a class="text-white" href="{{url('/contact')}}">Contact us</a>
+                    <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                </p>
+                <p class="text-white">
+                    Payment Method
                 </p>
                 <p>
-                    <a class="text-white">Payment Method</a>
-                </p>
-                <p>
-                    <li><img src="OVO.png" alt="" style="width: 10px;"></li>
-                    <li><img src="GoPay.png" alt="" style="width: 10px;"></li>
-                    <li><img src="dana.png" alt="" style="width: 10px;"></li>
+                    <li><img src="OVO.png" alt="" style="width: 15px;"></li>
+                    <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
+                    <li><img src="dana.png" alt="" style="width: 15px;"></li>
                 </p>
                 </div>
                 <!-- Grid column -->
@@ -108,10 +108,10 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                    <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                    <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
                 </div>
                 <!-- Grid column -->
 
@@ -123,54 +123,34 @@
                     <a
                         class="btn btn-primary btn-floating m-1"
                         style="background-color: #3b5998"
-                        href="#!"
+                        href="https://www.facebook.com"
                         role="button"
-                        ><i class="fab fa-facebook-f"></i
-                        ></a>
+                        ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
 
                     <!-- Twitter -->
                     <a
                         class="btn btn-primary btn-floating m-1"
                         style="background-color: #55acee"
-                        href="#!"
+                        href="https://www.twitter.com/"
                         role="button"
-                        ><i class="fab fa-twitter"></i
-                        ></a>
-
-                    <!-- Google -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #dd4b39"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-google"></i
-                        ></a>
+                        ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
 
                     <!-- Instagram -->
                     <a
                         class="btn btn-primary btn-floating m-1"
                         style="background-color: #ac2bac"
-                        href="#!"
+                        href="https://www.instagram.com"
                         role="button"
-                        ><i class="fab fa-instagram"></i
+                        ><img src="img/ig.png" alt="" style="width: 30px;"></i
                         ></a>
 
-                    <!-- Linkedin -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #0082ca"
-                        href="#!"
-                        role="button"
-                        ><i class="fab fa-linkedin-in"></i
-                        ></a>
                     <!-- Github -->
                     <a
                         class="btn btn-primary btn-floating m-1"
                         style="background-color: #333333"
-                        href="#!"
+                        href="https://www.tiktok.com/"
                         role="button"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
                 </div>
             </div>
             <!--Grid row-->
@@ -182,14 +162,13 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
             123 Plae Grownd Street<br>© 2021
-            <a class="text-white" href="http://127.0.0.1:8000">Ebike Rental</a>
+            <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
             All rights reserved.
         </div>
         <!-- Copyright -->
-    </footer>
+        </footer>
         <!-- Footer -->
-    {{-- </div> --}}
+    </div>
     <!-- End of .container -->
-    <!-- Footer -->
 </body>
 </html>
