@@ -54,135 +54,143 @@
 
         <div class="text-center"><h1>Top Up Wallet</h1></div>
         <p></p>
-        <div class="row gap-3">
-            <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
-                <div class="row">
-                    <div class="col d-grid gap-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="10k" checked>
-                            <label class="form-check-label" for="10k">
-                                Rp.10000
-                            </label>
+        <form action="{{url('/checknominal')}}" method="POST">
+            @csrf
+            <div class="row gap-3">
+                <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
+                    <div class="row">
+                        <div class="col d-grid gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="10k" value="Rp.10000" checked>
+                                <label class="form-check-label" for="10k">
+                                    Rp.10000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="20k" value="Rp.20000">
+                                <label class="form-check-label" for="20k">
+                                    Rp.20000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="25k" value="Rp.25000">
+                                <label class="form-check-label" for="25k">
+                                    Rp.25000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="30k" value="Rp.30000">
+                                <label class="form-check-label" for="30k">
+                                    Rp.30000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="50k" value="Rp.50000">
+                                <label class="form-check-label" for="50k">
+                                    Rp.50000
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="20k">
-                            <label class="form-check-label" for="20k">
-                                Rp.20000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="25k">
-                            <label class="form-check-label" for="25k">
-                                Rp.25000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="30k">
-                            <label class="form-check-label" for="30k">
-                                Rp.30000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="50k">
-                            <label class="form-check-label" for="50k">
-                                Rp.50000
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col d-grid gap-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="75k" checked>
-                            <label class="form-check-label" for="75k">
-                                Rp.75000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="100k">
-                            <label class="form-check-label" for="100k">
-                                Rp.100000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="125k">
-                            <label class="form-check-label" for="125k">
-                                Rp.125000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="150k">
-                            <label class="form-check-label" for="150k">
-                                Rp.150000
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="nominal" id="200k">
-                            <label class="form-check-label" for="200k">
-                                Rp.200000
-                            </label>
+                        <div class="col d-grid gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="75k" value="Rp.75000">
+                                <label class="form-check-label" for="75k">
+                                    Rp.75000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="100k" value="Rp.100000">
+                                <label class="form-check-label" for="100k">
+                                    Rp.100000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="125k" value="Rp.125000">
+                                <label class="form-check-label" for="125k">
+                                    Rp.125000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="150k" value="Rp.150000">
+                                <label class="form-check-label" for="150k">
+                                    Rp.150000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="nominal" id="200k" value="Rp.200000">
+                                <label class="form-check-label" for="200k">
+                                    Rp.200000
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="dana" checked>
-                    <img src="img/dana.png" alt="" style="width: 20px;">
-                    <label class="form-check-label" for="dana">
-                        Dana
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="ovo">
-                    <img src="img/OVO.png" alt="" style="width: 20px;">
-                    <label class="form-check-label" for="ovo">
-                        OVO
-                    </label>
-                </div>
-                <div class="form-check">
-                    <img src="img/GoPay.png" alt="" style="width: 20px;">
-                    <input class="form-check-input" type="radio" name="method" id="gopay">
-                    <label class="form-check-label" for="gopay">
-                        Gopay
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Bank ⬇️
-                    </label>
-                    <div class="collapse" id="collapseExample">
-                        <div class="form-check">
-                            <img src="" alt="" style="width: 20px;">
-                            <input class="form-check-input" type="radio" name="method" id="BCA">
-                            <label class="form-check-label" for="BCA">
-                                BCA
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <img src="" alt="" style="width: 20px;">
-                            <input class="form-check-input" type="radio" name="method" id="BRI">
-                            <label class="form-check-label" for="BRI">
-                                BRI
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <img src="" alt="" style="width: 20px;">
-                            <input class="form-check-input" type="radio" name="method" id="Mandiri">
-                            <label class="form-check-label" for="Mandiri">
-                                Mandiri
-                            </label>
-                        </div>
+                <div class="col border border-primary border-3 rounded-3 text-dark d-grid gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="method" id="dana" value="Dana" checked>
+                        <img src="img/dana.png" alt="" style="width: 20px;">
+                        <label class="form-check-label" for="dana">
+                            Dana
+                        </label>
                     </div>
-                </div>
-                <div class="position-relative">
-                    <div class="position-absolute bottom-0 end-0">
-                        <button type="button" class="btn btn-primary">
-                            Submit
-                        </button>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="method" id="ovo" value="OVO">
+                        <img src="img/OVO.png" alt="" style="width: 20px;">
+                        <label class="form-check-label" for="ovo">
+                            OVO
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <img src="img/GoPay.png" alt="" style="width: 20px;">
+                        <input class="form-check-input" type="radio" name="method" id="gopay" value="Gopay">
+                        <label class="form-check-label" for="gopay">
+                            Gopay
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Bank ⬇️
+                        </label>
+                        <div class="collapse" id="collapseExample">
+                            <div class="form-check">
+                                <img src="" alt="" style="width: 20px;">
+                                <input class="form-check-input" type="radio" name="method" id="BCA" value="BCA">
+                                <label class="form-check-label" for="BCA">
+                                    BCA
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <img src="" alt="" style="width: 20px;">
+                                <input class="form-check-input" type="radio" name="method" id="BNI" value="BNI">
+                                <label class="form-check-label" for="BNI">
+                                    BNI
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <img src="" alt="" style="width: 20px;">
+                                <input class="form-check-input" type="radio" name="method" id="BRI" value="BRI">
+                                <label class="form-check-label" for="BRI">
+                                    BRI
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <img src="" alt="" style="width: 20px;">
+                                <input class="form-check-input" type="radio" name="method" id="Mandiri" value="Mandiri">
+                                <label class="form-check-label" for="Mandiri">
+                                    Mandiri
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="position-relative">
+                <div class="position-absolute top-0 start-100 translate-middle">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
     </div>
 
     {{-- Footer --}}

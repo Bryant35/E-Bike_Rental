@@ -158,4 +158,54 @@ class LoginController extends Controller
             return view('topup');
         }
     }
+
+    public function nominal_Check(){
+        $nom = $_POST['nominal'];
+        $pay = $_POST['method'];
+        $data = [
+            'nominal' => $nom,
+            'method' => $pay
+        ];
+        $user = new Awal;
+        $tax = $user->tax($nom);
+        $totalpay = $user->totalpay($nom);
+        $unom = $user->updateNom($nom);
+        if($pay == 'BRI' || $pay == 'BNI' || $pay == 'Mandiri' || $pay == 'BCA'){
+            $pay = $pay . ' ' . 'Bank';
+        }
+
+        Session::put('Tax', $tax[0]->tax);
+        Session::put('Nom', $unom[0]->nom);
+        Session::put('pay', $pay);
+        Session::put('totalpay', $totalpay[0]->sum);
+        return redirect('/ctopup');
+        //dd($nom, $pay, $tax[0]->tax);
+    }
+
+    public function completeTopup(){
+        $login = Session::get('login');
+        $nom = Session::get('Nom');
+        $pay = Session::get('pay');
+        $totalpay = Session::get('totalpay');
+
+        $user = new Awal;
+        $getID = $user->IDPenyewa($login);
+        $IDPenyewa = $getID[0]->ID;
+        $data = [
+            Session::get('login') => $login,
+            Session::get('Nom') => $nom,
+            Session::get('pay') => $pay,
+            Session::get('totalpay') => $totalpay,
+            $getID[0]->ID => $IDPenyewa
+        ];
+
+        // $user = new Awal;
+        // $topup_data = $user->topupInsert($IDPenyewa, $nom);
+
+        $user = new Awal;
+        $topup_sum = $user->saldoupdate($IDPenyewa, $nom);
+        Session::put('saldo', $topup_sum[0]->saldo);
+        dd($topup_sum);
+        return redirect('/home');
+    }
 }

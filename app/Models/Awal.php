@@ -45,5 +45,64 @@ class Awal extends Model
 
         return $res;
     }
+
+    public function tax($nom){
+        $cmd = "SELECT (substring_index(:nominal, '.', -1) / 10) as `tax`;";
+        $data=['nominal'=> $nom];
+
+        $res = DB::select($cmd, $data);
+
+        return $res;
+    }
+
+    public function totalpay($nom){
+        $cmd = "SELECT (substring_index(:nominal, '.', -1)) * 1.1 as `sum`;";
+        $data=['nominal'=> $nom];
+
+        $res = DB::select($cmd, $data);
+
+        return $res;
+    }
+
+    public function updateNom($nom){
+        $cmd = "SELECT (substring_index(:nominal, '.', -1))as `nom`;";
+        $data=['nominal'=> $nom];
+
+        $res = DB::select($cmd, $data);
+
+        return $res;
+    }
+
+    public function IDpenyewa($login){
+        $idpenyewa = "SELECT ID_PENYEWA as `ID` FROM penyewa WHERE USERNAME_PENYEWA=:login;";
+        $data = ['login' => $login];
+        $res = DB::select($idpenyewa, $data);
+
+        return $res;
+    }
+
+    public function topupInsert($IDPenyewa, $nom){
+        $cmd = "INSERT INTO transaksi_topup ".
+                "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, 0 as `TOPUP_DELETE` ".
+                "FROM ".$this->tabel_terpilih." ".
+                "WHERE ID_PENYEWA = :idpenyewa;";
+        $data = [
+            'nom'=> $nom,
+            'idpenyewa' => $IDPenyewa
+        ];
+        $res = DB::insert($cmd, $data);
+
+        return;
+    }
+
+    public function saldoupdate($IDPenyewa, $nom){
+        $cmd =  "SELECT SALDO_PENYEWA as `saldo` FROM penyewa WHERE ID_PENYEWA = :idpenyewa;";
+        $data = [
+            'nom'=> $nom,
+            'idpenyewa' => $IDPenyewa
+        ];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
 }
 
