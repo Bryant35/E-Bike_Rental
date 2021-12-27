@@ -30,6 +30,7 @@ Route::get('/order', function () {
     return view('orderpage');
 });
 
+
 Route::get('/orderm', function () {
     return view('ordermethods');
 });
@@ -54,6 +55,9 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
+Route::get('/ctopup', function () {
+    return view('confirmtopup');
+});
 // Route::get('/topup', function () {
 //     return view('topup');
 // });
