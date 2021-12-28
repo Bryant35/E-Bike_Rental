@@ -59,16 +59,19 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" value="{{$tampil_data[0]->NAMA_PENYEWA}}"></div>
-                        <div class="col-md-6"><label class="labels">Username</label><input type="text" class="form-control" value="{{$tampil_data[0]->USERNAME_PENYEWA}}" placeholder="username"></div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="enter email" value="{{$tampil_data[0]->EMAIL_ADDRESS}}"></div>
-                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="{{$tampil_data[0]->TELP_PENYEWA}}"></div>
-                        <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" placeholder="enter address" value="{{$tampil_data[0]->ALAMAT_PENYEWA}}"></div>
-                    </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                    <form action="{{url('/saveprofile')}}" method="POST">
+                    @csrf
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" value="{{$tampil_data[0]->NAMA_PENYEWA}}" disabled></div>
+                            <div class="col-md-6"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="{{$tampil_data[0]->USERNAME_PENYEWA}}" placeholder="username"></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="enter email" value="{{$tampil_data[0]->EMAIL_ADDRESS}}"></div>
+                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" name="phone" class="form-control" placeholder="enter phone number" value="{{$tampil_data[0]->TELP_PENYEWA}}"></div>
+                            <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" placeholder="enter address" value="{{$tampil_data[0]->ALAMAT_PENYEWA}}"></div>
+                        </div>
+                        <div class="mt-5 text-center"><input type="submit" value="Save Profile" class="btn btn-primary profile-button"></div>
+                    </form>
                 </div>
             </div>
         </div>

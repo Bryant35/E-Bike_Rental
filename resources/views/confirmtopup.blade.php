@@ -94,18 +94,12 @@
             </div>
         </div>
         <div class="position-relative">
-            <div class="position-absolute top-0 start-100 translate-middle" onclick="show()">
+            <div class="position-absolute top-0 start-100 translate-middle">
                     <a href="/topuppay" class="btn btn-primary">Submit</a>
             </div>
         </div>
     </div>
 
-    {{-- <div class="modal0">
-        <div class="modal__inner">
-            Hi
-        </div>
-    </div>
-    <script src="js/completetopup.js"></script> --}}
 
     {{-- Footer --}}
     <div class="mt-4">

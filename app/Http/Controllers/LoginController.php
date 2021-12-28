@@ -121,7 +121,7 @@ class LoginController extends Controller
 
         if($login == null)
         {
-            return view('login');
+            return redirect('/login');
         }
         $user = new Awal;
         $tampil_data = $user->akun($login);
@@ -141,10 +141,10 @@ class LoginController extends Controller
         $login = Session::get('login');
         if($login == null)
         {
-            return view('landingpage');
+            return redirect('/');
         }
         else{
-            return view('homepage');
+            return view('/home');
         }
     }
 
@@ -152,10 +152,10 @@ class LoginController extends Controller
         $login = Session::get('login');
         if($login == null)
         {
-            return view('login');
+            return redirect('/login');
         }
         else{
-            return view('topup');
+            return redirect('/topup');
         }
     }
 
@@ -209,5 +209,29 @@ class LoginController extends Controller
         // dd($tampil_data);
         return view('topupcomplete',compact('tampil_data'));
         // return redirect('/ftopup');
+    }
+
+    public function updateProfile(Request $req){
+        $login = Session::get('login');
+        $uname = $req->input('uname');
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $user = new Awal;
+        $getID = $user->IDPenyewa($login);
+        $IDPenyewa = $getID[0]->ID;
+
+        $data = [
+            'uname' => $uname,
+            'email' => $email,
+            'phone' => $phone,
+            'address' => $address,
+            $getID[0]->ID => $IDPenyewa
+        ];
+
+        $user = new Awal;
+        $updateprofile = $user->profileUpdate($data);
+        Session::put('login', $updateprofile[0]->USERNAME_PENYEWA);
+        return redirect('/account');
     }
 }

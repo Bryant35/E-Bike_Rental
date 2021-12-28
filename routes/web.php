@@ -73,6 +73,8 @@ Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check'
 
 Route::get('/topuppay','App\Http\Controllers\LoginController@completeTopup');
 
+Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile');
+
 Route::get('/ftopup', function () {
     return view('topupcomplete');
 });

@@ -9,14 +9,11 @@
     <title>Topup-Complete</title>
 </head>
 <body>
-    <div class="modal" id="popUp">
-        <div class="modal__inner">
-            <div class="position-relative">
-                <div class="position-absolute top-0 end-0">
-                    Your Topup is completed
-                </div>
-            </div>
-        </div>
+    <div class="modal" id="modal">
+        <label class="text-end">{{$tampil_data[0]->TANGGAL_TOPUP}}</label><br>
+        <label class="position-absolute top-0 end-0">{{$tampil_data[0]->ID_TOPUP}}</label><br>
+        <label class="position-absolute top-0 end-0">{{ session()->get('login') }}</label><br>
+        <label class="position-absolute top-0 end-0">{{$tampil_data[0]->TOTAL_TOPUP}}</label>
     </div>
     <script src="js/completetopup.js"></script>
 </body>
