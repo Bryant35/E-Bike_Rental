@@ -11,7 +11,11 @@
 <body>
     <div class="modal" id="popUp">
         <div class="modal__inner">
-            Hi
+            <div class="position-relative">
+                <div class="position-absolute top-0 end-0">
+                    Your Topup is completed
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/completetopup.js"></script>

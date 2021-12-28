@@ -82,25 +82,43 @@ class Awal extends Model
     }
 
     public function topupInsert($IDPenyewa, $nom){
+        $cmd1 = "set time_zone = '+07:00';";
+        $res1 = DB::select($cmd1);
         $cmd = "INSERT INTO transaksi_topup ".
                 "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, 0 as `TOPUP_DELETE` ".
-                "FROM ".$this->tabel_terpilih." ".
+                "FROM penyewa ".
+                "WHERE ID_PENYEWA = :idpenyewa;";
+        $data = [
+            'nom'=> $nom,
+            'idpenyewa'=> $IDPenyewa
+        ];
+        $res = DB::insert($cmd, $data);
+
+        return $res;
+    }
+
+    public function saldoupdate($IDPenyewa, $nom){
+        $cmd = "UPDATE penyewa ".
+                "SET SALDO_PENYEWA = SALDO_PENYEWA + :nom ".
                 "WHERE ID_PENYEWA = :idpenyewa;";
         $data = [
             'nom'=> $nom,
             'idpenyewa' => $IDPenyewa
         ];
-        $res = DB::insert($cmd, $data);
+        $res = DB::update($cmd, $data);
 
-        return;
+        $cmd = "SELECT SALDO_PENYEWA ".
+                "FROM penyewa ".
+                "WHERE ID_PENYEWA = :idpenyewa;";
+        $data = ['idpenyewa' => $IDPenyewa];
+        $res = DB::select($cmd, $data);
+
+        return $res;
     }
 
-    public function saldoupdate($IDPenyewa, $nom){
-        $cmd =  "SELECT SALDO_PENYEWA as `saldo` FROM penyewa WHERE ID_PENYEWA = :idpenyewa;";
-        $data = [
-            'nom'=> $nom,
-            'idpenyewa' => $IDPenyewa
-        ];
+    public function data_topup($IDPenyewa){
+        $cmd =  "SELECT * FROM KMMI3.transaksi_topup WHERE ID_PENYEWA = :idpenyewa ORDER BY ID_TOPUP desc LIMIT 1;";
+        $data = ['idpenyewa'=>$IDPenyewa];
         $res = DB::select($cmd, $data);
         return $res;
     }

@@ -199,13 +199,15 @@ class LoginController extends Controller
             $getID[0]->ID => $IDPenyewa
         ];
 
-        // $user = new Awal;
-        // $topup_data = $user->topupInsert($IDPenyewa, $nom);
-
         $user = new Awal;
+        $topup_data = $user->topupInsert($IDPenyewa, $nom);
+
         $topup_sum = $user->saldoupdate($IDPenyewa, $nom);
-        Session::put('saldo', $topup_sum[0]->saldo);
-        dd($topup_sum);
-        return redirect('/home');
+        Session::put('saldo', $topup_sum[0]->SALDO_PENYEWA);
+
+        $tampil_data = $user->data_topup($IDPenyewa);
+        // dd($tampil_data);
+        return view('topupcomplete',compact('tampil_data'));
+        // return redirect('/ftopup');
     }
 }
