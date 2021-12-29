@@ -125,19 +125,17 @@ class Awal extends Model
 
 
     public function profileUpdate($data){
-        $cmd = "UPDATE penyewa SET USERNAME_PENYEWA =:uname, ALAMAT_PENYEWA =:address, TELP_PENYEWA =:phone , EMAIL_ADDRESS =:email WHERE ID_PENYEWA = :idpenyewa;";
-        $data = [
-            'uname' => $uname,
-            'email' => $email,
-            'phone' => $phone,
-            'address' => $address,
-            'idpenyewa' => $IDPenyewa
-        ];
+        $cmd = "UPDATE penyewa ".
+                "SET USERNAME_PENYEWA = :uname, ALAMAT_PENYEWA =:address, TELP_PENYEWA =:phone , EMAIL_ADDRESS =:email ".
+                "WHERE ID_PENYEWA = :IDpenyewa;";
+
         $res = DB::update($cmd, $data);
-        $cmd = "SELECT * FROM penyewa WHERE ID_PENYEWA = :idpenyewa;";
-        $data = [
-            'idpenyewa' => $IDPenyewa
-        ];
+
+
+        $cmd = "SELECT * ".
+                "FROM penyewa ".
+                "WHERE ID_PENYEWA = :IDpenyewa;";
+
         $res = DB::select($cmd, $data);
 
         return $res;

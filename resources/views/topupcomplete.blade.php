@@ -15,6 +15,6 @@
         <label class="position-absolute top-0 end-0">{{ session()->get('login') }}</label><br>
         <label class="position-absolute top-0 end-0">{{$tampil_data[0]->TOTAL_TOPUP}}</label>
     </div>
-    <script src="js/completetopup.js"></script>
+
 </body>
 </html>

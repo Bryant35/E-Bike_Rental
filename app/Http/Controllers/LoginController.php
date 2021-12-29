@@ -191,6 +191,7 @@ class LoginController extends Controller
         $user = new Awal;
         $getID = $user->IDPenyewa($login);
         $IDPenyewa = $getID[0]->ID;
+        Session::put('IDpenyewa', $getID[0]->ID );
         $data = [
             Session::get('login') => $login,
             Session::get('Nom') => $nom,
@@ -217,19 +218,21 @@ class LoginController extends Controller
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
+        $IDPenyewa = Session::get('IDpenyewa');
         $user = new Awal;
-        $getID = $user->IDPenyewa($login);
-        $IDPenyewa = $getID[0]->ID;
+
+
+        $cekAvalaible = $user->IDPenyewa($login);
 
         $data = [
             'uname' => $uname,
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
-            $getID[0]->ID => $IDPenyewa
+            'IDpenyewa' => $IDPenyewa
         ];
 
-        $user = new Awal;
+
         $updateprofile = $user->profileUpdate($data);
         Session::put('login', $updateprofile[0]->USERNAME_PENYEWA);
         return redirect('/account');
