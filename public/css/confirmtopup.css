@@ -13,12 +13,3 @@
 
 
 /*Body*/
-#modal {
-    position: absolute;
-    z-index: 99;
-    top: 25%;
-    width: 400px;
-    height: 300px;
-    margin: auto;
-    display: none;
- }

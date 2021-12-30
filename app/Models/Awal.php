@@ -131,12 +131,14 @@ class Awal extends Model
 
         $res = DB::update($cmd, $data);
 
+        return $res;
+    }
 
-        $cmd = "SELECT * ".
-                "FROM penyewa ".
-                "WHERE ID_PENYEWA = :IDpenyewa;";
+    public function saldoCek($IDPenyewa){
+        $cmd = "SELECT * FROM penyewa WHERE ID_PENYEWA = :IDpenyewa;";
+        $data=['IDpenyewa'=> $IDPenyewa];
 
-        $res = DB::select($cmd, $data);
+        $res = DB::select($cmd,$data);
 
         return $res;
     }

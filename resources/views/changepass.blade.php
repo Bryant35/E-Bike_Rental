@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Account</title>
+    <title>Change Password</title>
     <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/account.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
@@ -52,23 +52,21 @@
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{$tampil_data[0]->NAMA_PENYEWA}}</span><span class="text-black-50">{{$tampil_data[0]->EMAIL_ADDRESS}}</span><span><a href="{{url('/changepassword')}}">Change Password</a></span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{$tampil_data[0]->NAMA_PENYEWA}}</span><span class="text-black-50">{{$tampil_data[0]->EMAIL_ADDRESS}}</span><span><a href="">Change Password</a></span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
                     </div>
-                    <form action="{{url('/saveprofile')}}" method="POST">
+                    <form action="{{url('/savepass')}}" method="POST">
                     @csrf
-                        <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" value="{{$tampil_data[0]->NAMA_PENYEWA}}" disabled></div>
-                            <div class="col-md-6"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="{{$tampil_data[0]->USERNAME_PENYEWA}}" placeholder="username"></div>
-                        </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="enter email" value="{{$tampil_data[0]->EMAIL_ADDRESS}}"></div>
-                            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" name="phone" class="form-control" placeholder="enter phone number" value="{{$tampil_data[0]->TELP_PENYEWA}}"></div>
-                            <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" placeholder="enter address" value="{{$tampil_data[0]->ALAMAT_PENYEWA}}"></div>
+                            <div class="col-md-12"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="" placeholder="username"></div>
+                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="enter email" value=""></div>
+                            <div class="col-md-12"><label class="labels">Old Password</label><input type="text" name="OldPass" class="form-control" placeholder="Enter Old Password" value=""></div>
+                            <div class="col-md-12"><label class="labels">New Password</label><input type="text" name="NewPass" class="form-control" placeholder="Enter New Password" value=""></div>
+                            <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="text" name="CNewPass" class="form-control" placeholder="Confirm New Password" value=""></div>
                         </div>
                         <div class="mt-5 text-center"><input type="submit" value="Save Profile" class="btn btn-primary profile-button"></div>
                     </form>

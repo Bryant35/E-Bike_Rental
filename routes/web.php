@@ -47,6 +47,10 @@ Route::get('/forgotpassword', function () {
     return view('forgotpassword');
 });
 
+Route::get('/service', function () {
+    return view('ourservice');
+});
+
 Route::get('/contact', function () {
     return view('contactpage');
 });
@@ -75,6 +79,9 @@ Route::get('/topuppay','App\Http\Controllers\LoginController@completeTopup');
 
 Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile');
 
-Route::get('/ftopup', function () {
-    return view('topupcomplete');
-});
+Route::get('/ftopup', 'App\Http\Controllers\LoginController@cekCompleteTopup');
+
+Route::get('/changepassword','App\Http\Controllers\LoginController@passpage');
+// Route::get('changepassword', function () {
+//     return view('changepass');
+// });

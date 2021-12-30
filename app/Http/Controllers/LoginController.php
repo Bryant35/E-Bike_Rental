@@ -126,6 +126,10 @@ class LoginController extends Controller
         $user = new Awal;
         $tampil_data = $user->akun($login);
         Session::put('saldo', $tampil_data[0]->SALDO_PENYEWA);
+
+        $getID = $user->IDPenyewa($login);
+        $IDPenyewa = $getID[0]->ID;
+        Session::put('IDpenyewa', $getID[0]->ID );
         // dd($tampil_data[0]->SALDO_PENYEWA);
         return view('homepage',compact('tampil_data'));
     }
@@ -144,7 +148,7 @@ class LoginController extends Controller
             return redirect('/');
         }
         else{
-            return view('/home');
+            return redirect('/home');
         }
     }
 
@@ -155,7 +159,7 @@ class LoginController extends Controller
             return redirect('/login');
         }
         else{
-            return redirect('/topup');
+            return view('topup');
         }
     }
 
@@ -205,12 +209,27 @@ class LoginController extends Controller
 
         $topup_sum = $user->saldoupdate($IDPenyewa, $nom);
         Session::put('saldo', $topup_sum[0]->SALDO_PENYEWA);
-
+        return redirect('/ftopup');
         $tampil_data = $user->data_topup($IDPenyewa);
         // dd($tampil_data);
-        return view('topupcomplete',compact('tampil_data'));
-        // return redirect('/ftopup');
+        // return view('topupcomplete',compact('tampil_data'));
+
     }
+
+    public function cekCompleteTopup(){
+        $login = Session::get('login');
+        $user = new Awal;
+        $getID = $user->IDPenyewa($login);
+        $IDPenyewa = $getID[0]->ID;
+        $data = [
+            $getID[0]->ID => $IDPenyewa
+        ];
+
+        Session::put('IDpenyewa', $getID[0]->ID );
+        $tampil_data = $user->data_topup($IDPenyewa);
+        return view('topupcomplete',compact('tampil_data'));
+    }
+
 
     public function updateProfile(Request $req){
         $login = Session::get('login');
@@ -232,9 +251,15 @@ class LoginController extends Controller
             'IDpenyewa' => $IDPenyewa
         ];
 
-
         $updateprofile = $user->profileUpdate($data);
-        Session::put('login', $updateprofile[0]->USERNAME_PENYEWA);
+        $cekprofile = $user->saldoCek($IDPenyewa);
+        Session::put('login', $cekprofile[0]->USERNAME_PENYEWA);
         return redirect('/account');
+    }
+
+
+
+    public function passpage(){
+
     }
 }
