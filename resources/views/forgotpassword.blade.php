@@ -20,7 +20,7 @@
                         <a class="nav-link active" aria-current="page" href="/home" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
+                        <a class="nav-link disabled" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -37,10 +37,8 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
-                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
-                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
-                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
+                    <a href="{{url('/signup')}}" class="btn btn-light" style="text-decoration: none; color: #000">Register</a>
+                    <a href="{{url('/login')}}" class="btn btn-primary" style="text-decoration: none; color: white">Log In</a>
                 </form>
             </div>
         </div>
@@ -54,30 +52,30 @@
 		<div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
               <div class="panel-body">
-                <div class="text-center">
-                  <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">Forgot Password?</h2>
-                  <p>Enter your email address and you will receive a link to reset your password.</p>
-                  <div class="panel-body">
+                    <div class="text-center">
+                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                        <h2 class="text-center">Forgot Password?</h2>
+                        <p>Enter your email address and you will receive a link to reset your password.</p>
+                        <div class="panel-body">
 
-                    <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+                            <form id="register-form" role="form" autocomplete="off" class="form" method="post">
 
-                      <div class="form-group">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                          <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Get Password" type="submit">
+                                </div>
+
+                                <input type="hidden" class="hide" name="token" id="token" value="">
+                            </form>
+
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
-                      </div>
-
-                      <input type="hidden" class="hide" name="token" id="token" value="">
-                    </form>
-
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
 	</div>

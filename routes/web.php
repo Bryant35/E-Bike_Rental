@@ -81,7 +81,7 @@ Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile')
 
 Route::get('/ftopup', 'App\Http\Controllers\LoginController@cekCompleteTopup');
 
-//Route::get('/changepassword','App\Http\Controllers\LoginController@passpage');
+Route::post('/savepass','App\Http\Controllers\LoginController@passpage');
 Route::get('/changepassword', function () {
     return view('changepass');
 });

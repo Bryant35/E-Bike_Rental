@@ -7,7 +7,6 @@
     <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/login.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <title>Login</title>
 </head>
 <body>
@@ -52,20 +51,20 @@
         <h1>Login</h1>
         @if (Session::has('success'))
             <div class="alert alert-success alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>{{ Session::get('success') }}</strong>
+                <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
             </div>
         @endif
         @if (Session::has('error'))
             <div class="alert alert-danger alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>{{ Session::get('error') }}</strong>
+                <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
             </div>
         @endif
         @if (Session::has('keluar'))
             <div class="alert alert-warning alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>{{ Session::get('keluar') }}</strong>
+                <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
             </div>
         @endif
         <form action="{{ url('/signin')}}" method="POST">

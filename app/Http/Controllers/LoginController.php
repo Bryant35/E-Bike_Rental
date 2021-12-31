@@ -140,6 +140,13 @@ class LoginController extends Controller
         session()->forget('login');
         session()->forget('pass');
         session()->forget('saldo');
+        session()->forget('IDpenyewa');
+        session()->forget('Tax');
+        session()->forget('pay');
+        session()->forget('totalpay');
+        session()->forget('Nama_penyewa');
+        session()->forget('Email_penyewa');
+        session()->forget('nom');
         return redirect('/');
     }
 
@@ -235,11 +242,12 @@ class LoginController extends Controller
 
     public function updateProfile(Request $req){
         $login = Session::get('login');
+        $IDPenyewa = Session::get('IDpenyewa');
         $uname = $req->input('uname');
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
-        $IDPenyewa = Session::get('IDpenyewa');
+
         $user = new Awal;
 
 
@@ -261,7 +269,42 @@ class LoginController extends Controller
 
 
 
-    public function passpage(){
+    public function passpage(Request $req){
+        $login = Session::get('login');
+        $uname = $req->input('uname');
+        $OldPass = $_POST['OldPass'];
+        $NewPass = $_POST['NewPass'];
+        $CNewPass = $_POST['CNewPass'];
+        $IDPenyewa = Session::get('IDpenyewa');
+        $data = [
+            'uname' => $uname,
+            'OldPass' => $OldPass,
+            'NewPass' => $NewPass,
+            'CNewPass' => $CNewPass,
+            'IDPenyewa' => $IDPenyewa
+        ];
+        $user = new Awal;
+        $cek_user = $user->userCek($IDPenyewa);
 
+        if($cek_user[0]->USERNAME_PENYEWA != $uname){
+            Session::flash('userError', 'Wrong Username!');
+            return redirect('/changepassword');
+        }
+        elseif($cek_user[0]->PASSWORD_PENYEWA != $OldPass){
+            Session::flash('passError', 'Wrong Password!');
+            return redirect('/changepassword');
+        }
+        elseif($NewPass != $CNewPass){
+            Session::flash('newPassError', 'New Password is not the same!');
+            return redirect('/changepassword');
+        }
+        elseif($NewPass == '' && $CNewPass == ''){
+            Session::flash('newPassEmpty', 'New Password Cannot be Empty!');
+            return redirect('/changepassword');
+        }
+        elseif($cek_user[0]->USERNAME_PENYEWA == $uname && $cek_user[0]->PASSWORD_PENYEWA == $OldPass && $NewPass == $CNewPass){
+            $updatepass = $user->passUpdate($NewPass, $IDPenyewa);
+            return redirect('/changepassword');
+        }
     }
 }

@@ -142,5 +142,29 @@ class Awal extends Model
 
         return $res;
     }
+
+
+    public function userCek($IDPenyewa){
+        $cmd = "SELECT USERNAME_PENYEWA, PASSWORD_PENYEWA FROM penyewa WHERE ID_PENYEWA = :idpenyewa;";
+        $data = ['idpenyewa' => $IDPenyewa];
+
+        $res = DB::select($cmd,$data);
+
+        return $res;
+    }
+
+    public function passUpdate($NewPass, $IDPenyewa){
+        $cmd = "UPDATE penyewa ".
+                "SET PASSWORD_PENYEWA = :NewPass ".
+                "WHERE ID_PENYEWA = :IDPenyewa;";
+        $data = [
+            'NewPass' => $NewPass,
+            'IDPenyewa' => $IDPenyewa
+        ];
+
+        $res = DB::update($cmd, $data);
+
+        return $res;
+    }
 }
 

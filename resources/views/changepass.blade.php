@@ -56,17 +56,40 @@
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    {{-- <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
-                    </div>
+                    </div> --}}
+                    @if (Session::has('userError'))
+                        <div class="alert alert-danger alert-block">
+                            <strong>{{ Session::get('userError') }}</strong>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                        </div>
+                    @endif
+                    @if (Session::has('passError'))
+                        <div class="alert alert-danger alert-block">
+                            <strong>{{ Session::get('passError') }}</strong>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                        </div>
+                    @endif
+                    @if (Session::has('newPassEmpty'))
+                        <div class="alert alert-warning alert-block">
+                            <strong>{{ Session::get('newPassEmpty') }}</strong>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                        </div>
+                    @endif
+                    @if (Session::has('newPassError'))
+                        <div class="alert alert-danger alert-block">
+                            <strong>{{ Session::get('newPassError') }}</strong>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                        </div>
+                    @endif
                     <form action="{{url('/savepass')}}" method="POST">
                     @csrf
                         <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="" placeholder="Username"></div>
-                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="Enter Email Address" value=""></div>
-                            <div class="col-md-12"><label class="labels">Old Password</label><input type="text" name="OldPass" class="form-control" placeholder="Enter Old Password" value=""></div>
-                            <div class="col-md-12"><label class="labels">New Password</label><input type="text" name="NewPass" class="form-control" placeholder="Enter New Password" value=""></div>
-                            <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="text" name="CNewPass" class="form-control" placeholder="Confirm New Password" value=""></div>
+                            <div class="col-md-12"><label class="labels">Old Password</label><input type="password" name="OldPass" class="form-control" placeholder="Enter Old Password" value=""></div>
+                            <div class="col-md-12"><label class="labels">New Password</label><input type="password" name="NewPass" class="form-control" placeholder="Enter New Password" value=""></div>
+                            <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="password" name="CNewPass" class="form-control" placeholder="Confirm New Password" value=""></div>
                         </div>
                         <div class="mt-5 text-center"><input type="submit" value="Save Profile" class="btn btn-primary profile-button"></div>
                     </form>
