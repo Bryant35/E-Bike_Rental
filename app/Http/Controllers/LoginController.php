@@ -113,6 +113,8 @@ class LoginController extends Controller
         $user = new Awal;
         $tampil_data = $user->akun($login);
         // dd($tampil_data[0]->SALDO_PENYEWA);
+        Session::put('Nama_penyewa', $tampil_data[0]->NAMA_PENYEWA);
+        Session::put('Email_penyewa', $tampil_data[0]->EMAIL_ADDRESS);
         return view('account',compact('tampil_data'));
     }
 

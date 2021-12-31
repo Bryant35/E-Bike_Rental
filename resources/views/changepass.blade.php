@@ -52,7 +52,7 @@
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{$tampil_data[0]->NAMA_PENYEWA}}</span><span class="text-black-50">{{$tampil_data[0]->EMAIL_ADDRESS}}</span><span><a href="">Change Password</a></span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{ session()->get('Nama_penyewa') }}</span><span class="text-black-50">{{session()->get('Email_penyewa')}}</span><span><a href="{{url('/account')}}">Back</a></span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -62,8 +62,8 @@
                     <form action="{{url('/savepass')}}" method="POST">
                     @csrf
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="" placeholder="username"></div>
-                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="enter email" value=""></div>
+                            <div class="col-md-12"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="" placeholder="Username"></div>
+                            <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="Enter Email Address" value=""></div>
                             <div class="col-md-12"><label class="labels">Old Password</label><input type="text" name="OldPass" class="form-control" placeholder="Enter Old Password" value=""></div>
                             <div class="col-md-12"><label class="labels">New Password</label><input type="text" name="NewPass" class="form-control" placeholder="Enter New Password" value=""></div>
                             <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="text" name="CNewPass" class="form-control" placeholder="Confirm New Password" value=""></div>

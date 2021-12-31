@@ -77,6 +77,9 @@
             <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
         </div>
 
+
+    </div>
+    <div class="howto">
         <div class="howtopics">
             <img class="ONE" src="img/three.png"  alt="">
             <p class="ONEp1">THE BIKE IS READY TO GO!</p>
@@ -84,8 +87,9 @@
         </div>
         <br>
     </div>
-    <div class="howtobtn" style="align-items: center;">
-        <h2 class="buttonrent2"><a href="{{ url('/order') }}"  class="rent2" style="font-size: 0.7vw">RENT NOW</a></h2>
+    <br>
+    <div class="position-absolute start-50 translate-middle">
+        <h2 class="align-content-center"><a href="{{ url('/login') }}" class="btn btn-primary">RENT NOW</a></h2>
     </div>
     <br>
     <br>
@@ -121,10 +125,12 @@
         </div>
     </div>
 
-
-    <div class="fixed-bottom float-end">
-        <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <div class="rounded-circle">
+        <div class="fixed-bottom float-end">
+            <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        </div>
     </div>
+
     <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");
