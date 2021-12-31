@@ -82,16 +82,16 @@
                         <div class="label">
                             First Name
                         </div>
-                        <input type="text" name="f_name" required>
+                        <input type="text" name="f_name">
                     </div>
                     <div class="field">
                         <div class="label">
                             Last Name
                         </div>
-                        <input type="text" name="l_name" required>
+                        <input type="text" name="l_name">
                     </div>
                     <div class="field">
-                        <button class="firstNext next">Next</button>
+                        <button class="firstNext next" type="button">Next</button>
                     </div>
                 </div>
                 <div class="page">
@@ -102,13 +102,13 @@
                         <div class="label">
                             Email Address
                         </div>
-                        <input type="text" name="email" required>
+                        <input type="text" name="email">
                     </div>
                     <div class="field">
                         <div class="label">
                             Phone Number
                         </div>
-                        <input type="Number" name="phone" required>
+                        <input type="Number" name="phone">
                     </div>
                     <div class="field btns">
                         <button class="prev-1 prev">Previous</button>
@@ -123,18 +123,8 @@
                         <div class="label">
                             Address
                         </div>
-                        <input type="text" name="address" required>
+                        <input type="text" name="address">
                     </div>
-                    {{-- <div class="field">
-                        <div class="label">
-                            City
-                        </div>
-                        <select name="city">
-                            <option>Surabaya</option>
-                            <option>Bali</option>
-                            <option>Jakarta</option>
-                        </select>
-                    </div> --}}
                     <div class="field btns">
                         <button class="prev-2 prev">Previous</button>
                         <button class="next-2 next">Next</button>
@@ -148,13 +138,13 @@
                         <div class="label">
                             Username
                         </div>
-                        <input type="text" name="uname" required>
+                        <input type="text" name="uname">
                     </div>
                     <div class="field">
                         <div class="label">
                             Password
                         </div>
-                        <input type="password" name="pass" required>
+                        <input type="password" name="pass">
                     </div>
                     <div class="field btns">
                         <button class="prev-3 prev">Previous</button>

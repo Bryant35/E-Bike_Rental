@@ -85,3 +85,7 @@ Route::post('/savepass','App\Http\Controllers\LoginController@passpage');
 Route::get('/changepassword', function () {
     return view('changepass');
 });
+
+Route::get('/register', function () {
+    return view('signuppage2');
+});

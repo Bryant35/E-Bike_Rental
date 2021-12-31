@@ -10,6 +10,8 @@ use Alert;
 
 class LoginController extends Controller
 {
+
+    //Login page
     public function cek_login(Request $req){
         $uname = $_POST['uname'];
         $pass = $req->input('password');
@@ -37,7 +39,7 @@ class LoginController extends Controller
     }
 
 
-
+    //register page
     public function regis(Request $req){
         $messages = array();
         $fname = $_POST['f_name'];
@@ -48,6 +50,10 @@ class LoginController extends Controller
         $address = $_POST['address'];
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
+
+
+
+
 
         //lakukan validasi inputan
         if ($fname == ''){
@@ -83,6 +89,9 @@ class LoginController extends Controller
             return redirect('/signup');
         }
 
+
+        $user = new Awal;
+
         $data = [
             'name' => $name,
             'uname' => $uname,
@@ -92,8 +101,19 @@ class LoginController extends Controller
             'pass' => $pass
         ];
 
+        $cek_penyewa = $user->cekPenyewa($data);
+        if($cek_penyewa[0]->USERNAME_PENYEWA == $uname || $cek_penyewa[1]->USERNAME_PENYEWA == $uname){
+            array_push($messages,'Username has been used.');
+        }
+        if($cek_penyewa[0]->EMAIL_ADDRESS == $email || $cek_penyewa[1]->EMAIL_ADDRESS == $email){
+            array_push($messages,'Email has been used.');
+        }
+        if (isset($messages) && count($messages)>0){
+            Session::flash('danger', $messages);
+            return redirect('/signup');
+        }
 
-        $user = new Awal;
+
         $flag_exist = $user->regis($data);
 
         if($flag_exist==1){
@@ -103,9 +123,38 @@ class LoginController extends Controller
         }
     }
 
+
+
+    //Account Page
+    public function updateProfile(Request $req){
+        $login = Session::get('login');
+        $IDPenyewa = Session::get('IDpenyewa');
+        $uname = $req->input('uname');
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+
+        $user = new Awal;
+
+
+        $cekAvalaible = $user->IDPenyewa($login);
+
+        $data = [
+            'uname' => $uname,
+            'email' => $email,
+            'phone' => $phone,
+            'address' => $address,
+            'IDpenyewa' => $IDPenyewa
+        ];
+
+        $updateprofile = $user->profileUpdate($data);
+        $cekprofile = $user->saldoCek($IDPenyewa);
+        Session::put('login', $cekprofile[0]->USERNAME_PENYEWA);
+        return redirect('/account');
+    }
+    //Insert date to Account Page
     public function akun(){
         $login = Session::get('login');
-
         if($login == null)
         {
             return view('login');
@@ -118,6 +167,34 @@ class LoginController extends Controller
         return view('account',compact('tampil_data'));
     }
 
+
+    //logOut
+    public function end(Request $req){
+        session()->forget('login');
+        session()->forget('pass');
+        session()->forget('saldo');
+        session()->forget('IDpenyewa');
+        session()->forget('Tax');
+        session()->forget('pay');
+        session()->forget('totalpay');
+        session()->forget('Nama_penyewa');
+        session()->forget('Email_penyewa');
+        session()->forget('nom');
+        return redirect('/');
+    }
+
+    //Home Button
+    public function cek_home(){
+        $login = Session::get('login');
+        if($login == null)
+        {
+            return redirect('/');
+        }
+        else{
+            return redirect('/home');
+        }
+    }
+    //Get data in Home Page
     public function profile(){
         $login = Session::get('login');
 
@@ -136,31 +213,8 @@ class LoginController extends Controller
         return view('homepage',compact('tampil_data'));
     }
 
-    public function end(Request $req){
-        session()->forget('login');
-        session()->forget('pass');
-        session()->forget('saldo');
-        session()->forget('IDpenyewa');
-        session()->forget('Tax');
-        session()->forget('pay');
-        session()->forget('totalpay');
-        session()->forget('Nama_penyewa');
-        session()->forget('Email_penyewa');
-        session()->forget('nom');
-        return redirect('/');
-    }
 
-    public function cek_home(){
-        $login = Session::get('login');
-        if($login == null)
-        {
-            return redirect('/');
-        }
-        else{
-            return redirect('/home');
-        }
-    }
-
+    //Topup page
     public function cek_topup(){
         $login = Session::get('login');
         if($login == null)
@@ -240,35 +294,8 @@ class LoginController extends Controller
     }
 
 
-    public function updateProfile(Request $req){
-        $login = Session::get('login');
-        $IDPenyewa = Session::get('IDpenyewa');
-        $uname = $req->input('uname');
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
 
-        $user = new Awal;
-
-
-        $cekAvalaible = $user->IDPenyewa($login);
-
-        $data = [
-            'uname' => $uname,
-            'email' => $email,
-            'phone' => $phone,
-            'address' => $address,
-            'IDpenyewa' => $IDPenyewa
-        ];
-
-        $updateprofile = $user->profileUpdate($data);
-        $cekprofile = $user->saldoCek($IDPenyewa);
-        Session::put('login', $cekprofile[0]->USERNAME_PENYEWA);
-        return redirect('/account');
-    }
-
-
-
+    //Change Password
     public function passpage(Request $req){
         $login = Session::get('login');
         $uname = $req->input('uname');

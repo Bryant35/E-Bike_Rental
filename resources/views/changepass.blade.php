@@ -5,6 +5,7 @@
     <title>Change Password</title>
     <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
     <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -56,31 +57,31 @@
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
-                    {{-- <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
-                    </div> --}}
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Change Password</h4><h6 style="font-align: right;"></h6>
+                    </div>
                     @if (Session::has('userError'))
                         <div class="alert alert-danger alert-block">
                             <strong>{{ Session::get('userError') }}</strong>
-                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button>
                         </div>
                     @endif
                     @if (Session::has('passError'))
                         <div class="alert alert-danger alert-block">
                             <strong>{{ Session::get('passError') }}</strong>
-                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button>
                         </div>
                     @endif
                     @if (Session::has('newPassEmpty'))
                         <div class="alert alert-warning alert-block">
                             <strong>{{ Session::get('newPassEmpty') }}</strong>
-                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button>
                         </div>
                     @endif
                     @if (Session::has('newPassError'))
                         <div class="alert alert-danger alert-block">
                             <strong>{{ Session::get('newPassError') }}</strong>
-                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert">×</button>
+                            <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button>
                         </div>
                     @endif
                     <form action="{{url('/savepass')}}" method="POST">
