@@ -13,22 +13,22 @@
 <body>
     <div class="center">
         <h1>Login</h1>
-        @if (Session::has('success'))
-            <div class="alert alert-success alert-block mx-4">
-                {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('success') }}</strong>
-            </div>
-        @endif
-        @if (Session::has('error'))
+        @if (Session::has('emptydata'))
             <div class="alert alert-danger alert-block mx-4">
                 {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('error') }}</strong>
+                <strong>{{ Session::get('emptydata') }}</strong>
             </div>
         @endif
-        @if (Session::has('keluar'))
+        @if (Session::has('usernameUsed'))
             <div class="alert alert-warning alert-block mx-4">
                 {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('keluar') }}</strong>
+                <ul>
+                    <?php
+                        $list_msg = Session::get('usernameUsed');
+                        foreach($list_msg as $msg){
+                            echo "<li>".$msg."</li>";
+                        }
+                    ?>
             </div>
         @endif
         <form action="{{ url('/insert')}}" method="POST">
@@ -54,12 +54,17 @@
                 <label>Phone Number</label>
             </div>
             <div class="txt_field">
+                <input type="text" name="address" required>
+                <span></span>
+                <label>Address</label>
+            </div>
+            <div class="txt_field">
                 <input type="text" name="uname" required>
                 <span></span>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input type="password" name="password" required>
+                <input type="password" name="pass" required>
                 <span></span>
                 <label>Password</label>
             </div>

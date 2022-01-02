@@ -84,7 +84,7 @@
             <div class="pass" href="{{ url('/forgotpassword') }}"><a href="{{ url('/forgotpassword') }}">Forgot Password?</a></div>
             <input type="submit" value="Login">
             <div class="signup_link">
-                Don't have an account? <a href="{{ url('/signup') }}">Sign Up</a>
+                Don't have an account? <a href="{{ url('/register') }}">Sign Up</a>
             </div>
         </form>
     </div>

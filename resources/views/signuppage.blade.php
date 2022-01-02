@@ -72,7 +72,7 @@
                             }
                         ?>
             @endif
-            <form action="{{ url('/insert')}}" method="POST">
+            {{-- <form action="{{ url('/insert')}}" method="POST">
                 @csrf
                 <div class="page slide-page">
                     <div class="title">
@@ -151,7 +151,7 @@
                         <button type="submit">Submit</button>
                     </div>
                 </div>
-            </form>
+            </form> --}}
         </div>
     </div>
     <script src="js/signuppage.js"></script>

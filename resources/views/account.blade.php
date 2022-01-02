@@ -59,6 +59,18 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
                     </div>
+                    @if (Session::has('usernameUsed'))
+                        <div class="alert alert-warning alert-block mx-4">
+                            {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
+                            <ul>
+                                <?php
+                                    $list_msg = Session::get('usernameUsed');
+                                    foreach($list_msg as $msg){
+                                        echo "<li>".$msg."</li>";
+                                    }
+                                ?>
+                        </div>
+                    @endif
                     <form action="{{url('/saveprofile')}}" method="POST">
                     @csrf
                         <div class="row mt-2">
