@@ -61,8 +61,34 @@
     </div>
 
     <!--how to rent bek-->
+    <div class="container">
+        <div>
+            <h2 class="text-center">HOW TO RENT OUR BIKE</h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/one1.png" style="width: 200px; height: 200px;" alt="">
+                <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
+                <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
+            </div>
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/two2.png" style="width: 200px; height: 200px;" alt="">
+                <p class="ONEp1">RENT YOUR BIKE!</p>
+                <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
+            </div>
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/three3.png" style="width: 200px; height: 200px;"  alt="">
+                <p class="ONEp1">THE BIKE IS READY TO GO!</p>
+                <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
+        </div>
+    </div>
 
-    <div><h1 class="howtop">HOW TO RENT OUR BIKE</h1></div>
+
+    <!-- <div><h1 class="howtop">HOW TO RENT OUR BIKE</h1></div>
 
     <div class ="howto" >
         <div class="howtopics">
@@ -92,7 +118,7 @@
         <h2 class="align-content-center"><a href="{{ url('/login') }}" class="btn btn-primary">RENT NOW</a></h2>
     </div>
     <br>
-    <br>
+    <br> -->
 
     <!--Best Place For your Holdiday-->
     <div class="holiday">

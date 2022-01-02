@@ -48,45 +48,47 @@
         </div>
     </nav>
 
-
-    <div class="center">
-        <h1>Login</h1>
-        @if (Session::has('success'))
-            <div class="alert alert-success alert-block mx-4">
-                {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('success') }}</strong>
-            </div>
-        @endif
-        @if (Session::has('error'))
-            <div class="alert alert-danger alert-block mx-4">
-                {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('error') }}</strong>
-            </div>
-        @endif
-        @if (Session::has('keluar'))
-            <div class="alert alert-warning alert-block mx-4">
-                {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('keluar') }}</strong>
-            </div>
-        @endif
-        <form action="{{ url('/signin')}}" method="POST">
-            @csrf
-            <div class="txt_field">
-                <input type="text" name="uname" required>
-                <span></span>
-                <label>Username</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" name="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
-            <div class="pass" href="{{ url('/forgotpassword') }}"><a href="{{ url('/forgotpassword') }}">Forgot Password?</a></div>
-            <input type="submit" value="Login">
-            <div class="signup_link">
-                Don't have an account? <a href="{{ url('/register') }}">Sign Up</a>
-            </div>
-        </form>
+    <div class="container">
+        <div class="center position-absolute top-50 start-50 translate-middle">
+            <h1>Login</h1>
+            @if (Session::has('success'))
+                <div class="alert alert-success alert-block mx-4">
+                    {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
+                    <strong>{{ Session::get('success') }}</strong>
+                </div>
+            @endif
+            @if (Session::has('error'))
+                <div class="alert alert-danger alert-block mx-4">
+                    {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
+                    <strong>{{ Session::get('error') }}</strong>
+                </div>
+            @endif
+            @if (Session::has('keluar'))
+                <div class="alert alert-warning alert-block mx-4">
+                    {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
+                    <strong>{{ Session::get('keluar') }}</strong>
+                </div>
+            @endif
+            <form action="{{ url('/signin')}}" method="POST">
+                @csrf
+                <div class="txt_field">
+                    <input type="text" name="uname" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="pass" href="{{ url('/forgotpassword') }}"><a href="{{ url('/forgotpassword') }}">Forgot Password?</a></div>
+                <input type="submit" value="Login">
+                <div class="signup_link">
+                    Don't have an account? <a href="{{ url('/register') }}">Sign Up</a>
+                </div>
+            </form>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -17,7 +17,6 @@ class ordercontroller extends Controller
 
     public function holder(Request $req)
     {
-
         $login = Session::get('login');
         $today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' + today.getHours() + ":" + today.getMinutes();
         if($login == null)
