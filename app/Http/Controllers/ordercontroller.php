@@ -8,8 +8,18 @@ use App\Models\Awal;
 use Session;
 use Alert;
 
+
 class ordercontroller extends Controller
 {
+
+
+    
+$location = "";
+$color = "";
+$datetime = "";
+$today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' + today.getHours() + ":" + today.getMinutes();
+
+
     public function holder(Request $req)
     {
         $login = Session::get('login');
@@ -27,5 +37,11 @@ class ordercontroller extends Controller
             'color'=> $color
         ];
         return view('ordermethods',$data);
+    }
+
+    public function errorchk(Request $req){
+        if($datetime < $today ){
+            Session::flash('error', 'Date yang dimasukan berada di masa lampau!!!');
+        }
     }
 }
