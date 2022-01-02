@@ -67,16 +67,16 @@
         <!--duit mas duit-->
         <form>
             <label for="inputduit">Amount</label><br>
-            <input type="text" id="duitamount" name="inputduit">
-        </form>
+            <input type="number" onchange="taxsi()" id="duitamount" name="inputduit">
+       
         <!--oh no... TAXES!!!-->
-        <form>
+      
             <label for="taxes">Taxes</label><br>
             <input type="text" id="taxamount" name="taxes">
         </form>
         <!--confirmbutton-->
         <div>
-            <button type="button" id="butconf">Confirm</button>
+            <button type="button" id="butconf" onclick="">Confirm</button>
         </div>
         </section>
     </div>

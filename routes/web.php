@@ -72,6 +72,9 @@ Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
 Route::get('/order','App\Http\Controllers\ordercontroller@holder');
 
+
+
+
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check');
 

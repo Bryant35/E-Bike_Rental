@@ -26,6 +26,7 @@ class ordercontroller extends Controller
         }
         $location = $req->location;
         $datetime = $req->inputmap;
+        $errorchk = dates.compare($datetime,$today);
         $color = $req->Bikepick;
 
         $data = [
@@ -33,7 +34,7 @@ class ordercontroller extends Controller
             'datetime'=> $datetime,
             'color'=> $color
         ];
-        if($datetime < $today){
+        if($errorchk == -1){
             Session::flash('error', 'Waktu yang dipilih ada di masa lampau... pikir dikit dong!');
         }
         else
@@ -41,5 +42,6 @@ class ordercontroller extends Controller
         return view('ordermethods',$data);
         }
     }
-}
+
+  
    
