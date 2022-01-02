@@ -13,16 +13,13 @@ class ordercontroller extends Controller
 {
 
 
-    
-$location = "";
-$color = "";
-$datetime = "";
-$today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' + today.getHours() + ":" + today.getMinutes();
 
 
     public function holder(Request $req)
     {
+
         $login = Session::get('login');
+        $today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' + today.getHours() + ":" + today.getMinutes();
         if($login == null)
         {
             return redirect('/login');
@@ -36,12 +33,13 @@ $today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' 
             'datetime'=> $datetime,
             'color'=> $color
         ];
+        if($datetime < $today){
+            Session::flash('error', 'Waktu yang dipilih ada di masa lampau... pikir dikit dong!');
+        }
+        else
+        {
         return view('ordermethods',$data);
-    }
-
-    public function errorchk(Request $req){
-        if($datetime < $today ){
-            Session::flash('error', 'Date yang dimasukan berada di masa lampau!!!');
         }
     }
 }
+   
