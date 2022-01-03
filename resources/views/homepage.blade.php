@@ -47,12 +47,30 @@
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}
                     </button>
-                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
+                        Log Out
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
-
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure going to log out ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="{{url('/logout')}}" style="text-decoration: none; color: #fff">Log Out</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--home-->
 
@@ -60,7 +78,7 @@
     <div class="banner">
         <img src="img/bgpage.png" alt="img">
         <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-        <h2 class="buttonrent"><a href="{{ url('/login') }}"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
+        <h2 class="buttonrent"><a href="{{ url('/order') }}"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
     </div>
 
     <!--how to rent bek-->
@@ -89,7 +107,7 @@
             </div>
 
         </section>
-        <a href="{{ url('/login') }}"  class="btn btn-primary position-relative start-50">RENT NOW</a>
+        <a href="{{ url('/order') }}"  class="btn btn-primary position-relative start-50">RENT NOW</a>
 
         <div class="fixed-bottom float-end">
             <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>

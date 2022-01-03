@@ -42,6 +42,7 @@ class LoginController extends Controller
     //register page
     public function regis(Request $req){
         $messages = array();
+        $usedName = array();
         $fname = $_POST['f_name'];
         $lname = $_POST['l_name'];
         $name = $fname . ' ' . $lname;
@@ -85,8 +86,8 @@ class LoginController extends Controller
         }
 
         if (isset($messages) && count($messages)>0){
-            Session::flash('danger', $messages);
-            return redirect('/signup');
+            Session::flash('emptydata', 'Data cannot be Empty');
+            return redirect('/register');
         }
 
 
@@ -101,26 +102,49 @@ class LoginController extends Controller
             'pass' => $pass
         ];
 
-        $cek_penyewa = $user->cekPenyewa($data);
-        if($cek_penyewa[0]->USERNAME_PENYEWA == $uname || $cek_penyewa[1]->USERNAME_PENYEWA == $uname){
-            array_push($messages,'Username has been used.');
+        $cek_penyewa = $user->cekPenyewa($uname, $email);
+
+        if($cek_penyewa == 'null')
+        {
+            $flag_exist = $user->regis($data);
+
+            if($flag_exist==1){
+                //echo "Berhasil Insert Data User!";
+                Session::flash('success', 'Anda berhasil membuat akun!');
+                return redirect('/login');
+            }
         }
-        if($cek_penyewa[0]->EMAIL_ADDRESS == $email || $cek_penyewa[1]->EMAIL_ADDRESS == $email){
-            array_push($messages,'Email has been used.');
+        else{
+            $count = count($cek_penyewa);
+            if($count >= 1){
+                if($cek_penyewa[0]->USERNAME_PENYEWA == $uname){
+                    array_push($usedName,'Username has been used.');
+                }
+                elseif($count == 2){
+                    if($cek_penyewa[1]->USERNAME_PENYEWA == $uname){
+                        array_push($usedName,'Username has been used.');
+                    }
+                }
+            }
+            if($count >= 1){
+                if($cek_penyewa[0]->EMAIL_ADDRESS == $email){
+                    array_push($usedName,'Email has been used.');
+                }
+                elseif($count == 2){
+                    if($cek_penyewa[1]->EMAIL_ADDRESS == $email){
+                        array_push($usedName,'Email has been used.');
+                    }
+                }
+            }
+            if (isset($usedName) && count($usedName)>0){
+                Session::flash('usernameUsed', $usedName);
+                return redirect('/register');
+            }
         }
-        if (isset($messages) && count($messages)>0){
-            Session::flash('danger', $messages);
-            return redirect('/signup');
-        }
+        return redirect('/register');
 
 
-        $flag_exist = $user->regis($data);
 
-        if($flag_exist==1){
-            //echo "Berhasil Insert Data User!";
-            Session::flash('success', 'Anda berhasil membuat akun!');
-            return redirect('/login');
-        }
     }
 
 
@@ -128,6 +152,7 @@ class LoginController extends Controller
     //Account Page
     public function updateProfile(Request $req){
         $login = Session::get('login');
+        $usedName = array();
         $IDPenyewa = Session::get('IDpenyewa');
         $uname = $req->input('uname');
         $email = $_POST['email'];
@@ -135,7 +160,6 @@ class LoginController extends Controller
         $address = $_POST['address'];
 
         $user = new Awal;
-
 
         $cekAvalaible = $user->IDPenyewa($login);
 
@@ -147,10 +171,42 @@ class LoginController extends Controller
             'IDpenyewa' => $IDPenyewa
         ];
 
-        $updateprofile = $user->profileUpdate($data);
-        $cekprofile = $user->saldoCek($IDPenyewa);
-        Session::put('login', $cekprofile[0]->USERNAME_PENYEWA);
-        return redirect('/account');
+        $cek_penyewa = $user->cekPenyewa2($uname, $email, $IDPenyewa);
+        if($cek_penyewa == 'null')
+        {
+            $updateprofile = $user->profileUpdate($data);
+            $cekprofile = $user->saldoCek($IDPenyewa);
+            Session::put('login', $cekprofile[0]->USERNAME_PENYEWA);
+            return redirect('/account');
+        }
+        else{
+            $count = count($cek_penyewa);
+            if($count >= 1){
+                if($cek_penyewa[0]->USERNAME_PENYEWA == $uname){
+                    array_push($usedName,'Username has been used.');
+                }
+                elseif($count == 2){
+                    if($cek_penyewa[1]->USERNAME_PENYEWA == $uname){
+                        array_push($usedName,'Username has been used.');
+                    }
+                }
+            }
+            if($count >= 1){
+                if($cek_penyewa[0]->EMAIL_ADDRESS == $email){
+                    array_push($usedName,'Email has been used.');
+                }
+                elseif($count == 2){
+                    if($cek_penyewa[1]->EMAIL_ADDRESS == $email){
+                        array_push($usedName,'Email has been used.');
+                    }
+                }
+            }
+            if (isset($usedName) && count($usedName)>0){
+                Session::flash('usernameUsed', $usedName);
+                return redirect('/account');
+            }
+        }
+
     }
     //Insert date to Account Page
     public function akun(){

@@ -30,17 +30,44 @@ class Awal extends Model
     }
 
 
-    public function cekPenyewa($data){
+    public function cekPenyewa($uname, $email){
         $cmd = "SELECT USERNAME_PENYEWA, EMAIL_ADDRESS ".
                 "FROM penyewa ".
                 "WHERE USERNAME_PENYEWA = :uname OR EMAIL_ADDRESS = :email;";
-        $res = DB::select($cmd,$data);
+        $data = [
+            'uname'=> $uname,
+            'email'=> $email
+        ];
+
+        $res = DB::select($cmd, $data);
         if($res != null)
         {
             return $res;
         }
         else{
-            return;
+            $res = 'null';
+            return $res;
+        }
+    }
+
+    public function cekPenyewa2($uname, $email, $IDPenyewa){
+        $cmd = "SELECT USERNAME_PENYEWA, EMAIL_ADDRESS ".
+                "FROM penyewa ".
+                "WHERE ID_PENYEWA != :IDPenyewa AND (USERNAME_PENYEWA = :uname OR EMAIL_ADDRESS = :email);";
+        $data = [
+            'uname'=> $uname,
+            'email'=> $email,
+            'IDPenyewa'=> $IDPenyewa
+        ];
+
+        $res = DB::select($cmd, $data);
+        if($res != null)
+        {
+            return $res;
+        }
+        else{
+            $res = 'null';
+            return $res;
         }
     }
 

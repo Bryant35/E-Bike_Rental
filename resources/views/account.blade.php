@@ -43,11 +43,30 @@
                     <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
-                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
+                        Log Out
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure going to log out ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="{{url('/logout')}}" style="text-decoration: none; color: #fff">Log Out</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
@@ -59,6 +78,18 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
                     </div>
+                    @if (Session::has('usernameUsed'))
+                        <div class="alert alert-warning alert-block mx-4">
+                            {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
+                            <ul>
+                                <?php
+                                    $list_msg = Session::get('usernameUsed');
+                                    foreach($list_msg as $msg){
+                                        echo "<li>".$msg."</li>";
+                                    }
+                                ?>
+                        </div>
+                    @endif
                     <form action="{{url('/saveprofile')}}" method="POST">
                     @csrf
                         <div class="row mt-2">

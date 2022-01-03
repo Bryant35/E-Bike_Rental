@@ -44,11 +44,30 @@
                     <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
-                    <a href="{{url('/logout')}}" class="btn btn-primary">Log Out</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
+                        Log Out
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure going to log out ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="{{url('/logout')}}" style="text-decoration: none; color: #fff">Log Out</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <!--payment method-->
@@ -68,9 +87,9 @@
         <form>
             <label for="inputduit">Amount</label><br>
             <input type="number" onchange="taxsi()" id="duitamount" name="inputduit">
-       
+
         <!--oh no... TAXES!!!-->
-      
+
             <label for="taxes">Taxes</label><br>
             <input type="text" id="taxamount" name="taxes">
         </form>
