@@ -38,5 +38,5 @@ function map(){
   document.getElementById("taxamount").text = $taxaf;
   
 }
-}
+
 
