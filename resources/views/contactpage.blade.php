@@ -30,7 +30,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
                           </ul>
                     </li>
                     @else
@@ -39,7 +39,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
                         </ul>
                     </li>
                     @endif
@@ -93,27 +93,27 @@
 			<h3>CONTACT</h3>
 			<p>If You need more information before you book, or if you need us to arrange you particular wishes you can contact us through this form.<br> Please give us the most detail possible in order for us to help you !</p>
 
-            <form action="{{url('/sendHelp')}}">
+            <form action="{{url('/sendHelp')}}" method="POST">
             @csrf
                 <div class="row">
                     <div class="col" >
                         <div class="mb-3">
                             <label for="nama" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="nama" placeholder="">
+                            <input type="text" class="form-control" id="nama" name="name" placeholder="">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="">
                         </div>
                         <div class="mb-3">
                             <label for="telepon" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control" id="telepon" placeholder="">
+                            <input type="text" class="form-control" id="telepon" name="phone" placeholder="">
                         </div>
                     </div>
                     <div class="col" >
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="pesan" rows="9 "></textarea>
+                            <textarea class="form-control" id="pesan" name="message" rows="9"></textarea>
                         </div>
                         <button class="btn btn-primary float-end" type="submit">SEND</button>
                     </div>

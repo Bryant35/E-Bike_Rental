@@ -28,7 +28,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
                             {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
@@ -153,9 +153,11 @@
                 <p class="text-white">
                     Payment Method
                 </p>
-                <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
-                <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
-                <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+                <p>
+                    <li><img src="OVO.png" alt="" style="width: 15px;"></li>
+                    <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
+                    <li><img src="dana.png" alt="" style="width: 15px;"></li>
+                </p>
                 </div>
                 <!-- Grid column -->
 
@@ -232,5 +234,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
 </body>
 </html>

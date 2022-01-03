@@ -70,7 +70,9 @@ Route::get('/topup','App\Http\Controllers\LoginController@cek_topup');
 Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
-Route::get('/order','App\Http\Controllers\ordercontroller@holder');
+Route::get('/order','App\Http\Controllers\ordercontroller@enter');
+
+Route::get('/orderm','App\Http\Controllers\ordercontroller@holder');
 
 
 
@@ -92,3 +94,5 @@ Route::get('/changepassword', function () {
 Route::get('/register', function () {
     return view('signuppage2');
 });
+
+Route::post('/sendHelp','App\Http\Controllers\LoginController@sendhelp');

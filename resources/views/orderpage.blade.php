@@ -27,7 +27,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
                             {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
@@ -72,12 +72,12 @@
 
 
     <!--location -->
-<section id ="locationsect">
+    <div class="container">
+        <p class="text-end" id="timenow"></p>
+    <section id ="locationsect">
     <label for="locations">Choose a Location</label>
 
-
-
-    <form action="{{url('/order')}}" method="get" id="formorder">
+    <form action="{{url('/orderm')}}" method="get" id="formorder">
         @csrf
     <div><select name="location" id="location" onchange="map()">
             <option value="Iron">Iron Bikes</option>
@@ -96,10 +96,12 @@
     <!--date and time-->
 
         <label  for="pickuptime">Date and Time:</label>
-        <input name="inputmap" type="datetime-local" id="pickuptime">
+        <input name="inputmap" onchange="errorchk()" type="datetime-local" id="pickuptime">
 
 
       <div id="map"></div>
+    </div>
+
 
 
 
@@ -126,7 +128,7 @@
 
 
     {{-- Footer --}}
-    <div class="my-5">
+    <div class="mt-4">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->
@@ -152,17 +154,19 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                 <p>
-                    <a class="text-white" href="{{url('/aboutus')}}">About Us</a>
+                    <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
                 </p>
                 <p>
-                    <a class="text-white" href="{{url('/contact')}}">Contact us</a>
+                    <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                </p>
+                <p class="text-white">
+                    Payment Method
                 </p>
                 <p>
-                    <a class="text-white">Payment Method</a>
+                    <li><img src="OVO.png" alt="" style="width: 15px;"></li>
+                    <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
+                    <li><img src="dana.png" alt="" style="width: 15px;"></li>
                 </p>
-                <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
-                <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
-                <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
                 </div>
                 <!-- Grid column -->
 
@@ -174,10 +178,10 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                    <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                    <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
                 </div>
                 <!-- Grid column -->
 

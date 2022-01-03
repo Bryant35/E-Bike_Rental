@@ -208,5 +208,16 @@ class Awal extends Model
 
         return $res;
     }
+
+
+    //cek Time
+    public function cekTime(){
+        $cmd = "SET time_zone = '+07:00';";
+        $res = DB::select($cmd);
+        $cmd = "SELECT now();";
+        $res = DB::select($cmd);
+
+        return $res;
+    }
 }
 

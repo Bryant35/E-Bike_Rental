@@ -29,7 +29,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
                           </ul>
                     </li>
                     @else

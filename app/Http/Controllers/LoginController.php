@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Awal;
 use Session;
 use Alert;
+use Mail;
 
 class LoginController extends Controller
 {
@@ -25,15 +26,15 @@ class LoginController extends Controller
         // die;
         if ($flag_exist){
             //2.a. Jika KETEMU, maka session LOGIN dibuat
-            Session::put('login', $uname);  
+            Session::put('login', $uname);
             Session::put('pass', $pass);
 
-            Session::flash('success', 'Anda berhasil Login!');
+            Session::flash('success', 'Login Success!');
 
             return redirect('/home');
         } else {
             //2.b. Jika TIDKA KETEMU, maka kembali ke LOGIN dan tampilkan PESAN
-            Session::flash('error', 'Email atau Password tidak sesuai!');
+            Session::flash('error', 'Email or Password is Incorrect!');
             return redirect('/login');
         }
     }
@@ -51,10 +52,6 @@ class LoginController extends Controller
         $address = $_POST['address'];
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
-
-
-
-
 
         //lakukan validasi inputan
         if ($fname == ''){
@@ -389,5 +386,38 @@ class LoginController extends Controller
             $updatepass = $user->passUpdate($NewPass, $IDPenyewa);
             return redirect('/changepassword');
         }
+    }
+
+
+    public function sendhelp(Request $req){
+        $this->validate($req, [
+            'name'     =>  'required',
+            'email'  =>  'required|email',
+            'message' =>  'required'
+        ]);
+        $berhasil= 0;
+        $data = array(
+        'name'      => $req->input('name'),
+        'email'  => $req->input('email'),
+        'message'   => $req->input('message'),
+        'messages' => $req->message
+        );
+
+        // dd($data);
+        try{
+            Mail::send('email',$data, function($data) use($req){
+                $data->to('shvrnkoll@gmail.com','Verifikasi')->subject('Help using App');
+                $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Help from Customer');
+
+                // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
+            });
+        }catch (Exception $e){
+            return response (['status' => false,'errors' => $e->getMessage()]);
+        }
+
+        // if($berhasil == 1){
+        //     Session::flash('success', 'Terima kasih telah menghubungi kami.
+        //     Tanggapan Anda akan segera kami proses.');
+        return redirect('/contact');
     }
 }

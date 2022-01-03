@@ -7,44 +7,79 @@ use Illuminate\Http\Request;
 use App\Models\Awal;
 use Session;
 use Alert;
+use Log;
 
 
 class ordercontroller extends Controller
 {
 
-
-
-
-    public function holder(Request $req)
-    {
+    public function enter(){
         $login = Session::get('login');
-        $today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() + '-' + today.getHours() + ":" + today.getMinutes();
+
         if($login == null)
         {
             return redirect('/login');
         }
-        $location = $req->location;
-        $datetime = $req->inputmap;
-        $errorchk = dates.compare($datetime,$today);
-        $color = $req->Bikepick;
-        Session::put('location',$location);
-        Session::put('datetime',$datetime);
-        Session::put('color',$color);
-        $data = [
-            'location'=> $location,
-            'datetime'=> $datetime,
-            'color'=> $color
-        ];
-        if($errorchk == -1){
-            Session::flash('error', 'Waktu yang dipilih ada di masa lampau... pikir dikit dong!');
-        }
-        else
-        {
-        return view('ordermethods',$data);
-        }
+        return view('orderpage');
     }
 
 
-    public function show(){}
+    public function holder(Request $req)
+    {
+        $location = $req->location;
+        $datetime = $req->inputmap;
+        $color = $req->Bikepick;
+        $colorid = "";
+        if($color == "Biru"){
+            $colorid = "B001";
+        }
+        elseif($color == "Hitam"){
+            $colorid = "H001";
+        }
+        elseif($color == "Hijau"){
+            $colorid = "H002";
+        }
+        elseif($color == "Jingga"){
+            $colorid = "J001";
+        }
+        elseif($color == "Kuning"){
+            $colorid = "K001";
+        }
+        elseif($color == "Merah"){
+            $colorid = "M001";
+        }
+        elseif($color == "Pink"){
+            $colorid = "P001";
+        }
+        elseif($color == "Ungu"){
+            $colorid = "U001";
+        }
+
+        $user = new Awal;
+        $cek_time = $user->cekTime();
+        if($datetime > $cek_time){
+            // dd($cek_time, $datetime);
+            return redirect('/order');
+
+        }
+        else{
+            // dd($cek_time, $datetime);
+            Session::put('location',$location);
+            Session::put('datetime',$datetime);
+            Session::put('color',$colorid);
+            return view('ordermethods');
+        }
+
+    }
+
+    public function holdermethod(Request $req){
+
+    }
+
+
+
+    public function show(){
+
+    }
 
 }
