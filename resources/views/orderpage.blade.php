@@ -160,11 +160,9 @@
                 <p>
                     <a class="text-white">Payment Method</a>
                 </p>
-                <p>
-                    <li><img src="OVO.png" alt="" style="width: 10px;"></li>
-                    <li><img src="GoPay.png" alt="" style="width: 10px;"></li>
-                    <li><img src="dana.png" alt="" style="width: 10px;"></li>
-                </p>
+                <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
                 </div>
                 <!-- Grid column -->
 

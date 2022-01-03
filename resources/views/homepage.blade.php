@@ -75,65 +75,79 @@
     <!--home-->
 
 
-    <div class="banner">
-        <img src="img/bgpage.png" alt="img">
-        <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
-        <h2 class="buttonrent"><a href="{{ url('/order') }}"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
+    <div class="card bg-dark text-white text-center">
+        <img src="img/bgpage.png" class="card-img" alt="img">
+        <div class="card-img-overlay position-absolute top-50 start-50 translate-middle">
+            <div class="p-3 mb-2 bg-secondary text-white" style="--bs-bg-opacity: .5;">
+                <h4 class="card-title">Welcome</h4>
+                <p class="card-text">Quick Access E-bike Rental Platform.</p>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" href="{{ url('/order') }}">RENT NOW</a>
+            </div>
+        </div>
     </div>
 
     <!--how to rent bek-->
     <div class="container">
-
-
-        <div><h1 id="howtop">HOW TO RENT OUR BIKE</h1></div>
-
-        <section id="howto" >
-            <div class="howtopics">
-                <img class="ONE" src="img/one.png"  alt="">
+        <div>
+            <h2 class="text-center">HOW TO RENT OUR BIKE</h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/one1.png" style="width: 200px; height: 200px;" alt="">
                 <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
                 <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
             </div>
-
-            <div class="howtopics">
-                <img class="ONE" src="img/two.png"  alt="">
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/two2.png" style="width: 200px; height: 200px;" alt="">
                 <p class="ONEp1">RENT YOUR BIKE!</p>
                 <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
             </div>
-
-            <div class="howtopics">
-                <img class="ONE" src="img/three.png"  alt="">
+            <div class="col">
+                <img class="rounded mx-auto d-block" src="img/three3.png" style="width: 200px; height: 200px;"  alt="">
                 <p class="ONEp1">THE BIKE IS READY TO GO!</p>
                 <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
             </div>
-
-        </section>
-        <a href="{{ url('/order') }}"  class="btn btn-primary position-relative start-50">RENT NOW</a>
-
-        <div class="fixed-bottom float-end">
-            <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary text-center" href="{{ url('/order') }}">RENT NOW</a>
         </div>
     </div>
-        <script>
-            //Get the button
-            var mybutton = document.getElementById("myBtn");
 
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
 
-            function scrollFunction() {
-              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-              } else {
-                mybutton.style.display = "none";
-              }
-            }
+    <!-- <div><h1 class="howtop">HOW TO RENT OUR BIKE</h1></div>
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-              document.body.scrollTop = 0;
-              document.documentElement.scrollTop = 0;
-            }
-        </script>
+    <div class ="howto" >
+        <div class="howtopics">
+            <img class="ONE" src="img/one.png"  alt="">
+            <p class="ONEp1">FIND THE PERFECT LOCATION AND BIKE(S)</p>
+            <div><p class="ONEpsmall">CHOOSE BIKE RENTAL LOCATIONS, PRICES, BIKE VARIANTS. EVERYTHING IN ONE PLACE!</p></div>
+        </div>
+
+        <div class="howtopics">
+            <img class="ONE" src="img/two.png"  alt="">
+            <p class="ONEp1">RENT YOUR BIKE!</p>
+            <div><p class="ONEpsmall">AFTER CHOOSING YOUR LOCATION AND BIKE, OUR WEBSITE WILL GUIDE YOU RENT OUR BIKES.</p></div>
+        </div>
+
+
+    </div>
+    <div class="howto">
+        <div class="howtopics">
+            <img class="ONE" src="img/three.png"  alt="">
+            <p class="ONEp1">THE BIKE IS READY TO GO!</p>
+            <div><p class="ONEpsmall">YOU WILL BE ABLE TO ENJOY YOUR RIDE</p></div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="position-absolute start-50 translate-middle">
+        <h2 class="align-content-center"><a href="{{ url('/login') }}" class="btn btn-primary">RENT NOW</a></h2>
+    </div>
+    <br>
+    <br> -->
+
     <!--Best Place For your Holdiday-->
     <div class="holiday">
         <div class="container">
@@ -162,122 +176,153 @@
                 <div class="box"><img src="img/TP.png" alt=""></div>
                 <!--<div class="top-left5">Tunjungan plaza</div>-->
             </div>
-        </div>
-    </div>
-
-
-    <!--footer-->
-    <div class="mt-4">
-        <!-- Footer -->
-        <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Links -->
-            <section class="">
-            <!--Grid row-->
-            <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Ebike Rental
-                </h6>
-                <p>
-                    <a href="/home"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
-                </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
-                <p>
-                    <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
-                </p>
-                <p>
-                    <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
-                </p>
-                <p class="text-white">
-                    Payment Method
-                </p>
-                <p>
-                    <li><img src="OVO.png" alt="" style="width: 15px;"></li>
-                    <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
-                    <li><img src="dana.png" alt="" style="width: 15px;"></li>
-                </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
-                    <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
-                    <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-                    <!-- Facebook -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #3b5998"
-                        href="https://www.facebook.com"
-                        role="button"
-                        ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
-
-                    <!-- Twitter -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #55acee"
-                        href="https://www.twitter.com/"
-                        role="button"
-                        ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
-
-                    <!-- Instagram -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #ac2bac"
-                        href="https://www.instagram.com"
-                        role="button"
-                        ><img src="img/ig.png" alt="" style="width: 30px;"></i
-                        ></a>
-
-                    <!-- Github -->
-                    <a
-                        class="btn btn-primary btn-floating m-1"
-                        style="background-color: #333333"
-                        href="https://www.tiktok.com/"
-                        role="button"
-                        ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
-                </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" href="{{ url('/order') }}">RENT NOW</a>
             </div>
-            <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
         </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            123 Plae Grownd Street<br>© 2021
-            <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
-            All rights reserved.
-        </div>
-        <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
     </div>
+
+    <div class="">
+        <div class="float-end">
+            <button class="btn btn-dark fixed-bottom" onclick="topFunction()" id="myBtn" title="Go to top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+        <!-- Footer -->
+        <div class="">
+            <!-- Footer -->
+            <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                        Ebike Rental
+                    </h6>
+                    <p>
+                        <a href="/"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
+                    </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
+                    <p>
+                        <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
+                    </p>
+                    <p>
+                        <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                    </p>
+                    <p class="text-white">
+                        Payment Method
+                    </p>
+                    <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                    <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                    <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                        <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                        <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                        <!-- Facebook -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #3b5998"
+                            href="https://www.facebook.com"
+                            role="button"
+                            ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
+
+                        <!-- Twitter -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #55acee"
+                            href="https://www.twitter.com/"
+                            role="button"
+                            ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
+
+                        <!-- Instagram -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #ac2bac"
+                            href="https://www.instagram.com"
+                            role="button"
+                            ><img src="img/ig.png" alt="" style="width: 30px;"></i
+                            ></a>
+
+                        <!-- Github -->
+                        <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #333333"
+                            href="https://www.tiktok.com/"
+                            role="button"
+                            ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
+                    </div>
+                </div>
+                <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3 mt-2" style="background-color: rgba(0, 0, 0, 0.2)">
+                123 Plae Grownd Street<br>© 2021
+                <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
+                All rights reserved.
+            </div>
+            <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
+        </div>
     <!-- End of .container -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

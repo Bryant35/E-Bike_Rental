@@ -24,6 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{url('/homee')}}" >Home</a>
                     </li>
+                    @if (Session::has('login'))
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -32,6 +33,16 @@
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                           </ul>
                     </li>
+                    @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link disabled" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                        </ul>
+                    </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
                     </li>
@@ -39,15 +50,78 @@
                         <a class="nav-link" href="{{url('/aboutus')}}">About Us</a>
                     </li>
                 </ul>
+
+                @if (Session::has('login'))
+                <form class="d-flex">
+                    <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
+                        Log Out
+                    </button>
+                </form>
+                @else
+                <form class="d-flex">
+                    <a href="{{url('/signup')}}" class="btn btn-light" style="text-decoration: none; color: #000">Register</a>
+                    <a href="{{url('/login')}}" class="btn btn-primary" style="text-decoration: none; color: white">Log In</a>
+                </form>
+                @endif
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="confirmLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure going to log out ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="{{url('/logout')}}" style="text-decoration: none; color: #fff">Log Out</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section class="contact">
 		<div class="container">
 			<h3>CONTACT</h3>
 			<p>If You need more information before you book, or if you need us to arrange you particular wishes you can contact us through this form.<br> Please give us the most detail possible in order for us to help you !</p>
-			</div>
+
+            <form action="{{url('/sendHelp')}}">
+            @csrf
+                <div class="row">
+                    <div class="col" >
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="nama" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telepon" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="telepon" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col" >
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="pesan" rows="9 "></textarea>
+                        </div>
+                        <button class="btn btn-primary float-end" type="submit">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 	</section>
+
 
         <div class="mt-4">
             <!-- Footer -->
@@ -83,11 +157,10 @@
                     <p class="text-white">
                         Payment Method
                     </p>
-                    <p>
-                        <li><img src="OVO.png" alt="" style="width: 15px;"></li>
-                        <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
-                        <li><img src="dana.png" alt="" style="width: 15px;"></li>
-                    </p>
+                    <a class="shadow"><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                    <a class="shadow"><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                    <a class="shadow"><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+
                     </div>
                     <!-- Grid column -->
 

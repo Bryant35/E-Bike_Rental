@@ -10,6 +10,11 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+body{
+	background: linear-gradient(120deg,#2980b9, #8e44ad);
+	height: 100vh;
+	/* overflow: hidden; */
+}
 
 /*End Top Nav*/
 .container {

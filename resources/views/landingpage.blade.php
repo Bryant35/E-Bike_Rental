@@ -54,10 +54,23 @@
     <!--home-->
 
 
-    <div class="banner">
+    {{-- <div class="banner">
         <img src="img/bgpage.png" alt="img">
         <h2 class="heading">Welcome<br>Quick Access E-bike Rental Platform</h2>
         <h2 class="buttonrent"><a href="{{ url('/order') }}#"  class="rent" style="font-size: 45%">RENT NOW</a></h2>
+    </div> --}}
+
+    <div class="card bg-dark text-white text-center">
+        <img src="img/bgpage.png" class="card-img" alt="img">
+        <div class="card-img-overlay position-absolute top-50 start-50 translate-middle">
+            <div class="p-3 mb-2 bg-secondary text-white" style="--bs-bg-opacity: .5;">
+                <h4 class="card-title">Welcome</h4>
+                <p class="card-text">Quick Access E-bike Rental Platform.</p>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
+            </div>
+        </div>
     </div>
 
     <!--how to rent bek-->
@@ -148,12 +161,19 @@
                 <div class="box"><img src="img/TP.png" alt=""></div>
                 <!--<div class="top-left5">Tunjungan plaza</div>-->
             </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
+            </div>
         </div>
     </div>
 
-    <div class="rounded-circle">
-        <div class="fixed-bottom float-end">
-            <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <div class="">
+        <div class="float-end">
+            <button class="btn btn-dark fixed-bottom" onclick="topFunction()" id="myBtn" title="Go to top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
         </div>
     </div>
 
@@ -179,7 +199,7 @@
         }
     </script>
         <!-- Footer -->
-        <div class="mt-4">
+        <div class="">
             <!-- Footer -->
             <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
             <!-- Grid container -->
@@ -213,11 +233,9 @@
                     <p class="text-white">
                         Payment Method
                     </p>
-                    <p>
-                        <li><img src="OVO.png" alt="" style="width: 15px;"></li>
-                        <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
-                        <li><img src="dana.png" alt="" style="width: 15px;"></li>
-                    </p>
+                    <a class="shadow"><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                    <a class="shadow"><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                    <a class="shadow"><img src="img/Dana.png" alt="" style="width: 40px;"></a>
                     </div>
                     <!-- Grid column -->
 
@@ -281,7 +299,7 @@
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="text-center p-3 mt-2" style="background-color: rgba(0, 0, 0, 0.2)">
                 123 Plae Grownd Street<br>© 2021
                 <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
                 All rights reserved.

@@ -506,11 +506,9 @@
                 <p class="text-white">
                     Payment Method
                 </p>
-                <p>
-                    <li><img src="OVO.png" alt="" style="width: 15px;"></li>
-                    <li><img src="GoPay.png" alt="" style="width: 15px;"></li>
-                    <li><img src="dana.png" alt="" style="width: 15px;"></li>
-                </p>
+                <a class="shadow"><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                <a class="shadow"><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                <a class="shadow"><img src="img/Dana.png" alt="" style="width: 40px;"></a>
                 </div>
                 <!-- Grid column -->
 
