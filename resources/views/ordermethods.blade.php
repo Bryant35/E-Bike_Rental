@@ -91,7 +91,7 @@
         <!--oh no... TAXES!!!-->
 
             <label for="taxes">Taxes</label><br>
-            <input type="text" id="taxamount" name="taxes">
+            <input disabled="disabled" type="text" id="taxamount" name="taxes">
         </form>
         <!--confirmbutton-->
         <div>
