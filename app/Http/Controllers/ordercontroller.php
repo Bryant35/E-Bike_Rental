@@ -27,7 +27,9 @@ class ordercontroller extends Controller
         $datetime = $req->inputmap;
         $errorchk = dates.compare($datetime,$today);
         $color = $req->Bikepick;
-
+        Session::put('location',$location);
+        Session::put('datetime',$datetime);
+        Session::put('color',$color);
         $data = [
             'location'=> $location,
             'datetime'=> $datetime,
@@ -43,5 +45,6 @@ class ordercontroller extends Controller
     }
 
 
+    public function show(){}
 
 }

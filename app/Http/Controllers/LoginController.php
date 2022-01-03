@@ -25,7 +25,7 @@ class LoginController extends Controller
         // die;
         if ($flag_exist){
             //2.a. Jika KETEMU, maka session LOGIN dibuat
-            Session::put('login', $uname);
+            Session::put('login', $uname);  
             Session::put('pass', $pass);
 
             Session::flash('success', 'Anda berhasil Login!');
