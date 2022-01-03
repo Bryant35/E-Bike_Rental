@@ -75,13 +75,14 @@ class ordercontroller extends Controller
     public function holdermethod(Request $req){
         $price = $req->inputduit;
         Session::put('price',$price);
-        return view('orderconfirm');
+        return view('ordersummary');
     }
 
 
 
     public function show(){
-
+       
+       
     }
 
 }

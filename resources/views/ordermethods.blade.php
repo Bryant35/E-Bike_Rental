@@ -84,19 +84,21 @@
 
 
         <!--duit mas duit-->
-        <form>
+        <form action="{{url('/orders')}}" method="POST">
+            @csrf
             <label for="inputduit">Amount</label><br>
-            <input type="number" onchange="taxsi()" id="duitamount" name="inputduit">
+            <input type="number" onkeyup="taxsi()" id="duitamount" name="inputduit">
 
         <!--oh no... TAXES!!!-->
 
             <label for="taxes">Taxes</label><br>
             <input disabled="disabled" type="text" id="taxamount" name="taxes">
-        </form>
+     
         <!--confirmbutton-->
         <div>
-            <button type="button" id="butconf" onclick="">Confirm</button>
+            <button type="submit" id="butconf" >Confirm</button>
         </div>
+</form>
         </section>
     </div>
 

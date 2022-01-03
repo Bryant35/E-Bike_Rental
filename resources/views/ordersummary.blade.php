@@ -34,8 +34,8 @@
 <!--transaction-->
 
     <section id ="transinfo">
-        <p>Transaction Total :</p>
-        <p>My Wallet after transaction</p>
+        <p>Transaction Total           : {{Session::get('price')}}</p>
+        <p>My Wallet after transaction : </p>
         <button id="confbutton">Confirm</button>
     </section>
 

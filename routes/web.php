@@ -74,7 +74,7 @@ Route::get('/order','App\Http\Controllers\ordercontroller@enter');
 
 Route::get('/orderm','App\Http\Controllers\ordercontroller@holder');
 
-
+Route::post('/orders','App\Http\Controllers\ordercontroller@holdermethod');
 
 
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');

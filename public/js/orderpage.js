@@ -33,10 +33,12 @@ function map(){
 }
 
  function taxsi(){
-  $tax = document.getElementById("duitamount").text;
-  $taxaf = $tax + $tax/100*15;
 
-  document.getElementById("taxamount").text = $taxaf;
+  $tax = parseInt(document.getElementById("duitamount").value);
+
+  $taxaf = $tax + $tax/100*15;
+  
+  document.getElementById("taxamount").value = $taxaf;
 
 }
 
