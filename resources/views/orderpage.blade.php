@@ -96,8 +96,8 @@
     <!--date and time-->
 
         <label  for="pickuptime">Date and Time:</label>
-        <input name="inputmap" onchange="errorchk()" type="datetime-local" id="pickuptime">
-
+        <input name="inputmap" type="datetime-local" id="pickuptime">
+        
 
       <div id="map"></div>
     </div>
