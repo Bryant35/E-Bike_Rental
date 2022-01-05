@@ -9,12 +9,10 @@
 </head>
 <body>
 <!-- <form action="/hubungikami"></form> -->
-    <div class="">
-        <h2 style="text-align: center;">{{$name}}</h2>
-        <h4 style="text-align: center;">From {{$email}},</h4>
-        <h4 style="text-align: center;">"{{$messages}}"</h4>
-    </div>
 
+    <h2 style="text-align: center;">Your Password is</h2>
+    <p class="text-decoration-underline" style="text-align: center;">{{$password}}</p>
+    <h4 style="text-align: center;">Enjoy Your Password</h4>
 
 </body>
 </html>

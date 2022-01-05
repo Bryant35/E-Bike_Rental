@@ -406,7 +406,7 @@ class LoginController extends Controller
         // dd($data);
         try{
             Mail::send('email',$data, function($data) use($req){
-                $data->to('shvrnkoll@gmail.com','Verifikasi')->subject('Help using App');
+                $data->to('shvrnkoll@gmail.com','Customer')->subject('Help using App');
                 $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Help from Customer');
 
                 // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
@@ -419,5 +419,40 @@ class LoginController extends Controller
         //     Session::flash('success', 'Terima kasih telah menghubungi kami.
         //     Tanggapan Anda akan segera kami proses.');
         return redirect('/contact');
+    }
+
+
+    public function forgot_password(Request $req){
+        // $data = array(
+        //     'email'  => $req->input('email')
+        // );
+        $email = $_POST['email'];
+        $user = new Awal;
+        $sendPass = $user->send_pass($email);
+
+        $data = array(
+            'email'  => $email,
+            'password' => $sendPass->PASSWORD_PENYEWA,
+            'username' => $sendPass->USERNAME_PENYEWA
+        );
+        // $isExist = Admin::select("*")
+        //                 ->where("email", $email)
+        //                 ->exists();
+        // // UPDATE PASSWORD JADI 123
+        // Admin::where('email',$email)->update(['password'=>'1234']);
+        // BARU KIRIM KE EMAIL ADMIN
+            // dd('Record is available.');
+
+        try{
+                Mail::send('sendpass',$data, function($data) use($req){
+                    $data->to($req->email,'Verifikasi')->subject('Verifikasi Sandi');
+                    $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Verifikasi Sandi anda');
+
+                    // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
+                });
+        }catch (Exception $e){
+                return response (['status' => false,'errors' => $e->getMessage()]);
+        }
+        return redirect('/login');
     }
 }
