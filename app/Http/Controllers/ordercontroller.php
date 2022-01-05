@@ -8,6 +8,8 @@ use App\Models\Awal;
 use Session;
 use Alert;
 use Log;
+use Carbon\Carbon;
+use App\Models\penyewa;
 
 
 class ordercontroller extends Controller
@@ -57,13 +59,13 @@ class ordercontroller extends Controller
 
         $user = new Awal;
         $cek_time = $user->cekTime();
-        if($datetime > $cek_time){
-            // dd($cek_time, $datetime);
+        if(Carbon::parse($datetime) < Carbon::now()->setTimezone('Asia/Jakarta')){
+            // dd(Carbon::now()->setTimezone('Asia/Jakarta'), Carbon::parse($datetime)->setTimezone('Asia/Jakarta'));
             return redirect('/order');
 
         }
         else{
-            // dd($cek_time, $datetime);
+            //dd(Carbon::now()->setTimezone('Asia/Jakarta'),Carbon::parse($datetime));
             Session::put('location',$location);
             Session::put('datetime',$datetime);
             Session::put('color',$colorid);
@@ -75,12 +77,14 @@ class ordercontroller extends Controller
     public function holdermethod(Request $req){
         $price = $req->inputduit;
         Session::put('price',$price);
-        return view('ordersummary');
+        $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
+        return view('ordersummary',compact('penyewa'));
+
     }
 
 
 
-    public function show(){
+    public function a(){
        
        
     }

@@ -7,9 +7,6 @@ $rubyloc = "https://maps.google.com/maps?q=galaxy%20mall%203&t=&z=13&ie=UTF8&iwl
 $location = "";
 $datetime = "";
 $color = "";
-var d = new Date().toLocaleString("en-US", {timeZone: "Asia/Jakarta"});
-document.getElementById('timenow').innerHTML=d;
-var today = new Date();
 function map(){
     $mapchoice = document.getElementById("location");
     $choice = $mapchoice.options[$mapchoice.selectedIndex].text;
@@ -42,12 +39,8 @@ function map(){
 
 }
 
-function errorchk(){
-    $picktime = getElementById('pickuptime');
-    if($picktime < today){
-        alert("Time cannot be smaller");
-    }
-}
+
+
 
 
 

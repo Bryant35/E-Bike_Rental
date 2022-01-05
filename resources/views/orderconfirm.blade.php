@@ -33,10 +33,10 @@
 
     <section id= "transucc" >
     <h1>TRANSACTION SUCCESS!</h1>
-    <p>Transaction Code     :</p>
-    <p>Transaction Amount   :</p>
-    <p>Payment Method       :</p>
-    <p>Pickup Code          :</p>
+    <p>Transaction Code     : </p>
+    <p>Transaction Amount   : </p>
+    <p>Payment Method       : </p>
+    <p>Pickup Code          : </p>
     </section>
 
  <!--footer-->
