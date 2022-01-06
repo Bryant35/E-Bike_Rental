@@ -84,9 +84,23 @@ class ordercontroller extends Controller
 
 
 
-    public function a(){
+    public function insert(){
+        $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
+        $id = $penyewa->ID_PENYEWA;
+       $hasilid = db::select('SELECT fGenIDsewa( '.$id.' )');
+       $transaksi = transaksi_sewa::create(
+            [   'ID_SEWA'=>$hasilid,
+                'ID_SEPEDA'=>,
+                'ID_PENYEWA'=>$id,
+                'HARGA_SEWA'=>,
+                'TANGGAL_SEWA'=>,
+                'JAMAWAL_SEWA'=>,
+                'TGLAKHIR_SEWA'=>,
+                'JAMAKHIR_SEWA'=>,
+                'SEWA_DELETE'=>,
+           ]
+       );
        
-       
-    }
+       }
 
 }

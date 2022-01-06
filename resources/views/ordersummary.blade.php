@@ -36,7 +36,9 @@
     <section id ="transinfo">
         <p>Transaction Total : {{Session::get('price')}}</p>
         <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - Session::get('price')}}</p>
-        <button id="confbutton">Confirm</button>
+
+
+        <button id="confbutton" onclick="insert()">Confirm</button>
     </section>
 
  <!--footer-->
