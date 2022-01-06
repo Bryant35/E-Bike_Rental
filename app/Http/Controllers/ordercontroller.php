@@ -68,7 +68,7 @@ class ordercontroller extends Controller
         $cek_time = $user->cekTime();
         if(Carbon::parse($datetime) < Carbon::now()->setTimezone('Asia/Jakarta')){
             // dd(Carbon::now()->setTimezone('Asia/Jakarta'), Carbon::parse($datetime)->setTimezone('Asia/Jakarta'));
-            
+
             return redirect('/order')->with('success','Your Pickup date is in the past dumbass');
 
         }
@@ -83,7 +83,7 @@ class ordercontroller extends Controller
             Session::put('color',$colorid);
             Session::put('duration',$hourdiff);
             Session::put('price',$price);
-            Session::put('taxprice',$taxprice); 
+            Session::put('taxprice',$taxprice);
             Session::put('total',$totprice);
             return view('ordermethods');
         }
@@ -117,10 +117,10 @@ class ordercontroller extends Controller
         $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
          $hasilid = DB::select('SELECT fGenIDsewa( "'.$id.'" ) as id');
-       
-       
 
-        Session::put('idtrans',$hasilid);
+
+
+        Session::put('idtrans',$hasilid[0]->id);
 
 
         // $transaksi = new transaksi_sewa();
@@ -147,7 +147,7 @@ class ordercontroller extends Controller
            ]
       );
       return redirect('/orderconfirm');
-       
+
        }
 
 }

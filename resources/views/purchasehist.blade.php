@@ -77,7 +77,7 @@
                             <tr>
                                 <th class="center">Invoice</th>
                                 <th>Item</th>
-                                <th>Booth</th>
+                                <!-- <th>Booth</th> -->
                                 <th class="right">Date Rent</th>
                                 <th class="center">End Date</th>
                                 <th class="right">Price</th>
@@ -87,7 +87,7 @@
                             <tr>
                                 <td class="center">SBS001/17092021/9</td>
                                 <td class="left strong">Red Bike</td>
-                                <td class="left">Iron Bike to Emerald Bike</td>
+                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
                                 <td class="right">2021-09-17 03:47:05</td>
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
@@ -95,7 +95,7 @@
                             <tr>
                                 <td class="center">SBS001/17092021/9</td>
                                 <td class="left">Red Bike</td>
-                                <td class="left">Iron Bike to Emerald Bike</td>
+                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
                                 <td class="right">2021-09-17 03:47:05</td>
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
@@ -103,7 +103,7 @@
                             <tr>
                                 <td class="center">SBS001/17092021/9</td>
                                 <td class="left">Red Bike</td>
-                                <td class="left">Iron Bike to Emerald Bike</td>
+                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
                                 <td class="right">2021-09-17 03:47:05</td>
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
@@ -111,7 +111,7 @@
                             <tr>
                                 <td class="center">SBS001/17092021/9</td>
                                 <td class="left">Red Bike</td>
-                                <td class="left">Iron Bike to Emerald Bike</td>
+                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
                                 <td class="right">2021-09-17 03:47:05</td>
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>

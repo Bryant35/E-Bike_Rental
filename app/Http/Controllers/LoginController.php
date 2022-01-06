@@ -456,7 +456,7 @@ class LoginController extends Controller
             // dd('Record is available.');
 
         try{
-            if($cekacc == 1){
+            if($cekacc[0]->data == '1'){
                 Mail::send('sendpass',$data, function($data) use($req){
                     $data->to($req->email,'Verifikasi')->subject('Verifikasi Sandi');
                     $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Verifikasi Sandi anda');

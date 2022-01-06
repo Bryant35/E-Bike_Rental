@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Route::get('/purchasehist', function () {
-    return view('purchasehist');
-});
-
 Route::get('/logout','App\Http\Controllers\LoginController@end');
 
 Route::get('/login', function () {
@@ -37,9 +33,6 @@ Route::get('/order', function () {
 
 Route::get('/orderm', function () {
     return view('ordermethods');
-});
-Route::get('/orderconfirm', function() {
-   return view('orderconfirm'); 
 });
 
 // Route::get('/home', function () {
@@ -69,10 +62,6 @@ Route::get('/aboutus', function () {
 Route::get('/ctopup', function () {
     return view('confirmtopup');
 });
-
-Route::get('/wishlist', function () {
-    return view('wishlist');
-});
 // Route::get('/topup', function () {
 //     return view('topup');
 // });
@@ -83,10 +72,9 @@ Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
 Route::get('/order','App\Http\Controllers\ordercontroller@enter');
 
-Route::get('/order/method','App\Http\Controllers\ordercontroller@holder');
+Route::get('/orderm','App\Http\Controllers\ordercontroller@holder');
 
-Route::post('/order/summary','App\Http\Controllers\ordercontroller@holdermethod');
-Route::post('/order/confirm','App\Http\Controllers\ordercontroller@insert');
+Route::post('/orders','App\Http\Controllers\ordercontroller@holdermethod');
 
 Route::post('/getPassword','App\Http\Controllers\LoginController@forgot_password');
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');

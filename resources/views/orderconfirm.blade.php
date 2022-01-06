@@ -33,50 +33,122 @@
 
     <section id= "transucc" >
     <h1>TRANSACTION SUCCESS!</h1>
-    <p>Transaction Code     : </p>
-    <p>Transaction Amount   : </p>
-    <p>Payment Method       : </p>
-    <p>Pickup Code          : </p>
+    <p>Transaction Code     : {{Session::get('idtrans')}}</p>
+    <p>Transaction Amount   : {{Session::get('total')}}</p>
+    <p>Payment Method       : {{Session::get('method')}}</p>
+    <p>Pickup Location      : {{Session::get('location')}} </p>
     </section>
 
  <!--footer-->
- <footer class="footer">
-        <section class="logof">
-            <img src="img/ebike_logo.png" class="foot">
-        </section>
-        <section class="menuf">
-            <li><a href="#" class="aboutusf">About Us</a></li>
-            <li><a href="#" class="contactusf">Contact Us</a></li>
-            <li>Payment Method</li>
-            <li><a href="#" class="ovo"><img src="img/OVO.png"></a>
-            <a href="#" class="gopay"><img src="img/GoPay.png"></a>
-            <a href="#" class="dana"><img src="img/dana.png"></a></li>
-        </section>
-        <section class="Hour">
-            <li><h2>Operational Hour</h2></li>
-            <li><br></li>
-            <li>Monday-Saturday: 6AM - 6PM</li>
-            <li>Sunday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 6AM - 9PM</li>
-            <li><br></li>
-            <li><br></li>
-        </section>
-        <section class="SosMed">
-            <li><h2>Follow Us</h2></li>
-            <li><br></li>
-            <li class="logos">
-                <a href="#" class="Fb"><img src="img/Fb.png"></a>
-                <a href="#" class="ig"><img src="img/ig.png"></a>
-                <a href="#" class="tiktok"><img src="img/TikTok.png"></a>
-            </li>
-            <li><br></li>
-        </section>
-        <!-- Copyrights -->
-        <div class="copyrights">
+ <div class="mt-4">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+        <!--Grid row-->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+                Ebike Rental
+            </h6>
             <p>
-            123 Plae Grownd Street<br>
-            © 2021 E-Bike Rental All rights reserved.</p>
+                <a href="/home"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
+            </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
+            <p>
+                <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
+            </p>
+            <p>
+                <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+            </p>
+            <p class="text-white">
+                Payment Method
+            </p>
+            <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+            <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+            <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                <!-- Facebook -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #3b5998"
+                    href="https://www.facebook.com"
+                    role="button"
+                    ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
+
+                <!-- Twitter -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #55acee"
+                    href="https://www.twitter.com/"
+                    role="button"
+                    ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
+
+                <!-- Instagram -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #ac2bac"
+                    href="https://www.instagram.com"
+                    role="button"
+                    ><img src="img/ig.png" alt="" style="width: 30px;"></i
+                    ></a>
+
+                <!-- Github -->
+                <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #333333"
+                    href="https://www.tiktok.com/"
+                    role="button"
+                    ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
+            </div>
         </div>
+        <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        123 Plae Grownd Street<br>© 2021
+        <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
+        All rights reserved.
+    </div>
+    <!-- Copyright -->
     </footer>
+    <!-- Footer -->
+</div>
     <!-- Footer -->
 
 </body>
