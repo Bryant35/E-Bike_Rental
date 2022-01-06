@@ -71,6 +71,8 @@
 
     <div class="container">
         <!--payment method-->
+        <form action="{{url('/orders')}}" method="POST">
+        
         <section id ="paymeth">
         <label for="pay">Payment Method</label>
         <div><select name="pay" id="payment">
@@ -78,21 +80,21 @@
             <option value="dana">Dana</option>
             <option value="ovo">OVO</option>
             <option value="gopay">Gopay</option>
-            <option value="cos">Cash</option>
+            <option value="cash">Cash</option>
         </select>
         </div>
 
 
         <!--duit mas duit-->
-        <form action="{{url('/orders')}}" method="POST">
+        
             @csrf
             <label for="inputduit">Amount</label><br>
-            <input type="number" onkeyup="taxsi()" id="duitamount" name="inputduit">
+            <input disabled="disabled" type="text" id="duitamount" name="inputduit"value="{{Session::get('price')}}">
 
         <!--oh no... TAXES!!!-->
-
+    <div></div>
             <label for="taxes">Taxes</label><br>
-            <input disabled="disabled" type="text" id="taxamount" name="taxes">
+            <input disabled="disabled" onload="taxsi()" type="text" id="taxamount" name="taxes">
      
         <!--confirmbutton-->
         <div>

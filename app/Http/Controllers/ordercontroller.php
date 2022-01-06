@@ -85,7 +85,9 @@ class ordercontroller extends Controller
     }
 
     public function holdermethod(Request $req){
-        $price = Session::get('duration') * 2000;
+        $method = $req->pay;
+        $price = Session::get('duration') * 5000;
+        Session::put('method',$method);
         Session::put('price',$price);
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
         return view('ordersummary',compact('penyewa'));
@@ -106,6 +108,18 @@ class ordercontroller extends Controller
         $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
        $hasilid = db::select('SELECT fGenIDsewa( '.$id.' )');
+
+
+        Session::put('idtrans',$hasilid);
+        
+
+
+
+
+
+
+
+
        $transaksi = transaksi_sewa::create(
             [   'ID_SEWA'=>$hasilid,
                 'ID_SEPEDA'=>$ids,
