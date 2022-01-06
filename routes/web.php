@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/purchasehist', function () {
+    return view('purchasehist');
+});
+
 Route::get('/logout','App\Http\Controllers\LoginController@end');
 
 Route::get('/login', function () {
@@ -64,6 +68,10 @@ Route::get('/aboutus', function () {
 
 Route::get('/ctopup', function () {
     return view('confirmtopup');
+});
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
 });
 // Route::get('/topup', function () {
 //     return view('topup');

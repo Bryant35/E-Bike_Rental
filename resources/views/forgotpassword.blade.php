@@ -84,24 +84,36 @@
 
 <div class="container">
     <div class="center position-absolute top-50 start-50 translate-middle">
-        <h1>Forgot Password</h1>
-        <p class="text-center">Enter your email address and<br> you will receive your password.</p>
+        <h1>Forgot Account</h1>
+        <p class="text-center">Enter your email address and<br> you will receive your account.</p>
         @if (Session::has('success'))
             <div class="alert alert-success alert-block mx-4">
                 {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
                 <strong>{{ Session::get('success') }}</strong>
             </div>
+            {{-- <div class="modal fade" aria-labelledby="exampleModalLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Log Out ?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Your account have been sent to your email
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"><a href="{{ url('/getPassword')}}" style="text-decoration: none; color: #fff">Resend</a></button>
+                            <button type="button" class="btn btn-success"><a href="{{ url('/login')}}" style="text-decoration: none; color: #fff">Login</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
         @endif
         @if (Session::has('error'))
             <div class="alert alert-danger alert-block mx-4">
                 {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
                 <strong>{{ Session::get('error') }}</strong>
-            </div>
-        @endif
-        @if (Session::has('keluar'))
-            <div class="alert alert-warning alert-block mx-4">
-                {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
-                <strong>{{ Session::get('keluar') }}</strong>
             </div>
         @endif
         <form action="{{ url('/getPassword')}}" method="POST">
@@ -117,6 +129,7 @@
             </div>
         </form>
     </div>
+
 </div>
 
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> --}}

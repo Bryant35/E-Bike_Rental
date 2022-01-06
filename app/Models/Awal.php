@@ -220,6 +220,7 @@ class Awal extends Model
         return $res;
     }
 
+    //forgot password page
     public function send_pass($email){
         $data = [
             'email' => $email
@@ -228,6 +229,16 @@ class Awal extends Model
         $cmd = "SELECT PASSWORD_PENYEWA, USERNAME_PENYEWA FROM penyewa WHERE EMAIL_ADDRESS =:email;";
         $res = DB::select($cmd, $data);
         return $res[0];
+    }
+
+    public function cek_account($email){
+        $data = [
+            'email' => $email
+        ];
+        // dd($data);
+        $cmd = "SELECT count(*) as `data` FROM penyewa WHERE EMAIL_ADDRESS =:email;";
+        $res = DB::select($cmd, $data);
+        return $res;
     }
 }
 

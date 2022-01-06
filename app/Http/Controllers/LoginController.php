@@ -26,6 +26,7 @@ class LoginController extends Controller
         // die;
         if ($flag_exist){
             //2.a. Jika KETEMU, maka session LOGIN dibuat
+            Session::flush();
             Session::put('login', $uname);
             Session::put('pass', $pass);
 
@@ -223,16 +224,17 @@ class LoginController extends Controller
 
     //logOut
     public function end(Request $req){
-        session()->forget('login');
-        session()->forget('pass');
-        session()->forget('saldo');
-        session()->forget('IDpenyewa');
-        session()->forget('Tax');
-        session()->forget('pay');
-        session()->forget('totalpay');
-        session()->forget('Nama_penyewa');
-        session()->forget('Email_penyewa');
-        session()->forget('nom');
+        // session()->forget('login');
+        // session()->forget('pass');
+        // session()->forget('saldo');
+        // session()->forget('IDpenyewa');
+        // session()->forget('Tax');
+        // session()->forget('pay');
+        // session()->forget('totalpay');
+        // session()->forget('Nama_penyewa');
+        // session()->forget('Email_penyewa');
+        // session()->forget('nom');
+        Session::flush();
         return redirect('/');
     }
 
@@ -426,8 +428,18 @@ class LoginController extends Controller
         // $data = array(
         //     'email'  => $req->input('email')
         // );
-        $email = $_POST['email'];
+        if($_POST['email'] != null){
+            $email = $_POST['email'];
+        }
+        else{
+            $email = Session::get('email');
+        }
         $user = new Awal;
+        $cekacc = $user->cek_account($email);
+        if($cekacc[0]->data == '0'){
+            Session::flash('error', 'Email is not registered.');
+            return redirect('/forgotpassword');
+        }
         $sendPass = $user->send_pass($email);
 
         $data = array(
@@ -444,15 +456,18 @@ class LoginController extends Controller
             // dd('Record is available.');
 
         try{
+            if($cekacc == 1){
                 Mail::send('sendpass',$data, function($data) use($req){
                     $data->to($req->email,'Verifikasi')->subject('Verifikasi Sandi');
                     $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Verifikasi Sandi anda');
-
+                    Session::flash('success', 'Username and Password has been send to your email.');
                     // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
                 });
+                Session::put('email', $email);
+            }
         }catch (Exception $e){
                 return response (['status' => false,'errors' => $e->getMessage()]);
         }
-        return redirect('/login');
+        return redirect('/forgotpassword');
     }
 }
