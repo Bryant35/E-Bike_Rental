@@ -69,6 +69,14 @@
     </div>
 
 
+    @if (session('success'))
+    <div class="container">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{Session('success')}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+    @endif 
 
 
     <!--location -->
@@ -77,7 +85,7 @@
     <section id ="locationsect">
     <label for="locations">Choose a Location</label>
 
-    <form action="{{url('/orderm')}}" method="get" id="formorder">
+    <form action="{{url('/order/method')}}" method="get" id="formorder">
         @csrf
     <div><select name="location" id="location" onchange="map()">
             <option value="Iron">Iron Bikes</option>

@@ -69,9 +69,19 @@
         </div>
     </div>
 
+    @if (session('success'))
+    <div class="container">
+ <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{Session('success')}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+    @endif 
+
+
     <div class="container">
         <!--payment method-->
-        <form action="{{url('/orders')}}" method="POST">
+        <form action="{{url('/order/summary')}}" method="POST">
         
         <section id ="paymeth">
         <label for="pay">Payment Method</label>
@@ -89,12 +99,12 @@
         
             @csrf
             <label for="inputduit">Amount</label><br>
-            <input disabled="disabled" type="text" id="duitamount" name="inputduit"value="{{Session::get('price')}}">
+            <input readonly type="text" id="duitamount" name="inputduit"value="{{Session::get('price')}}">
 
         <!--oh no... TAXES!!!-->
     <div></div>
             <label for="taxes">Taxes</label><br>
-            <input disabled="disabled" onload="taxsi()" type="text" id="taxamount" name="taxes">
+            <input readonly  type="text" id="taxamount" name="taxes" value="{{Session::get('taxprice')}}">
      
         <!--confirmbutton-->
         <div>

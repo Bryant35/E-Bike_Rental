@@ -34,6 +34,9 @@ Route::get('/order', function () {
 Route::get('/orderm', function () {
     return view('ordermethods');
 });
+Route::get('/orderconfirm', function() {
+   return view('orderconfirm'); 
+});
 
 // Route::get('/home', function () {
 //     return view('homepage');
@@ -72,9 +75,10 @@ Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 Route::post('/insert','App\Http\Controllers\LoginController@regis');
 Route::get('/order','App\Http\Controllers\ordercontroller@enter');
 
-Route::get('/orderm','App\Http\Controllers\ordercontroller@holder');
+Route::get('/order/method','App\Http\Controllers\ordercontroller@holder');
 
-Route::post('/orders','App\Http\Controllers\ordercontroller@holdermethod');
+Route::post('/order/summary','App\Http\Controllers\ordercontroller@holdermethod');
+Route::post('/order/confirm','App\Http\Controllers\ordercontroller@insert');
 
 Route::post('/getPassword','App\Http\Controllers\LoginController@forgot_password');
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');

@@ -34,11 +34,14 @@
 <!--transaction-->
 
     <section id ="transinfo">
-        <p>Transaction Total : {{Session::get('price')}}</p>
-        <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - Session::get('price')}}</p>
+        <p>Transaction Total : {{Session::get('taxprice') + Session::get('price')}}</p>
+        <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - (Session::get('price') + Session::get('taxprice'))}}</p>
 
 
-        <button id="confbutton" onclick="insert()">Confirm</button>
+    <form action="{{url('/order/confirm')}}" method="POST">
+        @csrf
+        <button id="confbutton" type="submit">Confirm</button>
+        </form>
     </section>
 
  <!--footer-->

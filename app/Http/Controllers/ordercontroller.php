@@ -10,6 +10,8 @@ use Alert;
 use Log;
 use Carbon\Carbon;
 use App\Models\penyewa;
+use App\Models\transaksi_sewa;
+use DB;
 
 
 class ordercontroller extends Controller
@@ -33,30 +35,32 @@ class ordercontroller extends Controller
         $lastdate = $req->inputlast;
         $color = $req->Bikepick;
         $hourdiff = round((strtotime($lastdate) - strtotime($datetime))/3600, 1);
-      
+        $price = $hourdiff * 5000;
+        $taxprice = ($price/100 * 15);
+        $totprice = ($price + $taxprice);
         $colorid = "";
-        if($color == "Biru"){
+        if($color == "biru"){
             $colorid = "B001";
         }
-        elseif($color == "Hitam"){
+        elseif($color == "hitam"){
             $colorid = "H001";
         }
-        elseif($color == "Hijau"){
+        elseif($color == "hijau"){
             $colorid = "H002";
         }
-        elseif($color == "Jingga"){
+        elseif($color == "jingga"){
             $colorid = "J001";
         }
-        elseif($color == "Kuning"){
+        elseif($color == "kuning"){
             $colorid = "K001";
         }
-        elseif($color == "Merah"){
+        elseif($color == "merah"){
             $colorid = "M001";
         }
-        elseif($color == "Pink"){
+        elseif($color == "pink"){
             $colorid = "P001";
         }
-        elseif($color == "Ungu"){
+        elseif($color == "ungu"){
             $colorid = "U001";
         }
 
@@ -64,13 +68,12 @@ class ordercontroller extends Controller
         $cek_time = $user->cekTime();
         if(Carbon::parse($datetime) < Carbon::now()->setTimezone('Asia/Jakarta')){
             // dd(Carbon::now()->setTimezone('Asia/Jakarta'), Carbon::parse($datetime)->setTimezone('Asia/Jakarta'));
-            Session::flash('Pickup time is in the before time... THE PAST!!!!');
-            return redirect('/order');
+            
+            return redirect('/order')->with('success','Your Pickup date is in the past dumbass');
 
         }
         else if($lastdate < $datetime){
-            Session::flash("Dropoff time is before the pickup time. YOU Can't do that");
-            return redirect('/order');
+            return redirect('/order')->with('success','Your Dropoff date is before your pickup date DUM DUM.');
         }
         else{
             //dd(Carbon::now()->setTimezone('Asia/Jakarta'),Carbon::parse($datetime));
@@ -79,6 +82,9 @@ class ordercontroller extends Controller
             Session::put('lastdate',$lastdate);
             Session::put('color',$colorid);
             Session::put('duration',$hourdiff);
+            Session::put('price',$price);
+            Session::put('taxprice',$taxprice); 
+            Session::put('total',$totprice);
             return view('ordermethods');
         }
 
@@ -86,42 +92,50 @@ class ordercontroller extends Controller
 
     public function holdermethod(Request $req){
         $method = $req->pay;
-        $price = Session::get('duration') * 5000;
+        $total = Session::get('total');
         Session::put('method',$method);
-        Session::put('price',$price);
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
-        return view('ordersummary',compact('penyewa'));
 
+        if(($penyewa[0]['SALDO_PENYEWA'] - $total) < 0){
+
+            return redirect('/order')->with('success','Your Balance is not enough!');
+        }
+        else{
+        return view('ordersummary',compact('penyewa'));
+        }
     }
 
 
 
     public function insert(){
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
-        $id = $penyewa->ID_PENYEWA;
+        $id = $penyewa[0]['ID_PENYEWA'];
         $ids = Session::get('color');
-        $hargas = Session::get('price');
-        $tanggals = Carbon::parse(Session::get('datetime'));
-        $tanggals->toDateString();
-        $last = Carbon::parse(Session::get('lastdate'));
-        $last->toDateString();
+        $hargas = Session::get('total');
+        $tanggals = Carbon::parse(Session::get('datetime'))->format('Y-m-d');
+        $last = Carbon::parse(Session::get('lastdate'))->format('Y-m-d');
         $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
-       $hasilid = db::select('SELECT fGenIDsewa( '.$id.' )');
-
+         $hasilid = DB::select('SELECT fGenIDsewa( "'.$id.'" ) as id');
+       
+       
 
         Session::put('idtrans',$hasilid);
-        
 
 
-
-
-
-
-
-
-       $transaksi = transaksi_sewa::create(
-            [   'ID_SEWA'=>$hasilid,
+        // $transaksi = new transaksi_sewa();
+        // $transaksi->ID_SEWA=$hasilid[0]->id;
+        // $transaksi->ID_SEPEDA=$ids;
+        // $transaksi->ID_PENYEWA=$id;
+        // $transaksi->HARGA_SEWA=$hargas;
+        // $transaksi->TANGGAL_SEWA=$tanggals;
+        // $transaksi->JAMAWAL_SEWA=$jams;
+        // $transaksi->TGLAKHIR_SEWA=$last;
+        // $transaksi->JAMAKHIR_SEWA=$jaml;
+        // $transaksi->SEWA_DELETE=0;
+        //  $transaksi->save();
+       $transaksi = DB::table('transaksi_sewa')->insert(
+            [   'ID_SEWA'=>$hasilid[0]->id,
                 'ID_SEPEDA'=>$ids,
                 'ID_PENYEWA'=>$id,
                 'HARGA_SEWA'=>$hargas,
@@ -129,9 +143,10 @@ class ordercontroller extends Controller
                 'JAMAWAL_SEWA'=>$jams,
                 'TGLAKHIR_SEWA'=>$last,
                 'JAMAKHIR_SEWA'=>$jaml,
-                'SEWA_DELETE'=>'0',
+                'SEWA_DELETE'=> '0'
            ]
-       );
+      );
+      return redirect('/orderconfirm');
        
        }
 
