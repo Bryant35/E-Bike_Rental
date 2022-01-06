@@ -95,9 +95,11 @@
 
     <!--date and time-->
 
-        <label  for="pickuptime">Date and Time:</label>
+        <label  for="pickuptime">Start Date and Time:</label>
         <input name="inputmap" type="datetime-local" id="pickuptime">
-        
+
+        <label  for="dropofftime">Finish Date and Time:</label>
+        <input name="inputlast" type="datetime-local" id="dropofftime">
 
       <div id="map"></div>
     </div>

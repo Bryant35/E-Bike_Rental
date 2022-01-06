@@ -30,7 +30,10 @@ class ordercontroller extends Controller
     {
         $location = $req->location;
         $datetime = $req->inputmap;
+        $lastdate = $req->inputlast;
         $color = $req->Bikepick;
+        $hourdiff = round((strtotime($lastdate) - strtotime($datetime))/3600, 1);
+      
         $colorid = "";
         if($color == "Biru"){
             $colorid = "B001";
@@ -61,21 +64,28 @@ class ordercontroller extends Controller
         $cek_time = $user->cekTime();
         if(Carbon::parse($datetime) < Carbon::now()->setTimezone('Asia/Jakarta')){
             // dd(Carbon::now()->setTimezone('Asia/Jakarta'), Carbon::parse($datetime)->setTimezone('Asia/Jakarta'));
+            Session::flash('Pickup time is in the before time... THE PAST!!!!');
             return redirect('/order');
 
+        }
+        else if($lastdate < $datetime){
+            Session::flash("Dropoff time is before the pickup time. YOU Can't do that");
+            return redirect('/order');
         }
         else{
             //dd(Carbon::now()->setTimezone('Asia/Jakarta'),Carbon::parse($datetime));
             Session::put('location',$location);
             Session::put('datetime',$datetime);
+            Session::put('lastdate',$lastdate);
             Session::put('color',$colorid);
+            Session::put('duration',$hourdiff);
             return view('ordermethods');
         }
 
     }
 
     public function holdermethod(Request $req){
-        $price = $req->inputduit;
+        $price = Session::get('duration') * 2000;
         Session::put('price',$price);
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
         return view('ordersummary',compact('penyewa'));
@@ -87,17 +97,25 @@ class ordercontroller extends Controller
     public function insert(){
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
         $id = $penyewa->ID_PENYEWA;
+        $ids = Session::get('color');
+        $hargas = Session::get('price');
+        $tanggals = Carbon::parse(Session::get('datetime'));
+        $tanggals->toDateString();
+        $last = Carbon::parse(Session::get('lastdate'));
+        $last->toDateString();
+        $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
+        $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
        $hasilid = db::select('SELECT fGenIDsewa( '.$id.' )');
        $transaksi = transaksi_sewa::create(
             [   'ID_SEWA'=>$hasilid,
-                'ID_SEPEDA'=>,
+                'ID_SEPEDA'=>$ids,
                 'ID_PENYEWA'=>$id,
-                'HARGA_SEWA'=>,
-                'TANGGAL_SEWA'=>,
-                'JAMAWAL_SEWA'=>,
-                'TGLAKHIR_SEWA'=>,
-                'JAMAKHIR_SEWA'=>,
-                'SEWA_DELETE'=>,
+                'HARGA_SEWA'=>$hargas,
+                'TANGGAL_SEWA'=>$tanggals,
+                'JAMAWAL_SEWA'=>$jams,
+                'TGLAKHIR_SEWA'=>$last,
+                'JAMAKHIR_SEWA'=>$jaml,
+                'SEWA_DELETE'=>'0',
            ]
        );
        
