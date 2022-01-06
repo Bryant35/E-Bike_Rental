@@ -76,7 +76,7 @@ Route::get('/orderm','App\Http\Controllers\ordercontroller@holder');
 
 Route::post('/orders','App\Http\Controllers\ordercontroller@holdermethod');
 
-
+Route::post('/getPassword','App\Http\Controllers\LoginController@forgot_password');
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check');
 

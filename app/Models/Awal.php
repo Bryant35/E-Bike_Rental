@@ -219,5 +219,15 @@ class Awal extends Model
 
         return $res;
     }
+
+    public function send_pass($email){
+        $data = [
+            'email' => $email
+        ];
+        // dd($data);
+        $cmd = "SELECT PASSWORD_PENYEWA, USERNAME_PENYEWA FROM penyewa WHERE EMAIL_ADDRESS =:email;";
+        $res = DB::select($cmd, $data);
+        return $res[0];
+    }
 }
 

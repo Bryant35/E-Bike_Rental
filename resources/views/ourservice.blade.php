@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/ourservice.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 </head>
 <!-- navbar -->
@@ -118,7 +118,7 @@
                                 <div class="row r4">
                                     <div class="col-md-2 myt des"><a href="#">Description</a></div>
                                     <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
+                                    <div class="col-md-2 mio offset-md-4"><a href="#"><i class="bi bi-heart" ></i></a></div>
                                     <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
                                 </div>
                             </div>
