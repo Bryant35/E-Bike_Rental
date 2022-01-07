@@ -77,7 +77,7 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 </div>
-    @endif 
+    @endif
 
 
     <!--location -->
@@ -88,12 +88,13 @@
 
     <form action="{{url('/order/method')}}" method="get" id="formorder">
         @csrf
-    <div><select name="location" id="location" onchange="map()">
-            <option value="Iron">Iron Bikes</option>
-            <option value="Emerald">Emerald Bikes</option>
-            <option value="Gold">Gold Bikes</option>
-            <option value="Ruby">Ruby Bikes</option>
-        </select>
+        <div><select name="location" id="location" onchange="map()">
+                <option value="Iron">Iron Bikes</option>
+                <option value="Emerald">Emerald Bikes</option>
+                <option value="Gold">Gold Bikes</option>
+                <option value="Ruby">Ruby Bikes</option>
+            </select>
+        </div>
 
 
 
@@ -101,8 +102,7 @@
         <div class="gmap_canvas">
             <iframe width="600" height="500"name="gmap" id="gmap" src="https://maps.google.com/maps?q=pakuwon%20tower&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div>
-
-    <!--date and time-->
+        <!--date and time-->
 
         <label  for="pickuptime">Start Date and Time:</label>
         <input name="inputmap" type="datetime-local" id="pickuptime">
@@ -121,21 +121,21 @@
 
     <label for="Bikes">Choose your preferred bike.</label>
     <div><select name="Bikepick" id="bikepick">
-        <option value="biru">Biru</option>
-        <option value="hitam">Hitam</option>
-        <option value="hijau">Hijau</option>
-        <option value="jingga">Jingga</option>
-        <option value="kuning">Kuning</option>
-        <option value="merah">Merah</option>
-        <option value="pink">Pink</option>
-        <option value="ungu">Ungu</option>
-    </select>
+            <option value="biru">Biru</option>
+            <option value="hitam">Hitam</option>
+            <option value="hijau">Hijau</option>
+            <option value="jingga">Jingga</option>
+            <option value="kuning">Kuning</option>
+            <option value="merah">Merah</option>
+            <option value="pink">Pink</option>
+            <option value="ungu">Ungu</option>
+        </select>
     </div>
     </form>
 
-   <button type="submit" id="confirmbut" onclick="holder()">Confirm</button>
-</section>
-
+    <button type="submit" id="confirmbut" onclick="holder()">Confirm</button>
+    </section>
+    </div>
 
 
     {{-- Footer --}}
