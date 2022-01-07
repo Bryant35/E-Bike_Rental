@@ -117,8 +117,8 @@ class ordercontroller extends Controller
         $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
          $hasilid = DB::select('SELECT fGenIDsewa( "'.$id.'" ) as id');
-
-
+         $sisa = ($penyewa[0]['SALDO_PENYEWA'] - $hargas);
+        
 
         Session::put('idtrans',$hasilid[0]->id);
 
@@ -146,7 +146,8 @@ class ordercontroller extends Controller
                 'SEWA_DELETE'=> '0'
            ]
       );
-      return redirect('/orderconfirm');
+      $updet = DB::table('penyewa')->where('ID_PENYEWA',$id)->update(['SALDO_PENYEWA'=>$sisa]);
+      return view('orderconfirm');
 
        }
 

@@ -38,7 +38,7 @@
         <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - (Session::get('price') + Session::get('taxprice'))}}</p>
 
 
-    <form action="{{url('/order/confirm')}}" method="POST">
+    <form action="{{url('/order/success')}}" method="POST">
         @csrf
         <button id="confbutton" type="submit">Confirm</button>
         </form>
