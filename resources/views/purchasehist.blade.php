@@ -67,15 +67,26 @@
 <div class="container">
     <div class="my-4">
         <div class="card">
-            <div class="card-header p-4">
+            <div class="card-header p-4 d-flex justify-content-between">
                 <h2>Purchase History</h2>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                        <li><a class="dropdown-item" href="#">Top Up History</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">All Transaction</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive-sm">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th class="center">Invoice</th>
+                                <th class="center ps-4">Invoice</th>
                                 <th>Item</th>
                                 <!-- <th>Booth</th> -->
                                 <th class="right">Date Rent</th>
@@ -84,37 +95,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            {{-- <tr>
                                 <td class="center">SBS001/17092021/9</td>
                                 <td class="left strong">Red Bike</td>
                                 <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
                                 <td class="right">2021-09-17 03:47:05</td>
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
-                            </tr>
+                            </tr> --}}
+                            @foreach($tampil_history as $history)
+                                <tr>
+                                    <td class="center ps-4">{{ $history->Invoice }}</td>
+                                    <td class="left strong">{{ $history->TypeBike }}</td>
+                                    <td class="right">{{ $history->DateRent }}</td>
+                                    <td class="center">{{ $history->EndDate }}</td>
+                                    <td class="right text-end pe-4">{{ $history->Price }}</td>
+                                </tr>
+                            @endforeach
                             <tr>
-                                <td class="center">SBS001/17092021/9</td>
-                                <td class="left">Red Bike</td>
-                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
-                                <td class="right">2021-09-17 03:47:05</td>
-                                <td class="center">2021-09-17 03:47:05</td>
-                                <td class="right">Rp 15,000</td>
-                            </tr>
-                            <tr>
-                                <td class="center">SBS001/17092021/9</td>
-                                <td class="left">Red Bike</td>
-                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
-                                <td class="right">2021-09-17 03:47:05</td>
-                                <td class="center">2021-09-17 03:47:05</td>
-                                <td class="right">Rp 15,000</td>
-                            </tr>
-                            <tr>
-                                <td class="center">SBS001/17092021/9</td>
-                                <td class="left">Red Bike</td>
-                                <!-- <td class="left">Iron Bike to Emerald Bike</td> -->
-                                <td class="right">2021-09-17 03:47:05</td>
-                                <td class="center">2021-09-17 03:47:05</td>
-                                <td class="right">Rp 15,000</td>
+                                <td class="center ps-4">Total Purchase</td>
+                                <td class="left strong"></td>
+                                <td class="right"></td>
+                                <td class="center"></td>
+                                <td class="right text-end pe-4">{{ $sum_purchase[0]->TotalPurchase }}</td>
                             </tr>
                         </tbody>
                     </table>

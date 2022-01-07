@@ -240,5 +240,24 @@ class Awal extends Model
         $res = DB::select($cmd, $data);
         return $res;
     }
+
+    public function history_transaksi($IDPenyewa){
+        $cmd = "CALL pHistory(:IDPenyewa);";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function total_purchase($IDPenyewa){
+        $cmd = "SELECT SUM(PRICE) as `TotalPurchase` ".
+                "FROM (SELECT ".
+                "ts.ID_SEWA AS `Invoice`, s.WARNA_SEPEDA AS `TypeBike`, CONCAT(ts.TANGGAL_SEWA, ' ', ts.JAMAWAL_SEWA) as `DateRent`, CONCAT(ts.TGLAKHIR_SEWA, ' ', ts.JAMAKHIR_SEWA) as `EndDate`, HARGA_SEWA AS `Price` ".
+                "FROM transaksi_sewa ts JOIN sepeda s JOIN penyewa p ".
+                "WHERE ((s.ID_SEPEDA = ts.ID_SEPEDA) AND (ts.ID_PENYEWA = :IDPenyewa)) GROUP BY `Invoice` ".
+                "ORDER BY ts.TANGGAL_SEWA DESC) a;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
 }
 

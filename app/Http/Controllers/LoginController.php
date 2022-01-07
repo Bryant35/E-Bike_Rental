@@ -470,4 +470,16 @@ class LoginController extends Controller
         }
         return redirect('/forgotpassword');
     }
+
+
+    public function purchase_history(){
+        $IDPenyewa = Session::get('IDpenyewa');
+
+        $user = new Awal;
+        $tampil_history = $user->history_transaksi($IDPenyewa);
+        $sum_purchase = $user->total_purchase($IDPenyewa);
+        // dd($tampil_history);
+
+        return view('purchasehist', compact(['tampil_history', 'sum_purchase']));
+    }
 }
