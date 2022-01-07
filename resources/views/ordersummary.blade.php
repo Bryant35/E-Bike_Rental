@@ -68,7 +68,7 @@
         </div>
     </div>
 <!--transaction-->
-
+<div class="container">
     <section id ="transinfo">
         <p>Transaction Total : {{Session::get('taxprice') + Session::get('price')}}</p>
         <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - (Session::get('price') + Session::get('taxprice'))}}</p>
@@ -79,7 +79,7 @@
         <button id="confbutton" type="submit">Confirm</button>
         </form>
     </section>
-
+</div>
     {{-- Footer --}}
     <div class="mt-4">
         <!-- Footer -->

@@ -133,9 +133,10 @@
             <option value="ungu">Ungu</option>
         </select>
     </div>
-    </form>
+
 
     <button type="submit" id="confirmbut" >Confirm</button>
+    </form>
     </section>
     </div>
 
