@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = "icon" href = "img/ebike_logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/ordermethods.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
 
 </head>
 <body>
-    <!--header-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!--header-->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a href="" class="logo"><img src="img/ebike_logo.png" alt="" style="width: 60px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,29 +22,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/home" >Home</a>
+                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#wishlist">Wishlist</a></li>
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
-                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Something Else</a></li>
+
                           </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/aboutus')}}">About Us</a>
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
-                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}
+                    </button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                         Log Out
                     </button>
@@ -68,6 +71,7 @@
             </div>
         </div>
     </div>
+    
 
     @if (session('success'))
     <div class="container">

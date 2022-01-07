@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
     <link rel="stylesheet" href="css/footer.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/ordersummary.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
-   
+    
+    <title>Order</title>
+
 
 </head>
 <body>
@@ -72,17 +73,18 @@
     </div>
 <!--transaction-->
 
-    <section id ="transinfo">
+<div class="container">
+    <div class="h1"><section id ="transinfo">
         <p>Transaction Total : {{Session::get('taxprice') + Session::get('price')}}</p>
         <p>My Wallet after transaction : {{$penyewa[0]['SALDO_PENYEWA'] - (Session::get('price') + Session::get('taxprice'))}}</p>
-
+        </div>
 
     <form action="{{url('/order/success')}}" method="POST">
         @csrf
         <button id="confbutton" type="submit">Confirm</button>
         </form>
     </section>
-
+    </div>
     {{-- Footer --}}
     <div class="mt-4">
         <!-- Footer -->

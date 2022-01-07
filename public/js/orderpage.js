@@ -28,6 +28,10 @@ function map(){
         document.getElementById("gmap").src = $rubyloc;
     }
 }
+function bike(){
+    $bikechoice = document.getElementById("bikepick").value;
+    
+}
 
  function taxsi(){
 

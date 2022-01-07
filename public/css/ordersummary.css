@@ -93,13 +93,14 @@ nav{
  
 
 
+
 #transinfo{
     margin: 10%;
-    background-color: #474fa0;
+    font-size: 25px;
 }
 
-/*Footer*/
-.footer {
+/* Footer*/
+/* .footer {
     display: block;
     background-color: #59bfff;
     margin: 0px, auto;
@@ -168,5 +169,5 @@ nav{
 
 .copyrights{
     text-align: center;
-}
-/*End Footer*/
+} */
+/*End Footer */

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/orderconfirm.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/homepage.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Order</title>
     <script src="js/ordersummary.js"></script>
@@ -70,7 +72,7 @@
         </div>
     </div>
 
-
+<div class="container">
     <section id= "transucc" >
     <h1>TRANSACTION SUCCESS!</h1>
     <p>Transaction Code     : {{Session::get('idtrans')}}</p>
@@ -78,7 +80,7 @@
     <p>Payment Method       : {{Session::get('method')}}</p>
     <p>Pickup Location      : {{Session::get('location')}} </p>
     </section>
-
+</div>
     {{-- Footer --}}
     <div class="mt-4">
         <!-- Footer -->
