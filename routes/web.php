@@ -36,6 +36,12 @@ Route::get('/order', function () {
 Route::get('/ordermethods', function () {
     return view('ordermethods');
 });
+Route::get('/ordersummary', function(){
+    return view('ordersummary');
+});
+Route::get('/orderconfirm', function(){
+    return view('orderconfirm');
+});
 
 
 // Route::get('/home', function () {

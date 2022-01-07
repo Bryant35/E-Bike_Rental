@@ -85,7 +85,8 @@ class ordercontroller extends Controller
             Session::put('price',$price);
             Session::put('taxprice',$taxprice);
             Session::put('total',$totprice);
-            return view('ordermethods');
+
+            return redirect('ordermethods');
         }
 
     }
@@ -95,13 +96,15 @@ class ordercontroller extends Controller
         $total = Session::get('total');
         Session::put('method',$method);
         $penyewa = penyewa::where('USERNAME_PENYEWA',Session::get('login'))->get();
+        $duitPenyewa = $penyewa[0]['SALDO_PENYEWA'];
+        Session::put('duitpenyewa',$duitPenyewa);
 
         if(($penyewa[0]['SALDO_PENYEWA'] - $total) < 0){
 
             return redirect('/order')->with('success','Your Balance is not enough!');
         }
         else{
-        return view('ordersummary',compact('penyewa'));
+            return redirect('ordersummary');
         }
     }
 
@@ -147,7 +150,7 @@ class ordercontroller extends Controller
     //        ]
     //   );
     //   $updet = DB::table('penyewa')->where('ID_PENYEWA',$id)->update(['SALDO_PENYEWA'=>$sisa]);
-      return view('orderconfirm');
+      return redirect('orderconfirm');
 
        }
 
