@@ -259,5 +259,31 @@ class Awal extends Model
         $res = DB::select($cmd, $data);
         return $res;
     }
+
+    public function history_topup($IDPenyewa){
+        $cmd = "SELECT t.ID_TOPUP AS `Invoice`, t.PAYMENT_METHOD AS `Payment_Method`, TANGGAL_TOPUP AS `Tanggal_Topup`, TOTAL_TOPUP AS `Nominal` ".
+                "FROM transaksi_topup t JOIN sepeda s JOIN penyewa p ".
+                "WHERE (t.ID_PENYEWA = :IDPenyewa) GROUP BY `Invoice` ORDER BY `Tanggal_Topup` DESC;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function total_tpurchase($IDPenyewa){
+        $cmd = "SELECT SUM(Nominal) as `SUMTopup` ".
+                "FROM (SELECT t.ID_TOPUP AS `Invoice`, t.PAYMENT_METHOD AS `Payment_Method`, TANGGAL_TOPUP AS `Tanggal_Topup`, TOTAL_TOPUP AS `Nominal` ".
+                "FROM transaksi_topup t JOIN sepeda s JOIN penyewa p ".
+                "WHERE (t.ID_PENYEWA = :IDPenyewa) GROUP BY `Invoice` ORDER BY `Tanggal_Topup` DESC) a;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function semua_transaksi($IDPenyewa){
+        $cmd = "call KMMI3.AllTransaction(:IDPenyewa);";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
 }
 

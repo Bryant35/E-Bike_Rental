@@ -474,12 +474,15 @@ class LoginController extends Controller
 
     public function purchase_history(){
         $IDPenyewa = Session::get('IDpenyewa');
-
+        $saldo = Session::get('saldo');
         $user = new Awal;
-        $tampil_history = $user->history_transaksi($IDPenyewa);
+        $tampil_phistory = $user->history_transaksi($IDPenyewa);
+        $tampil_thistory = $user->history_topup($IDPenyewa);
+        $tampil_ahistory = $user->semua_transaksi($IDPenyewa);
         $sum_purchase = $user->total_purchase($IDPenyewa);
-        // dd($tampil_history);
+        $sum_tpurchase = $user->total_tpurchase($IDPenyewa);
+        $sum_alltransaksi = $sum_tpurchase[0]->SUMTopup - $sum_purchase[0]->TotalPurchase;
 
-        return view('purchasehist', compact(['tampil_history', 'sum_purchase']));
+        return view('purchasehist', compact(['tampil_phistory', 'sum_purchase', 'tampil_thistory', 'sum_tpurchase', 'tampil_ahistory', 'sum_alltransaksi']));
     }
 }
