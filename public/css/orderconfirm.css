@@ -11,6 +11,11 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+section{
+    padding: 50px 100px;
+}
+
+/*End Header*/
 /*:root{
     --main-color :#fe5b3d;
     --second-color :#ffac38;
@@ -106,8 +111,8 @@ nav{
 
 
 
-/*Footer*/
-.footer {
+/* Footer*/
+/* .footer {
     display: block;
     background-color: #59bfff;
     margin: 0px, auto;
@@ -176,5 +181,5 @@ nav{
 
 .copyrights{
     text-align: center;
-}
-/*End Footer*/
+} */
+/*End Footer */
