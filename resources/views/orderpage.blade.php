@@ -102,7 +102,7 @@
 
     <div class="mapouter">
         <div class="gmap_canvas">
-            <iframe width="600" height="500"name="gmap" id="gmap" src="https://maps.google.com/maps?q=pakuwon%20tower&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <iframe width="600" height="500"name="gmap" id="gmap" src="https://maps.google.com/maps?q=pakuwon%20mall%20surabaya&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div>
         <!--date and time-->
 
@@ -135,7 +135,7 @@
     </div>
     </form>
 
-    <button type="submit" id="confirmbut" onclick="holder()">Confirm</button>
+    <button type="submit" id="confirmbut" >Confirm</button>
     </section>
     </div>
 
