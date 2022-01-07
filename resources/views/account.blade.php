@@ -76,7 +76,7 @@
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="#">Purchase History</a></h6>
+                        <h4 class="text-right">Profile Settings</h4><h6 style="font-align: right;"><a href="/purchasehist">Purchase History</a></h6>
                     </div>
                     @if (Session::has('usernameUsed'))
                         <div class="alert alert-warning alert-block mx-4">

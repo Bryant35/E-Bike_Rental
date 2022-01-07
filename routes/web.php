@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/purchasehist','App\Http\Controllers\LoginController@purchase_history');
+
 Route::get('/logout','App\Http\Controllers\LoginController@end');
 
 Route::get('/login', function () {
