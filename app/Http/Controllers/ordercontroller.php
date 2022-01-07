@@ -117,8 +117,8 @@ class ordercontroller extends Controller
         $jams = Carbon::parse(Session::get('datetime'))->format('H:i:s');
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
          $hasilid = DB::select('SELECT fGenIDsewa( "'.$id.'" ) as id');
-
-
+         $sisa = ($penyewa[0]['SALDO_PENYEWA'] - $hargas);
+        
 
         Session::put('idtrans',$hasilid[0]->id);
 
@@ -134,19 +134,20 @@ class ordercontroller extends Controller
         // $transaksi->JAMAKHIR_SEWA=$jaml;
         // $transaksi->SEWA_DELETE=0;
         //  $transaksi->save();
-       $transaksi = DB::table('transaksi_sewa')->insert(
-            [   'ID_SEWA'=>$hasilid[0]->id,
-                'ID_SEPEDA'=>$ids,
-                'ID_PENYEWA'=>$id,
-                'HARGA_SEWA'=>$hargas,
-                'TANGGAL_SEWA'=>$tanggals,
-                'JAMAWAL_SEWA'=>$jams,
-                'TGLAKHIR_SEWA'=>$last,
-                'JAMAKHIR_SEWA'=>$jaml,
-                'SEWA_DELETE'=> '0'
-           ]
-      );
-      return redirect('/orderconfirm');
+    //    $transaksi = DB::table('transaksi_sewa')->insert(
+    //         [   'ID_SEWA'=>$hasilid[0]->id,
+    //             'ID_SEPEDA'=>$ids,
+    //             'ID_PENYEWA'=>$id,
+    //             'HARGA_SEWA'=>$hargas,
+    //             'TANGGAL_SEWA'=>$tanggals,
+    //             'JAMAWAL_SEWA'=>$jams,
+    //             'TGLAKHIR_SEWA'=>$last,
+    //             'JAMAKHIR_SEWA'=>$jaml,
+    //             'SEWA_DELETE'=> '0'
+    //        ]
+    //   );
+    //   $updet = DB::table('penyewa')->where('ID_PENYEWA',$id)->update(['SALDO_PENYEWA'=>$sisa]);
+      return view('orderconfirm');
 
        }
 
