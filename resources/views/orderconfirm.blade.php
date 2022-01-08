@@ -74,6 +74,7 @@
         </div>
     </div>
 
+    <div class="bg-info h-100 w-100" >
 <div class="container">
     <section id= "transucc" >
     <h1>TRANSACTION SUCCESS!</h1>
@@ -83,8 +84,9 @@
     <p>Pickup Location      : {{Session::get('location')}} </p>
     </section>
 </div>
+</div>
     {{-- Footer --}}
-    <div class="mt-4">
+    <div>
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->

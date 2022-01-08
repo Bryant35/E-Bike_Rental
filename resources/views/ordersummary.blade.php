@@ -13,7 +13,7 @@
 <body>
      <!--header-->
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container container-fluid container-lg">
             <a href="" class="logo"><img src="{{asset('img/ebike_logo.png')}}" alt="" style="width: 60px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,21 +68,33 @@
             </div>
         </div>
     </div>
-<!--transaction-->
-<div class="container">
-    <section id ="transinfo">
-        <p>Transaction Total : {{Session::get('taxprice') + Session::get('price')}}</p>
-        <p>My Wallet after transaction : {{Session::get('duitpenyewa') - (Session::get('price') + Session::get('taxprice'))}}</p>
 
+
+
+<!--transaction-->
+<div class="bg-info h-100 w-100" style="min-height: 518px;">
+    
+    <div class="pt-5 container fs-2" id ="transinfo">
+        <div class="d-flex p-5">
+        <p>Transaction Total : {{Session::get('taxprice') + Session::get('price')}}</p>
+        </div>
+        <div class="d-flex p-5">
+        <p>My Wallet after transaction : {{Session::get('duitpenyewa') - (Session::get('price') + Session::get('taxprice'))}}</p>
+        </div>
 
     <form action="{{url('/order/success')}}" method="POST">
         @csrf
-        <button id="confbutton" type="submit">Confirm</button>
+        <div class="text-end">
+        <button class="btn btn-light btn-lg"id="confbutton" type="submit">Confirm</button>
+        </div>
         </form>
-    </section>
+        
 </div>
+</div>
+
+
     {{-- Footer --}}
-    <div class="mt-4">
+    <div>
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->

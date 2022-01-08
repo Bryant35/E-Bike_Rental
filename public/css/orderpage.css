@@ -21,6 +21,7 @@ margin: 10%;
 #datetime{
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
 
 .gmap_canvas{
@@ -29,6 +30,14 @@ margin: 10%;
     background:none!important;
     height:500px;
     width:600px;
+}
+
+
+#bikeimg{
+    width: 500px;
+    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
 }
 /*Footer*/
 .footer {

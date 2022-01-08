@@ -30,6 +30,31 @@ function map(){
 }
 function bike(){
     $bikechoice = document.getElementById("bikepick").value;
+    if ($bikechoice == "biru" ){
+        document.getElementById("bikeimg").src = "img/bluebike.jpg";
+    }
+    else if($bikechoice == "hitam" ){
+        document.getElementById("bikeimg").src = "img/blackbike.jpg";
+    }
+    else if($bikechoice == "hijau" ){
+        document.getElementById("bikeimg").src = "img/greenbike.jpg";
+    }
+    else if($bikechoice == "jingga" ){
+        document.getElementById("bikeimg").src = "img/orangebike.jpg";
+    }
+    else if($bikechoice == "kuning" ){
+        document.getElementById("bikeimg").src = "img/yellowbike.jpg";
+    }
+    else if($bikechoice == "merah" ){
+        document.getElementById("bikeimg").src = "img/redbike.jpg";
+    }
+    else if($bikechoice == "pink" ){
+        document.getElementById("bikeimg").src = "img/pinkbike.jpg";
+    }
+    else {
+        document.getElementById("bikeimg").src = "img/purplebike.jpg";
+    }
+    
     
 }
 

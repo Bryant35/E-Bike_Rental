@@ -82,9 +82,10 @@
 </div>
     @endif 
 
-
+    <div class="bg-info h-100 w-100">
     <div class="container">
         <!--payment method-->
+        <div class="fs-2">
         <form action="{{url('/order/summary')}}" method="POST">
         
         <section id ="paymeth">
@@ -111,16 +112,17 @@
             <input readonly  type="text" id="taxamount" name="taxes" value="{{Session::get('taxprice')}}">
      
         <!--confirmbutton-->
-        <div>
-            <button type="submit" id="butconf" >Confirm</button>
+        <div class="text-end">
+            <button class = "btn btn-light btn-lg" type="submit" id="butconf" >Confirm</button>
+        </div>
         </div>
 </form>
         </section>
     </div>
-
+</div>
 
     {{-- Footer --}}
-    <div class="mt-4">
+    <div >
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->

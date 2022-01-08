@@ -72,6 +72,11 @@
     </div>
 
 
+  
+
+
+    <!--location -->
+    <div class="bg-info h-100 w-100">
     @if (session('success'))
     <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -81,16 +86,14 @@
 </div>
     @endif
 
-
-    <!--location -->
-    <div class="container">
+    <div class="container container-lg">
         <p class="text-end" id="timenow"></p>
     <section id ="locationsect">
-    <label for="locations">Choose a Location</label>
+    <label class="fs-3"for="locations">Choose a Location</label>
 
     <form action="{{url('/order/method')}}" method="get" id="formorder">
         @csrf
-        <div><select name="location" id="location" onchange="map()">
+        <div><select class="fs-2" name="location" id="location" onchange="map()">
                 <option value="Iron">Iron Bikes</option>
                 <option value="Emerald">Emerald Bikes</option>
                 <option value="Gold">Gold Bikes</option>
@@ -99,30 +102,34 @@
         </div>
 
 
-
+<div class="container" >
     <div class="mapouter">
-        <div class="gmap_canvas">
+    <div class="row">
+        <div class="gmap_canvas col">
             <iframe width="600" height="500"name="gmap" id="gmap" src="https://maps.google.com/maps?q=pakuwon%20mall%20surabaya&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div>
         <!--date and time-->
-
-        <label  for="pickuptime">Start Date and Time:</label>
+    <div class = "col d-flex flex-column justify-content-around">
+        <div>
+        <label  class="fs-3" for="pickuptime">Start Date and Time:</label>
         <input name="inputmap" type="datetime-local" id="pickuptime">
-
-        <label  for="dropofftime">Finish Date and Time:</label>
+        </div>
+        <div>
+        <label  class="fs-3" for="dropofftime">Finish Date and Time:</label>
         <input name="inputlast" type="datetime-local" id="dropofftime">
-
-      <div id="map"></div>
+        </div>
+        </div>
+      
     </div>
-
+</div>
 
 
 
 <!--bikepick-->
 <!--location -->
-
-    <label for="Bikes">Choose your preferred bike.</label>
-    <div><select name="Bikepick" id="bikepick">
+<div class="mt-5">
+    <label class="fs-3"for="Bikes">Choose your preferred bike.</label>
+    <div><select class="form-select fs-2" onchange="bike()"name="Bikepick" id="bikepick">
             <option value="biru">Biru</option>
             <option value="hitam">Hitam</option>
             <option value="hijau">Hijau</option>
@@ -133,16 +140,20 @@
             <option value="ungu">Ungu</option>
         </select>
     </div>
-
-
-    <button type="submit" id="confirmbut" >Confirm</button>
+    </div>
+    <div id="bikeborder" class="d-flex flex-column align-items-center mt-5">
+        <img class="img-thumbnail bg-black mt-4" id="bikeimg" src="img/bluebike.jpg" alt="">
+        
+    <button class="btn btn-primary mt-4  "type="submit" id="confirmbut" >Confirm</button>
+    </div>
     </form>
     </section>
     </div>
-
+    </div>
+            </div>
 
     {{-- Footer --}}
-    <div class="mt-4">
+    <div>
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
         <!-- Grid container -->
