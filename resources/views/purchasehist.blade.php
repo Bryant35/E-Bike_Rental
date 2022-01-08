@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/purhist.css">
     <title>Purchase History</title>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -68,7 +69,7 @@
     <div class="my-4">
         <div class="card">
             <div class="card-header p-4 d-flex justify-content-between">
-                <h2>Purchase History</h2>
+                <h2 id="title">Purchase History</h2>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Menu
@@ -81,8 +82,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="table-responsive-sm">
+            <div class="card-body" id="TablepHistory">
+                <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -103,7 +104,7 @@
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
                             </tr> --}}
-                            @foreach($tampil_history as $history)
+                            @foreach($tampil_phistory as $history)
                                 <tr>
                                     <td class="center ps-4">{{ $history->Invoice }}</td>
                                     <td class="left strong">{{ $history->TypeBike }}</td>
@@ -112,6 +113,9 @@
                                     <td class="right text-end pe-4">{{ $history->Price }}</td>
                                 </tr>
                             @endforeach
+
+                        </tbody>
+                        <tfoot>
                             <tr>
                                 <td class="center ps-4">Total Purchase</td>
                                 <td class="left strong"></td>
@@ -119,7 +123,81 @@
                                 <td class="center"></td>
                                 <td class="right text-end pe-4">{{ $sum_purchase[0]->TotalPurchase }}</td>
                             </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="card-body visually-hidden" id="TabletHistory">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="center ps-4">Invoice</th>
+                                <th>Payment Method</th>
+                                <!-- <th>Booth</th> -->
+                                <th class="right">Topup Date</th>
+                                {{-- <th class="center">End Date</th> --}}
+                                <th class="right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($tampil_thistory as $history)
+                                <tr>
+                                    <td class="center ps-4">{{ $history->Invoice }}</td>
+                                    <td class="left strong">{{ $history->Payment_Method }}</td>
+                                    <td class="right">{{ $history->Tanggal_Topup }}</td>
+                                    {{-- <td class="center">{{ $history->EndDate }}</td> --}}
+                                    <td class="right text-end pe-4">{{ $history->Nominal }}</td>
+                                </tr>
+                            @endforeach
+
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="center ps-4">Total Purchase</td>
+                                <td class="left strong"></td>
+                                <td class="right"></td>
+                                {{-- <td class="center"></td> --}}
+                                <td class="right text-end pe-4">{{ $sum_tpurchase[0]->SUMTopup }}</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="card-body visually-hidden" id="TableaHistory">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="center ps-4">Invoice</th>
+                                <th>Payment Method</th>
+                                <!-- <th>Booth</th> -->
+                                <th class="right">Date Rent</th>
+                                <th class="center">End Date</th>
+                                <th class="right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($tampil_ahistory as $history)
+                                <tr>
+                                    <td class="center ps-4">{{ $history->Invoice }}</td>
+                                    <td class="left strong">{{ $history->Payment_Method }}</td>
+                                    <td class="right">{{ $history->Tanggal_Transaksi }}</td>
+                                    <td class="center">{{ $history->EndDate }}</td>
+                                    <td class="right text-end pe-4">{{ $history->Nominal }}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="center ps-4">Total Purchase</td>
+                                <td class="left strong"></td>
+                                <td class="right"></td>
+                                <td class="center"></td>
+                                <td class="right text-end pe-4">{{ $sum_alltransaksi }}</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -130,117 +208,116 @@
     </div>
 </div>
 
-
  <div class="">
-            <!-- Footer -->
-            <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <!-- Section: Links -->
-                <section class="">
-                <!--Grid row-->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
-                        Ebike Rental
-                    </h6>
-                    <p>
-                        <a href="/"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
-                    <p>
-                        <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
-                    </p>
-                    <p>
-                        <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
-                    </p>
-                    <p class="text-white">
-                        Payment Method
-                    </p>
-                    <a class="shadow"><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
-                    <a class="shadow"><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
-                    <a class="shadow"><img src="img/Dana.png" alt="" style="width: 40px;"></a>
-                    </div>
-                    <!-- Grid column -->
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Grid column -->
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                        <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
-                        <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
-                        <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-                        <!-- Facebook -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #3b5998"
-                            href="https://www.facebook.com"
-                            role="button"
-                            ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
-
-                        <!-- Twitter -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #55acee"
-                            href="https://www.twitter.com/"
-                            role="button"
-                            ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
-
-                        <!-- Instagram -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #ac2bac"
-                            href="https://www.instagram.com"
-                            role="button"
-                            ><img src="img/ig.png" alt="" style="width: 30px;"></i
-                            ></a>
-
-                        <!-- Github -->
-                        <a
-                            class="btn btn-primary btn-floating m-1"
-                            style="background-color: #333333"
-                            href="https://www.tiktok.com/"
-                            role="button"
-                            ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
-                    </div>
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Ebike Rental
+                </h6>
+                <p>
+                    <a href="/"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
+                </p>
                 </div>
-                <!--Grid row-->
-                </section>
-                <!-- Section: Links -->
-            </div>
-            <!-- Grid container -->
+                <!-- Grid column -->
 
-            <!-- Copyright -->
-            <div class="text-center p-3 mt-2" style="background-color: rgba(0, 0, 0, 0.2)">
-                123 Plae Grownd Street<br>© 2021
-                <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
-                All rights reserved.
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
+                <p>
+                    <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
+                </p>
+                <p>
+                    <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                </p>
+                <p class="text-white">
+                    Payment Method
+                </p>
+                <a class="shadow"><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                <a class="shadow"><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                <a class="shadow"><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                    <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                    <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                    <!-- Facebook -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #3b5998"
+                        href="https://www.facebook.com"
+                        role="button"
+                        ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
+
+                    <!-- Twitter -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #55acee"
+                        href="https://www.twitter.com/"
+                        role="button"
+                        ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
+
+                    <!-- Instagram -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #ac2bac"
+                        href="https://www.instagram.com"
+                        role="button"
+                        ><img src="img/ig.png" alt="" style="width: 30px;"></i
+                        ></a>
+
+                    <!-- Github -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #333333"
+                        href="https://www.tiktok.com/"
+                        role="button"
+                        ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
+                </div>
             </div>
-            <!-- Copyright -->
-            </footer>
-            <!-- Footer -->
+            <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
         </div>
+        <!-- Grid container -->
 
+        <!-- Copyright -->
+        <div class="text-center p-3 mt-2" style="background-color: rgba(0, 0, 0, 0.2)">
+            123 Plae Grownd Street<br>© 2021
+            <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
+            All rights reserved.
+        </div>
+        <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+ <script src="js/purchasehistory.js"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

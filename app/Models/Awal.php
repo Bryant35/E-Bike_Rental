@@ -123,16 +123,17 @@ class Awal extends Model
         return $res;
     }
 
-    public function topupInsert($IDPenyewa, $nom){
+    public function topupInsert($IDPenyewa, $nom, $pay){
         $cmd1 = "set time_zone = '+07:00';";
         $res1 = DB::select($cmd1);
         $cmd = "INSERT INTO transaksi_topup ".
-                "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, 0 as `TOPUP_DELETE` ".
+                "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, :method as `PAYMENT_METHOD`, 0 as `TOPUP_DELETE` ".
                 "FROM penyewa ".
                 "WHERE ID_PENYEWA = :idpenyewa;";
         $data = [
             'nom'=> $nom,
-            'idpenyewa'=> $IDPenyewa
+            'idpenyewa'=> $IDPenyewa,
+            'method'=> $pay
         ];
         $res = DB::insert($cmd, $data);
 
@@ -255,6 +256,32 @@ class Awal extends Model
                 "FROM transaksi_sewa ts JOIN sepeda s JOIN penyewa p ".
                 "WHERE ((s.ID_SEPEDA = ts.ID_SEPEDA) AND (ts.ID_PENYEWA = :IDPenyewa)) GROUP BY `Invoice` ".
                 "ORDER BY ts.TANGGAL_SEWA DESC) a;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function history_topup($IDPenyewa){
+        $cmd = "SELECT t.ID_TOPUP AS `Invoice`, t.PAYMENT_METHOD AS `Payment_Method`, TANGGAL_TOPUP AS `Tanggal_Topup`, TOTAL_TOPUP AS `Nominal` ".
+                "FROM transaksi_topup t JOIN sepeda s JOIN penyewa p ".
+                "WHERE (t.ID_PENYEWA = :IDPenyewa) GROUP BY `Invoice` ORDER BY `Tanggal_Topup` DESC;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function total_tpurchase($IDPenyewa){
+        $cmd = "SELECT SUM(Nominal) as `SUMTopup` ".
+                "FROM (SELECT t.ID_TOPUP AS `Invoice`, t.PAYMENT_METHOD AS `Payment_Method`, TANGGAL_TOPUP AS `Tanggal_Topup`, TOTAL_TOPUP AS `Nominal` ".
+                "FROM transaksi_topup t JOIN sepeda s JOIN penyewa p ".
+                "WHERE (t.ID_PENYEWA = :IDPenyewa) GROUP BY `Invoice` ORDER BY `Tanggal_Topup` DESC) a;";
+        $data = ['IDPenyewa'=>$IDPenyewa];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
+
+    public function semua_transaksi($IDPenyewa){
+        $cmd = "call KMMI3.AllTransaction(:IDPenyewa);";
         $data = ['IDPenyewa'=>$IDPenyewa];
         $res = DB::select($cmd, $data);
         return $res;

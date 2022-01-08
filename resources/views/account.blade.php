@@ -71,7 +71,7 @@
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{$tampil_data[0]->NAMA_PENYEWA}}</span><span class="text-black-50">{{$tampil_data[0]->EMAIL_ADDRESS}}</span><span><a href="{{url('/changepassword')}}">Change Password</a></span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="img/Avatar.png"><span class="font-weight-bold">{{$tampil_data[0]->NAMA_PENYEWA}}</span><span class="text-black-50">{{$tampil_data[0]->EMAIL_ADDRESS}}</span><span><a href="{{url('/changepassword')}}">Change Password</a></span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -92,11 +92,11 @@
                     @endif
                     <form action="{{url('/saveprofile')}}" method="POST">
                     @csrf
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                             <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" value="{{$tampil_data[0]->NAMA_PENYEWA}}" disabled></div>
                             <div class="col-md-6"><label class="labels">Username</label><input type="text" name="uname" class="form-control" value="{{$tampil_data[0]->USERNAME_PENYEWA}}" placeholder="username"></div>
                         </div>
-                        <div class="row mt-3">
+                        <div class="row">
                             <div class="col-md-12"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="enter email" value="{{$tampil_data[0]->EMAIL_ADDRESS}}"></div>
                             <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" name="phone" class="form-control" placeholder="enter phone number" value="{{$tampil_data[0]->TELP_PENYEWA}}"></div>
                             <div class="col-md-12"><label class="labels">Address</label><input type="text" name="address" class="form-control" placeholder="enter address" value="{{$tampil_data[0]->ALAMAT_PENYEWA}}"></div>
