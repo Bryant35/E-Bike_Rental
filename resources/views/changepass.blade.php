@@ -72,7 +72,7 @@
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{ session()->get('Nama_penyewa') }}</span><span class="text-black-50">{{session()->get('Email_penyewa')}}</span><span><a href="{{url('/account')}}">Back</a></span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="img/Avatar.png"><span class="font-weight-bold">{{ session()->get('Nama_penyewa') }}</span><span class="text-black-50">{{session()->get('Email_penyewa')}}</span><span><a href="{{url('/account')}}">Back</a></span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -111,7 +111,7 @@
                             <div class="col-md-12"><label class="labels">New Password</label><input type="password" name="NewPass" class="form-control" placeholder="Enter New Password" value=""></div>
                             <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="password" name="CNewPass" class="form-control" placeholder="Confirm New Password" value=""></div>
                         </div>
-                        <div class="mt-5 text-center"><input type="submit" value="Save Profile" class="btn btn-primary profile-button"></div>
+                        <div class="mt-5 text-center"><input type="submit" value="Save Password" class="btn btn-primary profile-button"></div>
                     </form>
                 </div>
             </div>
