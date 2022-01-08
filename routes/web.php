@@ -71,6 +71,9 @@ Route::get('/aboutus', function () {
 Route::get('/ctopup', function () {
     return view('confirmtopup');
 });
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
 // Route::get('/topup', function () {
 //     return view('topup');
 // });

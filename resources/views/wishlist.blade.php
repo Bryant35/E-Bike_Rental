@@ -7,6 +7,7 @@
     <title>E-Bike Rental Website</title>
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/wishlist.css">
     <script src="js/completetopup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -76,5 +77,16 @@
     </div>
 
     <!--home-->
+    <div class="container">
+        <div class= "col-sm-4 col-md-3">
+            <div class="products">
+                <img src="img/ebike1.jpg" width="175px" height="200px"/>
+                <h4 class="text-info">Contoh 1 Ebike</h4>
+                <h4>Rp. 5000/jam</h4>
+                <button type="button" class="btn btn-primary">Check Out Now</button>
+
+            </div>
+        </div>
+    </div>
 
 </body>
