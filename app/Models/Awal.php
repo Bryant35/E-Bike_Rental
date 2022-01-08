@@ -123,16 +123,17 @@ class Awal extends Model
         return $res;
     }
 
-    public function topupInsert($IDPenyewa, $nom){
+    public function topupInsert($IDPenyewa, $nom, $pay){
         $cmd1 = "set time_zone = '+07:00';";
         $res1 = DB::select($cmd1);
         $cmd = "INSERT INTO transaksi_topup ".
-                "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, 0 as `TOPUP_DELETE` ".
+                "SELECT fGenIDtopup(ID_PENYEWA) as `ID_TOPUP`, ID_PENYEWA, :nom as `TOTAL_TOPUP`, now() as `TANGGAL_TOPUP`, :method as `PAYMENT_METHOD`, 0 as `TOPUP_DELETE` ".
                 "FROM penyewa ".
                 "WHERE ID_PENYEWA = :idpenyewa;";
         $data = [
             'nom'=> $nom,
-            'idpenyewa'=> $IDPenyewa
+            'idpenyewa'=> $IDPenyewa,
+            'method'=> $pay
         ];
         $res = DB::insert($cmd, $data);
 

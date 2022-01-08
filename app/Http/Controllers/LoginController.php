@@ -323,7 +323,7 @@ class LoginController extends Controller
         ];
 
         $user = new Awal;
-        $topup_data = $user->topupInsert($IDPenyewa, $nom);
+        $topup_data = $user->topupInsert($IDPenyewa, $nom, $pay);
 
         $topup_sum = $user->saldoupdate($IDPenyewa, $nom);
         Session::put('saldo', $topup_sum[0]->SALDO_PENYEWA);
@@ -423,17 +423,12 @@ class LoginController extends Controller
         return redirect('/contact');
     }
 
-
+    //forgot password
     public function forgot_password(Request $req){
         // $data = array(
         //     'email'  => $req->input('email')
         // );
-        if($_POST['email'] != null){
-            $email = $_POST['email'];
-        }
-        else{
-            $email = Session::get('email');
-        }
+        $email = $_POST['email'];
         $user = new Awal;
         $cekacc = $user->cek_account($email);
         if($cekacc[0]->data == '0'){
@@ -458,8 +453,8 @@ class LoginController extends Controller
         try{
             if($cekacc[0]->data == '1'){
                 Mail::send('sendpass',$data, function($data) use($req){
-                    $data->to($req->email,'Verifikasi')->subject('Verifikasi Sandi');
-                    $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Verifikasi Sandi anda');
+                    $data->to($req->email,'to -')->subject('EBike Rental Account');
+                    $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'Your Account');
                     Session::flash('success', 'Username and Password has been send to your email.');
                     // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
                 });
@@ -471,7 +466,46 @@ class LoginController extends Controller
         return redirect('/forgotpassword');
     }
 
+    public function resend_password(){
+        $email = Session::get('email');
+        $user = new Awal;
+        $cekacc = $user->cek_account($email);
+        if($cekacc[0]->data == '0'){
+            Session::flash('error', 'Email is not registered.');
+            return redirect('/forgotpassword');
+        }
+        $sendPass = $user->send_pass($email);
 
+        $data = array(
+            'email'  => $email,
+            'password' => $sendPass->PASSWORD_PENYEWA,
+            'username' => $sendPass->USERNAME_PENYEWA
+        );
+        // $isExist = Admin::select("*")
+        //                 ->where("email", $email)
+        //                 ->exists();
+        // // UPDATE PASSWORD JADI 123
+        // Admin::where('email',$email)->update(['password'=>'1234']);
+        // BARU KIRIM KE EMAIL ADMIN
+            // dd('Record is available.');
+
+        try{
+            if($cekacc[0]->data == '1'){
+                Mail::send('sendpass',$data, function($data){
+                    $data->to(Session::get('email'),'to -')->subject('Your Account');
+                    $data->from(env('MAIL_USERNAME','shvrnkoll@gmail.com'),'EBike Rental Account');
+                    Session::flash('success', 'Username and Password has been re-send to your email.');
+                    // dd($data->to('masakyukgan@gmail.com','Verifikasi')->subject('Verifikasi Email'));
+                });
+                Session::put('email', $email);
+            }
+        }catch (Exception $e){
+                return response (['status' => false,'errors' => $e->getMessage()]);
+        }
+        return redirect('/forgotpassword');
+    }
+
+    //Purchase History
     public function purchase_history(){
         $IDPenyewa = Session::get('IDpenyewa');
         $saldo = Session::get('saldo');

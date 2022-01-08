@@ -78,6 +78,8 @@ Route::get('/wishlist', function () {
 //     return view('topup');
 // });
 Route::get('/topup','App\Http\Controllers\LoginController@cek_topup');
+Route::get('/topuppay','App\Http\Controllers\LoginController@completeTopup');
+
 
 Route::post('/signin', 'App\Http\Controllers\LoginController@cek_login');
 
@@ -85,19 +87,19 @@ Route::post('/insert','App\Http\Controllers\LoginController@regis');
 Route::get('/order','App\Http\Controllers\ordercontroller@enter');
 
 Route::get('/order/method','App\Http\Controllers\ordercontroller@holder');
+Route::get('/ftopup', 'App\Http\Controllers\LoginController@cekCompleteTopup');
 
 Route::post('/order/summary','App\Http\Controllers\ordercontroller@holdermethod');
 Route::post('/order/success','App\Http\Controllers\ordercontroller@insert');
 
 Route::post('/getPassword','App\Http\Controllers\LoginController@forgot_password');
+Route::get('/resendPassword','App\Http\Controllers\LoginController@resend_password');
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check');
 
-Route::get('/topuppay','App\Http\Controllers\LoginController@completeTopup');
 
 Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile');
 
-Route::get('/ftopup', 'App\Http\Controllers\LoginController@cekCompleteTopup');
 
 Route::post('/savepass','App\Http\Controllers\LoginController@passpage');
 Route::get('/changepassword', function () {

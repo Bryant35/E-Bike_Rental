@@ -90,7 +90,7 @@
             <div class="alert alert-success alert-block mx-4" data-bs-toggle="modal" data-bs-target="#email-resend">
                 {{-- <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button> --}}
                 <strong>{{ Session::get('success') }}</strong>
-                <strong>didn't recieve our email ? <a href="/getPassword">Resend</a> email</strong>
+                <strong>didn't recieve our email ? <a href="/resendPassword">Resend</a> email</strong>
             </div>
 
         @endif
