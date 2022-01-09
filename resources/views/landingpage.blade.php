@@ -98,6 +98,7 @@
         <div class="text-center">
             <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
         </div>
+        <div class="mb-3"></div>
     </div>
 
 
@@ -164,6 +165,7 @@
             <div class="text-center">
                 <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
             </div>
+            <div class="mb-3"></div>
         </div>
     </div>
 
@@ -197,9 +199,9 @@
             <div class="text-center">
                 <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
             </div>
+            <div class="mb-4"></div>
         </div>
     </div>
-
     <div class="">
         <div class="float-end">
             <button class="btn btn-dark fixed-bottom" onclick="topFunction()" id="myBtn" title="Go to top">
@@ -232,7 +234,7 @@
         }
     </script>
         <!-- Footer -->
-        <div class="">
+        <div class="border-top border-3 border-dark">
             <!-- Footer -->
             <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
             <!-- Grid container -->
