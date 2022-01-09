@@ -167,6 +167,39 @@
         </div>
     </div>
 
+    <div class="bike">
+        <div class="container">
+            <div class="bike-text">
+                <div style="text-align:center">
+                    <h1 style="color: black;">Our <span>Bikes</span></h1>
+                </div>
+                <br>
+            </div>
+            <div class="wrapper">
+                <div class="box"><img src="img/purplebike.png" alt=""></div>
+                <!--<div class="top-left">GWK</div>-->
+
+                <div class="box"><img src="img/redbike.png" alt=""></div>
+                <!--<div class="top-left1">Pantai Kuta</div>-->
+
+                <div class="box"><img src="img/blackbike.png" alt=""></div>
+                <!--<div class="top-left2">Beachwalk Mall</div>-->
+
+                <div class="box"><img src="img/pinkbike.png" alt=""></div>
+                <!--<div class="top-left3">Pakuwon Mall</div>-->
+
+                <div class="box"><img src="img/yellowbike.png" alt=""></div>
+                <!--<div class="top-left4">Universitas Ciputra</div>-->
+
+                <div class="box"><img src="img/bluebike.png" alt=""></div>
+                <!--<div class="top-left5">Tunjungan plaza</div>-->
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-center" href="{{ url('/login') }}">RENT NOW</a>
+            </div>
+        </div>
+    </div>
+
     <div class="">
         <div class="float-end">
             <button class="btn btn-dark fixed-bottom" onclick="topFunction()" id="myBtn" title="Go to top">

@@ -21,28 +21,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{{url('/aboutus')}}">About Us</a>
                     </li>
                 </ul>
 
                 <form class="d-flex">
+                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
-                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}
-                    </button>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                         Log Out
                     </button>
@@ -67,6 +68,7 @@
             </div>
         </div>
     </div>
+
     <!-- end navbar -->
 
     <!-- product detail -->
@@ -89,10 +91,10 @@
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Purple E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -101,40 +103,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-4"> <img src="img/purplebike.png" width="110%" height="110%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#"><i class="bi bi-heart" ></i></a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mt offset-md-7" style="font-size: 24px;"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 2-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Pink E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -143,40 +144,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/pinkbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 3-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Red E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -185,40 +185,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/redbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 4-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Yellow E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -227,40 +226,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/yellowbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 5-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Orange E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -269,40 +267,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/orangebike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 6-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Green E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -311,40 +308,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/greenbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 7-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Black E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -353,40 +349,39 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/blackbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#"></a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item"><!--Slide 8-->
                     <div class="border border-primary border-5 rounded-3">
                         <div class="mx-5 my-4">
                             <div class="header">
                                 <div class="row r1">
                                     <div class="col-md-9 abc">
-                                        <h1>Tyre Mountain Cycle 21</h1>
+                                        <h1>Blue E-Bike</h1>
                                     </div>
                                     <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                    <p class="text-right para">Based on 250 Review</p>
+                                    <p><div class="col-md-2 myt des"><a href="#">Description</a></div></p>
                                 </div>
                             </div>
                             <div class="container-body mt-4">
@@ -395,25 +390,23 @@
                                         <div class="mx-5">
                                             <ul>
                                                 <li>100% Quality</li>
-                                                <li>Free Shipping</li>
                                                 <li>Easy Returns</li>
-                                                <li>12 Months Warranty</li>
-                                                <li>EMI Starting from (On Credit Cards)</li>
-                                                <li>Normal Delivery : 4-5 Days</li>
-                                                <li>Express Delivery : 2-3 Days</li>
-                                                <li>COD Available (All Over India)</li>
+                                                <li>Easy Pay</li>
+                                                <li>Performance: powerful, dynamic and silent</li>
+                                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                                <li>Comfortable riding position</li>
+                                                <li>Integrated design</li>
+                                                <li>Battery ejection at the push of a button</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                                    <div class="col-md-5"> <img src="img/bluebike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
                             <div class="footer d-flex flex-column mt-5">
                                 <div class="row r4">
-                                    <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                                    <div class="col-md-2 myt "><a href="#">Review</a></div>
-                                    <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                                    <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
+                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
                                 </div>
                             </div>
                         </div>
@@ -430,16 +423,17 @@
             </button>
         </div>
     </div>
-    {{-- <div class="container my-4 mx-auto">
+
+    <!-- {{-- <div class="container my-4 mx-auto">
         <div class="border border-primary border-5 rounded-3">
             <div class="mx-4 my-4">
                 <div class="header">
                     <div class="row r1">
                         <div class="col-md-9 abc">
-                            <h1>Tyre Mountain Cycle 21</h1>
+                            <h1>Red E-Bike</h1>
                         </div>
                         <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                        <p class="text-right para">Based on 250 Review</p>
+                        <p class="text-right para">Electronic Bike Rental</p>
                     </div>
                 </div>
                 <div class="container-body mt-4">
@@ -447,16 +441,16 @@
                         <div class="col-md-5 p-0 klo">
                             <ul>
                                 <li>100% Quality</li>
-                                <li>Free Shipping</li>
                                 <li>Easy Returns</li>
-                                <li>12 Months Warranty</li>
-                                <li>EMI Starting from (On Credit Cards)</li>
-                                <li>Normal Delivery : 4-5 Days</li>
-                                <li>Express Delivery : 2-3 Days</li>
-                                <li>COD Available (All Over India)</li>
+                                <li>Easy Pay</li>
+                                <li>Performance: powerful, dynamic and silent</li>
+                                <li>Strong rear-wheel motor up to 45 km/h</li>
+                                <li>Comfortable riding position</li>
+                                <li>Integrated design</li>
+                                <li>Battery ejection at the push of a button</li>
                             </ul>
                         </div>
-                        <div class="col-md-7"> <img src="https://assetscdn1.paytm.com/images/catalog/product/K/KI/KIDTORADO-MUSCUTORA65799297FD22C/1564571511644_0.jpg" width="90%" height="95%"> </div>
+                        <div class="col-md-5"> <img src="img/purplebike.png" width="100%" height="100%"> </div>
                     </div>
                 </div>
                 <div class="footer d-flex flex-column mt-5">
@@ -464,12 +458,12 @@
                         <div class="col-md-2 myt des"><a href="#">Description</a></div>
                         <div class="col-md-2 myt "><a href="#">Review</a></div>
                         <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                        <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">BUY NOW</a></button></div>
+                        <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">RENT NOW</a></button></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div> --}} -->
 
 
     <div class="mt-4">

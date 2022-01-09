@@ -286,5 +286,15 @@ class Awal extends Model
         $res = DB::select($cmd, $data);
         return $res;
     }
+
+
+    public function list_wishlist($IDPenyewa){
+        $cmd = "SELECT * FROM wishlist WHERE ID_PENYEWA =:IDPenyewa ORDER BY ADD_DATE DESC;";
+        $data =[
+            'IDPenyewa'=>$IDPenyewa
+        ];
+        $res = DB::select($cmd, $data);
+        return $res;
+    }
 }
 

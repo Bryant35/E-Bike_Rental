@@ -80,7 +80,7 @@
 
     <!--home-->
     <div class="container">
-    <p class="wishlist">MY WISHLIST</p>
+        <p class="wishlist">MY WISHLIST</p>
          <!-- <div class= "col-sm-4 col-md-2" >
             <div class="products">
                 <img src="img/greenbike.png" width="175px" height="200px" />
@@ -117,25 +117,29 @@
                 </div>
             </div> -->
             <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
-                    <img src="img/redbike.png" class="card-img-top card-header" alt="img/redbike.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Contoh EBike 3</h5>
-                        <h4>Rp. 5000/jam</h4>
-                    </div>
-                    <div class="card-footer bg-transparent d-flex bd-highlight">
-                        <button class="btn btn-danger p-2 bd-highlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
-                                ::before
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg>
-                        </button>
-                        <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
+
+                @foreach($wishlist as $list)
+                <div class="col">
+                    <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
+                        <img src="{{$list->IMG_SEPEDA}}" class="card-img-top card-header" alt="img/redbike.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$list->NAMA_SEPEDA}}</h5>
+                            <h4>Rp. 5000/jam</h4>
+                        </div>
+                        <div class="card-footer bg-transparent d-flex bd-highlight">
+                            <button class="btn btn-danger p-2 bd-highlight">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
+                                    ::before
+                                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+                @endforeach
+
+            <!-- <div class="col">
                 <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
                     <img src="img/redbike.png" class="card-img-top card-header" alt="img/redbike.jpg">
                     <div class="card-body">
@@ -189,7 +193,7 @@
                         <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
 
 
@@ -202,6 +206,115 @@
             unlove.classList.toggle("far fa-heart");
         }
     </script>
+    <div class="mt-4">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #2a9df4">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Ebike Rental
+                </h6>
+                <p>
+                    <a href="/home"><img src="img/ebike_logo.png" alt="" class="img-thumbnail"></a>
+                </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
+                <p>
+                    <a class="text-white" href="{{url('/aboutus')}}" style="text-decoration: none;">About Us</a>
+                </p>
+                <p>
+                    <a class="text-white" href="{{url('/contact')}}" style="text-decoration: none;">Contact us</a>
+                </p>
+                <p class="text-white">
+                    Payment Method
+                </p>
+                <a><img src="img/Ovo.png" alt="" style="width: 40px;"></a>
+                <a><img src="img/Gopay.png" alt="" style="width: 40px;"></a>
+                <a><img src="img/Dana.png" alt="" style="width: 40px;"></a>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i>Surabaya, East Java</p>
+                    <p><i class="fas fa-envelope mr-3"></i> ebike@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +62812 3456 7890</p>
+                    <p><i class="fas fa-print mr-3"></i> +62809 8765 4321</p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                    <!-- Facebook -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #3b5998"
+                        href="https://www.facebook.com"
+                        role="button"
+                        ><img src="img/Fb.png" alt="" style="width: 30px;"></a>
+
+                    <!-- Twitter -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #55acee"
+                        href="https://www.twitter.com/"
+                        role="button"
+                        ><img src="img/Twitter.png" alt="" style="width: 30px;"></a>
+
+                    <!-- Instagram -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #ac2bac"
+                        href="https://www.instagram.com"
+                        role="button"
+                        ><img src="img/ig.png" alt="" style="width: 30px;"></i
+                        ></a>
+
+                    <!-- Github -->
+                    <a
+                        class="btn btn-primary btn-floating m-1"
+                        style="background-color: #333333"
+                        href="https://www.tiktok.com/"
+                        role="button"
+                        ><img src="img/TikTok.png" alt="" style="width: 30px;"></a>
+                </div>
+            </div>
+            <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            123 Plae Grownd Street<br>© 2021
+            <a class="text-white" href="http://127.0.0.1:8000/home">Ebike Rental</a>
+            All rights reserved.
+        </div>
+        <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

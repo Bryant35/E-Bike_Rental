@@ -8,14 +8,135 @@ use App\Models\Awal;
 use Session;
 use Alert;
 use Mail;
+use Cookie;
 
 class LoginController extends Controller
 {
-
+    public function Cookie_Login(Request $req){
+        $login = Request()->cookie('user');
+        if($login != '')
+        {
+            Session::put('login', $login);
+            return redirect('/home');
+        }
+        else{
+            return view('landingpage');
+        }
+    }
     //Login page
     public function cek_login(Request $req){
         $uname = $_POST['uname'];
         $pass = $req->input('password');
+        $req->input([
+            'RememberMe' => 'accepted'
+        ]);
+
+        //iseng1
+        // session_start();
+
+        // include "koneksi.php";
+
+        // $nim = $_POST["nim"];
+        // $fakultas = $_POST["fakultas"];
+
+        // $query = "select * from mahasiswa where nim='$nim' and fakultas='$fakultas'";
+        // $result = mysqli_query($link, $query);
+
+        // $banyakRecord = mysqli_num_rows($result);
+
+        // if($banyakRecord > 0){
+        //     $data = mysqli_fetch_assoc($result);
+        //     $nama = $data["nama"];
+
+        //     $_SESSION["namaUser"] = $nama;
+
+        //     $cookieNama = "namaUser";
+        //     $cookieNilai = $nama;
+        //     $cookieWaktu = time() + 3600;
+
+        //     setcookie($cookieNama, $cookieNilai, $cookieWaktu, "/");
+
+        //     echo "
+        //     <h2>Selamat siang $nama</h2>
+        //     <script>
+        //         alert('Klik Ok untuk ke halaman baru');
+        //         window.location.href = 'halaman_baru.php';
+        //     </script>
+        //     ";
+        // }
+        // else{
+        //     echo "
+        //     <script>
+        //         alert('Login gagal!');
+        //         window.location.href = 'login.php';
+        //     </script>
+        //     ";
+        // }
+
+        // //iseng2
+        // include "koneksi.php";
+
+        // $nim = $_POST["nim"];
+        // $fakultas = $_POST["fakultas"];
+
+        // $query = "select * from mahasiswa where nim='$nim' and fakultas='$fakultas'";
+        // $result = mysqli_query($link, $query);
+
+        // $banyakRecord = mysqli_num_rows($result);
+
+        // if($banyakRecord > 0){
+        //     $data = mysqli_fetch_assoc($result);
+        //     $nama = $data["nama"];
+
+        //     $cookieNama = "namaUser";
+        //     $cookieNilai = $nama;
+        //     $cookieWaktu = time() + 3600;
+
+        //     setcookie($cookieNama, $cookieNilai, $cookieWaktu, "/");
+
+        //     echo "
+        //     <h2>Selamat siang $nama</h2>
+        //     ";
+        // }
+        // else{
+        //     echo "
+        //     <script>
+        //         alert('Login gagal!');
+        //         window.location.href = 'login.php';
+        //     </script>
+        //     ";
+        // }
+
+        // //iseng3
+        // if(!isset($_COOKIE["namaUser"]))
+        // {
+        //     echo "
+        //     <!DOCTYPE html>
+        //     <html>
+        //     <head>
+        //     </head>
+        //     <body>
+        //         <h2>Login Page</h2>
+        //         <form id='frmLogin' method='post' action='frmHandler2.php'>
+        //             NIM: <input type='text' name='nim' id='nim'><br>
+        //             Fakultas: <input type='text' name='fakultas' id=fakultas'><br>
+        //             <input type='submit' value='Login'>
+        //         </form>
+        //     </body>
+        //     </html>
+        //     ";
+        // }
+        // else
+        // {
+        //     $nama = $_COOKIE["namaUser"];
+        //     echo "
+        //     <h2>Selama datang kembali $nama</h1>
+        //     ";
+        // }
+        //endiseng
+
+
+
         $data = [
             'username' => $uname,
             'password' => $pass
@@ -29,9 +150,11 @@ class LoginController extends Controller
             Session::flush();
             Session::put('login', $uname);
             Session::put('pass', $pass);
-
+            if($req->has('RememberMe')){
+                $minute = 10080;
+                $cookieuname = Cookie::forever('user', $uname);
+            }
             Session::flash('success', 'Login Success!');
-
             return redirect('/home');
         } else {
             //2.b. Jika TIDKA KETEMU, maka kembali ke LOGIN dan tampilkan PESAN
@@ -235,7 +358,11 @@ class LoginController extends Controller
         // session()->forget('Email_penyewa');
         // session()->forget('nom');
         Session::flush();
-        return redirect('/');
+        if(Cookie::get('username') != ''){
+            Cookie::forget('username');
+        }
+
+        return view('landingpage');
     }
 
     //Home Button
@@ -243,7 +370,7 @@ class LoginController extends Controller
         $login = Session::get('login');
         if($login == null)
         {
-            return redirect('/');
+            return view('landingpage');
         }
         else{
             return redirect('/home');
@@ -519,4 +646,22 @@ class LoginController extends Controller
 
         return view('purchasehist', compact(['tampil_phistory', 'sum_purchase', 'tampil_thistory', 'sum_tpurchase', 'tampil_ahistory', 'sum_alltransaksi']));
     }
+    //rememberme
+    public function remember(){
+
+    }
+
+
+    //wishlist
+    public function wishlist(){
+        $IDPenyewa = Session::get('IDpenyewa');
+        $user = new Awal;
+        $wishlist = $user->list_wishlist($IDPenyewa);
+        return view('wishlist', compact(['wishlist']));
+    }
+
+    //remove wishlist
+    // public function wishlist(){
+    //     $index = $req->''
+    // }
 }

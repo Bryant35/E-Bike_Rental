@@ -72,7 +72,7 @@
     </div>
 
 
-  
+
 
 
     <!--location -->
@@ -119,7 +119,7 @@
         <input name="inputlast" type="datetime-local" id="dropofftime">
         </div>
         </div>
-      
+
     </div>
 </div>
 
@@ -130,20 +130,20 @@
 <div class="mt-5">
     <label class="fs-3"for="Bikes">Choose your preferred bike.</label>
     <div><select class="form-select fs-2" onchange="bike()"name="Bikepick" id="bikepick">
-            <option value="biru">Biru</option>
-            <option value="hitam">Hitam</option>
-            <option value="hijau">Hijau</option>
-            <option value="jingga">Jingga</option>
-            <option value="kuning">Kuning</option>
-            <option value="merah">Merah</option>
+            <option value="biru">Blue</option>
+            <option value="hitam">Black</option>
+            <option value="hijau">Green</option>
+            <option value="jingga">Orange</option>
+            <option value="kuning">Yellow</option>
+            <option value="merah">Red</option>
             <option value="pink">Pink</option>
-            <option value="ungu">Ungu</option>
+            <option value="ungu">Purple</option>
         </select>
     </div>
     </div>
     <div id="bikeborder" class="d-flex flex-column align-items-center mt-5">
         <img class="img-thumbnail bg-black mt-4" id="bikeimg" src="img/bluebike.jpg" alt="">
-        
+
     <button class="btn btn-primary mt-4  "type="submit" id="confirmbut" >Confirm</button>
     </div>
     </form>

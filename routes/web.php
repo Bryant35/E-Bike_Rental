@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage');
-});
+// Route::get('/', function () {
+//     return view('landingpage');
+// });
+Route::get('/','App\Http\Controllers\LoginController@Cookie_Login');
 
 Route::get('/purchasehist','App\Http\Controllers\LoginController@purchase_history');
 
@@ -71,9 +72,9 @@ Route::get('/aboutus', function () {
 Route::get('/ctopup', function () {
     return view('confirmtopup');
 });
-Route::get('/wishlist', function () {
-    return view('wishlist');
-});
+// Route::get('/wishlist', function () {
+//     return view('wishlist');
+// });
 // Route::get('/topup', function () {
 //     return view('topup');
 // });
@@ -96,7 +97,7 @@ Route::post('/getPassword','App\Http\Controllers\LoginController@forgot_password
 Route::get('/resendPassword','App\Http\Controllers\LoginController@resend_password');
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check');
-
+Route::get('/wishlist','App\Http\Controllers\LoginController@wishlist');
 
 Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile');
 
