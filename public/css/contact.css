@@ -11,7 +11,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-	background: linear-gradient(120deg,#2980b9, #8e44ad);
+	background: linear-gradient(rgb(146, 130, 216),#335ccc);
 	height: 100vh;
 	/* overflow: hidden; */
 }

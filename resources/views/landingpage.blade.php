@@ -26,7 +26,6 @@
                         <a class="nav-link active" aria-current="page" href="#" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link disabled" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>

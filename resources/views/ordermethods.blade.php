@@ -11,9 +11,8 @@
 
 </head>
 <body>
-      <!--header-->
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <!--header-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a href="" class="logo"><img src="img/ebike_logo.png" alt="" style="width: 60px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,31 +21,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" >Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
-                            <li><a class="dropdown-item" href="#wishlist">Wishlist</a></li>
-                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/service')}}">Something Else</a></li>
-
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                           </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{{url('/aboutus')}}">About Us</a>
                     </li>
                 </ul>
 
                 <form class="d-flex">
+                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ Session::get('sisa') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
-                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}
-                    </button>
+                    <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
                         Log Out
                     </button>
@@ -71,7 +68,7 @@
             </div>
         </div>
     </div>
-    
+
 
     @if (session('success'))
     <div class="container">
@@ -80,14 +77,14 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 </div>
-    @endif 
+    @endif
 
     <div class="bg-info h-100 w-100">
     <div class="container">
         <!--payment method-->
         <div class="fs-2">
         <form action="{{url('/order/summary')}}" method="POST">
-        
+
         <section id ="paymeth">
         <label for="pay">Payment Method</label>
         <div><select name="pay" id="payment">
@@ -101,7 +98,7 @@
 
 
         <!--duit mas duit-->
-        
+
             @csrf
             <label for="inputduit">Amount</label><br>
             <input readonly type="text" id="duitamount" name="inputduit"value="{{Session::get('price')}}">
@@ -110,7 +107,7 @@
     <div></div>
             <label for="taxes">Taxes</label><br>
             <input readonly  type="text" id="taxamount" name="taxes" value="{{Session::get('taxprice')}}">
-     
+
         <!--confirmbutton-->
         <div class="text-end">
             <button class = "btn btn-light btn-lg" type="submit" id="butconf" >Confirm</button>

@@ -98,7 +98,7 @@ Route::get('/resendPassword','App\Http\Controllers\LoginController@resend_passwo
 Route::get('/homee','App\Http\Controllers\LoginController@cek_home');
 Route::post('/checknominal','App\Http\Controllers\LoginController@nominal_Check');
 Route::get('/wishlist','App\Http\Controllers\LoginController@wishlist');
-
+Route::post('/delete','App\Http\Controllers\LoginController@delwishlist');
 Route::post('/saveprofile','App\Http\Controllers\LoginController@updateProfile');
 
 

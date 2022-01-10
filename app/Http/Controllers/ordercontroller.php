@@ -121,7 +121,8 @@ class ordercontroller extends Controller
         $jaml = Carbon::parse(Session::get('lastdate'))->format('H:i:s');
          $hasilid = DB::select('SELECT fGenIDsewa( "'.$id.'" ) as id');
          $sisa = ($penyewa[0]['SALDO_PENYEWA'] - $hargas);
-        
+         Session::put('sisa',$sisa);
+
 
         Session::put('idtrans',$hasilid[0]->id);
 

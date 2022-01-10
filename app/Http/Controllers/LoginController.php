@@ -5,23 +5,27 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Models\Awal;
+use App\Models\wishlist;
 use Session;
 use Alert;
 use Mail;
 use Cookie;
+use DB;
+use Hash;
+
 
 class LoginController extends Controller
 {
     public function Cookie_Login(Request $req){
-        $login = Request()->cookie('user');
-        if($login != '')
-        {
-            Session::put('login', $login);
-            return redirect('/home');
-        }
-        else{
+        // $login = $_COOKIE['user'];
+        // if($login != '')
+        // {
+        //     Session::put('login', $login);
+        //     return redirect('/home');
+        // }
+        // else{
             return view('landingpage');
-        }
+        // }
     }
     //Login page
     public function cek_login(Request $req){
@@ -151,8 +155,10 @@ class LoginController extends Controller
             Session::put('login', $uname);
             Session::put('pass', $pass);
             if($req->has('RememberMe')){
-                $minute = 10080;
-                $cookieuname = Cookie::forever('user', $uname);
+                $minute = time()+60*60*24*30;
+               setcookie('user', $uname, $minute);
+
+                // dd($_COOKIE['user']);
             }
             Session::flash('success', 'Login Success!');
             return redirect('/home');
@@ -176,7 +182,6 @@ class LoginController extends Controller
         $address = $_POST['address'];
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
-
         //lakukan validasi inputan
         if ($fname == ''){
             array_push($messages,'First name belum diisi.'); //$messages.add('.....');
@@ -661,7 +666,11 @@ class LoginController extends Controller
     }
 
     //remove wishlist
-    // public function wishlist(){
-    //     $index = $req->''
-    // }
+     public function delwishlist(request $req){
+
+        $id = $req->heart;
+        $wishlist = DB::table('wishlist')->where('ID_WISHLIST',$id)->delete();
+        return redirect('/wishlist');
+
+    }
 }

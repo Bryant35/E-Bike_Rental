@@ -35,7 +35,7 @@
                             <li><a class="dropdown-item" href="#wishlist">Wishlist</a></li>
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{url('/service')}}">Something Else</a></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
 
                           </ul>
                     </li>
@@ -81,41 +81,6 @@
     <!--home-->
     <div class="container">
         <p class="wishlist">MY WISHLIST</p>
-         <!-- <div class= "col-sm-4 col-md-2" >
-            <div class="products">
-                <img src="img/greenbike.png" width="175px" height="200px" />
-                <h4 class="text-info">Contoh 1 Ebike</h4>
-                <h4>Rp. 5000/jam</h4>
-                <button class="btn-outline-danger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
-                         ::before
-                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                    </svg>
-                </button>
-                <button type="button" class="btn btn-primary">Check Out Now</button>
-
-            </div>
-        </div> -->
-        <!-- <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
-                    <img src="img/purplebike.png" class="card-img-top card-header" alt="img/purplebike.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Contoh EBike 2</h5>
-                        <p class="card-text">Rp. 5000/jam</p>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <div class="text-end">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-danger p-2 bd-highlight" onclick="likePress()">
-                                    <i class="fas fa-heart" id="love"></i>
-                                </button>
-                                <button type="button" class="btn btn-primary">Check Out Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="row row-cols-1 row-cols-md-4 g-4">
 
                 @foreach($wishlist as $list)
@@ -127,76 +92,21 @@
                             <h4>Rp. 5000/jam</h4>
                         </div>
                         <div class="card-footer bg-transparent d-flex bd-highlight">
-                            <button class="btn btn-danger p-2 bd-highlight">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
+                            <form action="{{url('/delete')}}" method="POST">
+                                @csrf
+                                <input name="heart" type="hidden" value="{{$list->ID_WISHLIST}}">
+                            <button type ="submit" class="btn btn-danger p-2 bd-highlight">
+                                <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
                                     ::before
                                     <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg>
                             </button>
+                            </form>
                             <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
                         </div>
                     </div>
                 </div>
                 @endforeach
-
-            <!-- <div class="col">
-                <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
-                    <img src="img/redbike.png" class="card-img-top card-header" alt="img/redbike.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Contoh EBike 3</h5>
-                        <h4>Rp. 5000/jam</h4>
-                    </div>
-                    <div class="card-footer bg-transparent d-flex bd-highlight">
-                        <button class="btn btn-danger p-2 bd-highlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
-                                ::before
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg>
-                        </button>
-                        <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
-                    <img src="img/redbike.png" class="card-img-top card-header" alt="img/redbike.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Contoh EBike 3</h5>
-                        <h4>Rp. 5000/jam</h4>
-                    </div>
-                    <div class="card-footer bg-transparent d-flex bd-highlight">
-                        <button class="btn btn-danger p-2 bd-highlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
-                                ::before
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg>
-                        </button>
-                        <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100" style="max-width: 16rem; background-color: #f1f1f1;">
-                    <img src="img/redbike.png" class="card-img-top card-header" alt="img/redbike.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Contoh EBike 3</h5>
-                        <h4>Rp. 5000/jam</h4>
-                    </div>
-                    <div class="card-footer bg-transparent d-flex bd-highlight">
-                        <button class="btn btn-danger p-2 bd-highlight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 15">
-                                ::before
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                            </svg>
-                        </button>
-                        <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
-                    </div>
-                </div>
-            </div>-->
-
-
-
         </div>
     </div>
     <script>

@@ -46,7 +46,7 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ session()->get('saldo') }}</a>
+                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ Session::get('sisa') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-
+<!-- isi body -->
     <div class="bg-info h-100 w-100" >
 <div class="container">
     <section id= "transucc" >

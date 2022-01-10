@@ -23,7 +23,6 @@
                         <a class="nav-link active" aria-current="page" href="/" >Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link disabled" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Service</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -45,7 +44,8 @@
             </div>
         </div>
     </nav>
-    <div class="center">
+
+    <div class="center" style="max-height= 10vh;">
         <h1>Register</h1>
         @if (Session::has('emptydata'))
             <div class="alert alert-danger alert-block mx-4">
