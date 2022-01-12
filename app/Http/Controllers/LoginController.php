@@ -17,15 +17,15 @@ use Hash;
 class LoginController extends Controller
 {
     public function Cookie_Login(Request $req){
-        // $login = $_COOKIE['user'];
-        // if($login != '')
-        // {
-        //     Session::put('login', $login);
-        //     return redirect('/home');
-        // }
-        // else{
+        $login = Session::get('login');
+        if($login != '')
+        {
+           Session::put('login', $login);
+           return redirect('/home');
+        }
+        else{
             return view('landingpage');
-        // }
+        }
     }
     //Login page
     public function cek_login(Request $req){
@@ -139,8 +139,6 @@ class LoginController extends Controller
         // }
         //endiseng
 
-
-
         $data = [
             'username' => $uname,
             'password' => $pass
@@ -154,15 +152,19 @@ class LoginController extends Controller
             Session::flush();
             Session::put('login', $uname);
             Session::put('pass', $pass);
-            if($req->has('RememberMe')){
-                $minute = time()+60*60*24*30;
-               setcookie('user', $uname, $minute);
 
-                // dd($_COOKIE['user']);
+            if($req->has('RememberMe')){
+            //  $minute = time()+60*60*24*30;
+            //  setcookie('user', $uname, $minute);
+                session_start();
+            }
+            else{
+                session_set_cookie_params(0);
+                session_start();
             }
             Session::flash('success', 'Login Success!');
             return redirect('/home');
-        } else {
+        }else {
             //2.b. Jika TIDKA KETEMU, maka kembali ke LOGIN dan tampilkan PESAN
             Session::flash('error', 'Email or Password is Incorrect!');
             return redirect('/login');
