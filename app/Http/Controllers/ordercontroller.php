@@ -69,11 +69,11 @@ class ordercontroller extends Controller
         if(Carbon::parse($datetime) < Carbon::now()->setTimezone('Asia/Jakarta')){
             // dd(Carbon::now()->setTimezone('Asia/Jakarta'), Carbon::parse($datetime)->setTimezone('Asia/Jakarta'));
 
-            return redirect('/order')->with('success','Your Pickup date is in the past dumbass');
+            return redirect('/order')->with('success','Your Pickup date is in the past!');
 
         }
         else if($lastdate < $datetime){
-            return redirect('/order')->with('success','Your Dropoff date is before your pickup date DUM DUM.');
+            return redirect('/order')->with('success','Your Dropoff date is before your pickup date.');
         }
         else{
             //dd(Carbon::now()->setTimezone('Asia/Jakarta'),Carbon::parse($datetime));
@@ -147,10 +147,13 @@ class ordercontroller extends Controller
                 'JAMAWAL_SEWA'=>$jams,
                 'TGLAKHIR_SEWA'=>$last,
                 'JAMAKHIR_SEWA'=>$jaml,
+                'PAYMENT_METHOD'=>Session::get('method'),
                 'SEWA_DELETE'=> '0'
-           ]
+            ]
       );
       $updet = DB::table('penyewa')->where('ID_PENYEWA',$id)->update(['SALDO_PENYEWA'=>$sisa]);
+      $newSaldo = DB::select('SELECT SALDO_PENYEWA FROM penyewa WHERE ID_PENYEWA = "'.$id.'"');
+      Session::put('saldo', $sisa);
       return redirect('orderconfirm');
 
        }

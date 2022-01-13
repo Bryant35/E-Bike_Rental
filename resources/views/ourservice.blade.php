@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/ourservice.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <!-- navbar -->
@@ -29,7 +31,10 @@
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
-                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
                           </ul>
                     </li>
                     <li class="nav-item">
@@ -72,6 +77,14 @@
     <!-- end navbar -->
 
     <!-- product detail -->
+    <div class="container mt-5">
+        @if (Session::has('error'))
+            <div class="alert alert-danger alert-block">
+                <strong>{{ Session::get('error') }}</strong>
+                <button type="button" class="close position-absolute top-0 start-100 translate-middle" data-dismiss="alert"><i class="bi bi-x-circle-fill"></i></button>
+            </div>
+        @endif
+    </div>
     <div class="container my-4 mx-auto">
         <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -113,13 +126,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-4"> <img src="img/purplebike.png" width="110%" height="110%"> </div>
+                                        <div class="col-md-4 me-5"> <img src="img/purplebike.png" width="110%" height="110%"></div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mt offset-md-7" style="font-size: 24px;"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="U001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -154,13 +178,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/pinkbike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/pinkbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="P001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -195,13 +230,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/redbike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/redbike.png" width="110%" height="110%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="M001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -236,13 +282,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/yellowbike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/yellowbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="K001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -277,13 +334,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/orangebike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/orangebike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="J001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -318,13 +386,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/greenbike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/greenbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="H002">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -359,13 +438,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/blackbike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/blackbike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="H001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -400,13 +490,24 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5"> <img src="img/bluebike.png" width="100%" height="100%"> </div>
+                                    <div class="col-md-4"> <img src="img/bluebike.png" width="100%" height="100%"> </div>
                                 </div>
                             </div>
-                            <div class="footer d-flex flex-column mt-5">
-                                <div class="row r4">
-                                    <div class="col-md-2 mio offset-md-2"><a href="#"><i class="bi bi-heart"></i></a></div>
-                                    <div class="col-md-2 myt offset-md-5"><button type="button" class="btn btn-outline-warning"><a href="{{ url('/order') }}">RENT NOW</a></button></div>
+                            <div class="footer d-flex flex-column mt-5 ms-5 d-flex justify-content-evenly">
+                                <div class="row r4 position-absolute end-0">
+                                    <form action="{{url('/addwish')}}" method="POST">
+                                        @csrf
+                                        <div class="mb-5">
+                                            <div class="btn-group mb-5" role="group" aria-label="Basic example" style="margin-right: 200px;">
+                                                <button type="submit" class="btn btn-danger" style="width: 200px">
+                                                        <input name="biketype" type="hidden" value="B001">
+                                                        Add to Wishlist
+                                                        <input name="idpenyewa"type="hidden" value="{{session()->get('IDpenyewa')}}">
+                                                </button>
+                                                <a href="{{ url('/order') }}" class="btn btn-outline-warning" style="vertical-align: middle;">RENT NOW</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -423,47 +524,6 @@
             </button>
         </div>
     </div>
-
-    <!-- {{-- <div class="container my-4 mx-auto">
-        <div class="border border-primary border-5 rounded-3">
-            <div class="mx-4 my-4">
-                <div class="header">
-                    <div class="row r1">
-                        <div class="col-md-9 abc">
-                            <h1>Red E-Bike</h1>
-                        </div>
-                        <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                        <p class="text-right para">Electronic Bike Rental</p>
-                    </div>
-                </div>
-                <div class="container-body mt-4">
-                    <div class="row r3">
-                        <div class="col-md-5 p-0 klo">
-                            <ul>
-                                <li>100% Quality</li>
-                                <li>Easy Returns</li>
-                                <li>Easy Pay</li>
-                                <li>Performance: powerful, dynamic and silent</li>
-                                <li>Strong rear-wheel motor up to 45 km/h</li>
-                                <li>Comfortable riding position</li>
-                                <li>Integrated design</li>
-                                <li>Battery ejection at the push of a button</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-5"> <img src="img/purplebike.png" width="100%" height="100%"> </div>
-                    </div>
-                </div>
-                <div class="footer d-flex flex-column mt-5">
-                    <div class="row r4">
-                        <div class="col-md-2 myt des"><a href="#">Description</a></div>
-                        <div class="col-md-2 myt "><a href="#">Review</a></div>
-                        <div class="col-md-2 mio offset-md-4"><a href="#">ADD TO CART</a></div>
-                        <div class="col-md-2 myt "><button type="button" class="btn btn-outline-warning"><a href="#">RENT NOW</a></button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}} -->
 
 
     <div class="mt-4">

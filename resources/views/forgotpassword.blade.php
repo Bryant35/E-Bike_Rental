@@ -26,7 +26,10 @@
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
-                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
                           </ul>
                     </li>
                     <li class="nav-item">

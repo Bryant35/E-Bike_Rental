@@ -25,7 +25,10 @@
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
                           </ul>
                     </li>
                     <li class="nav-item">
@@ -176,7 +179,7 @@
                                 <th class="center ps-4">Invoice</th>
                                 <th>Payment Method</th>
                                 <!-- <th>Booth</th> -->
-                                <th class="right">Date Rent</th>
+                                <th class="right">Date Rent/Topup</th>
                                 <th class="center">End Date</th>
                                 <th class="right">Price</th>
                             </tr>

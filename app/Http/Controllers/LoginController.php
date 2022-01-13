@@ -12,10 +12,12 @@ use Mail;
 use Cookie;
 use DB;
 use Hash;
+use Carbon\Carbon;
 
 
 class LoginController extends Controller
 {
+    //masuk landing page
     public function Cookie_Login(Request $req){
         $login = Session::get('RememberMe');
         if($login == 'Yes')
@@ -35,110 +37,6 @@ class LoginController extends Controller
         $req->input([
             'RememberMe' => 'accepted'
         ]);
-
-        //iseng1
-        // session_start();
-
-        // include "koneksi.php";
-
-        // $nim = $_POST["nim"];
-        // $fakultas = $_POST["fakultas"];
-
-        // $query = "select * from mahasiswa where nim='$nim' and fakultas='$fakultas'";
-        // $result = mysqli_query($link, $query);
-
-        // $banyakRecord = mysqli_num_rows($result);
-
-        // if($banyakRecord > 0){
-        //     $data = mysqli_fetch_assoc($result);
-        //     $nama = $data["nama"];
-
-        //     $_SESSION["namaUser"] = $nama;
-
-        //     $cookieNama = "namaUser";
-        //     $cookieNilai = $nama;
-        //     $cookieWaktu = time() + 3600;
-
-        //     setcookie($cookieNama, $cookieNilai, $cookieWaktu, "/");
-
-        //     echo "
-        //     <h2>Selamat siang $nama</h2>
-        //     <script>
-        //         alert('Klik Ok untuk ke halaman baru');
-        //         window.location.href = 'halaman_baru.php';
-        //     </script>
-        //     ";
-        // }
-        // else{
-        //     echo "
-        //     <script>
-        //         alert('Login gagal!');
-        //         window.location.href = 'login.php';
-        //     </script>
-        //     ";
-        // }
-
-        // //iseng2
-        // include "koneksi.php";
-
-        // $nim = $_POST["nim"];
-        // $fakultas = $_POST["fakultas"];
-
-        // $query = "select * from mahasiswa where nim='$nim' and fakultas='$fakultas'";
-        // $result = mysqli_query($link, $query);
-
-        // $banyakRecord = mysqli_num_rows($result);
-
-        // if($banyakRecord > 0){
-        //     $data = mysqli_fetch_assoc($result);
-        //     $nama = $data["nama"];
-
-        //     $cookieNama = "namaUser";
-        //     $cookieNilai = $nama;
-        //     $cookieWaktu = time() + 3600;
-
-        //     setcookie($cookieNama, $cookieNilai, $cookieWaktu, "/");
-
-        //     echo "
-        //     <h2>Selamat siang $nama</h2>
-        //     ";
-        // }
-        // else{
-        //     echo "
-        //     <script>
-        //         alert('Login gagal!');
-        //         window.location.href = 'login.php';
-        //     </script>
-        //     ";
-        // }
-
-        // //iseng3
-        // if(!isset($_COOKIE["namaUser"]))
-        // {
-        //     echo "
-        //     <!DOCTYPE html>
-        //     <html>
-        //     <head>
-        //     </head>
-        //     <body>
-        //         <h2>Login Page</h2>
-        //         <form id='frmLogin' method='post' action='frmHandler2.php'>
-        //             NIM: <input type='text' name='nim' id='nim'><br>
-        //             Fakultas: <input type='text' name='fakultas' id=fakultas'><br>
-        //             <input type='submit' value='Login'>
-        //         </form>
-        //     </body>
-        //     </html>
-        //     ";
-        // }
-        // else
-        // {
-        //     $nama = $_COOKIE["namaUser"];
-        //     echo "
-        //     <h2>Selama datang kembali $nama</h1>
-        //     ";
-        // }
-        //endiseng
 
         $data = [
             'username' => $uname,
@@ -273,12 +171,14 @@ class LoginController extends Controller
             }
         }
         return redirect('/register');
-
-
-
     }
 
-
+    //Sepeda List
+    public function sepedaList(){
+        $user = new Awal;
+        $list_sepeda = $user->tampil_sepeda();
+        return view('ourservice', compact(['list_sepeda']));
+    }
 
     //Account Page
     public function updateProfile(Request $req){
@@ -371,8 +271,8 @@ class LoginController extends Controller
         if(Cookie::get('username') != ''){
             Cookie::forget('username');
         }
-
-        return view('landingpage');
+        return redirect('/');
+        // return view('landingpage');
     }
 
     //Home Button
@@ -671,11 +571,27 @@ class LoginController extends Controller
     }
 
     //remove wishlist
-     public function delwishlist(request $req){
+    public function delwishlist(request $req){
 
         $id = $req->heart;
         $wishlist = DB::table('wishlist')->where('ID_WISHLIST',$id)->delete();
         return redirect('/wishlist');
 
     }
+
+    public function addwishlist(request $req){
+        $id = $req->biketype;
+        $idpenyewa = $req->idpenyewa;
+        $now = Carbon::now();
+        $checkid = DB::select('SELECT count(ID_WISHLIST) is_exist FROM wishlist WHERE ID_WISHLIST = concat("'.$idpenyewa.'", "'.$id.'");');
+        if($checkid[0]->is_exist >= 1){
+            Session::flash('error', 'Item already in wishlist');
+        }
+        else{
+            $add_wishlist = DB::select('CALL KMMI3.newWislist("'.$idpenyewa.'", "'.$id.'", "'.$now.'")');
+
+        }
+        return redirect('/service');
+    }
+
 }

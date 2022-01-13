@@ -56,10 +56,11 @@ Route::get('/account','App\Http\Controllers\LoginController@akun');
 Route::get('/forgotpassword', function () {
     return view('forgotpassword');
 });
+Route::get('/service','App\Http\Controllers\LoginController@sepedaList');
 
-Route::get('/service', function () {
-    return view('ourservice');
-});
+// Route::get('/service', function () {
+//     return view('ourservice');
+// });
 
 Route::get('/contact', function () {
     return view('contactpage');
@@ -112,3 +113,5 @@ Route::get('/register', function () {
 });
 
 Route::post('/sendHelp','App\Http\Controllers\LoginController@sendhelp');
+
+Route::post('/addwish','App\Http\Controllers\LoginController@addwishlist');

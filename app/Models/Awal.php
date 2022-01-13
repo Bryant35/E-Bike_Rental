@@ -296,5 +296,9 @@ class Awal extends Model
         $res = DB::select($cmd, $data);
         return $res;
     }
+
+    public function tampil_sepeda(){
+
+    }
 }
 

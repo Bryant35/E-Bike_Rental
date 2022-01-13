@@ -28,8 +28,11 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="{{url('/order')}}">Order Bike</a></li>
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{url('/topup')}}">Top-Up Wallet</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{url('/service')}}">Our Product</a></li>
-                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
                           </ul>
                     </li>
                     <li class="nav-item">
@@ -41,7 +44,7 @@
                 </ul>
 
                 <form class="d-flex">
-                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ Session::get('sisa') }}</a>
+                    <a href="{{url('/topup')}}" class="btn btn-info rounded-pill">Rp. {{ Session::get('saldo') }}</a>
                     <a href="{{url('/account')}}"><img src="img/Avatar.png" alt="" style="height: 40px;"></a>
                     <button class="btn btn-light" type="submit">{{ session()->get('login') }}</button>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmLogout">
@@ -88,11 +91,11 @@
         <section id ="paymeth">
         <label for="pay">Payment Method</label>
         <div><select name="pay" id="payment">
-            <option value="wallet">My Wallet</option>
-            <option value="dana">Dana</option>
-            <option value="ovo">OVO</option>
-            <option value="gopay">Gopay</option>
-            <option value="cash">Cash</option>
+            <option value="MY Wallet">My Wallet</option>
+            <option value="Dana">Dana</option>
+            <option value="OVO">OVO</option>
+            <option value="Gopay">Gopay</option>
+            <option value="Cash">Cash</option>
         </select>
         </div>
 
