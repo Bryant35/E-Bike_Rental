@@ -17,13 +17,14 @@ use Hash;
 class LoginController extends Controller
 {
     public function Cookie_Login(Request $req){
-        $login = Session::get('login');
-        if($login != '')
+        $login = Session::get('RememberMe');
+        if($login == 'Yes')
         {
-           Session::put('login', $login);
-           return redirect('/home');
+            Session::get('login');
+            return redirect('/home');
         }
         else{
+            Session::flush();
             return view('landingpage');
         }
     }
@@ -157,10 +158,12 @@ class LoginController extends Controller
             //  $minute = time()+60*60*24*30;
             //  setcookie('user', $uname, $minute);
                 session_start();
+                $cekSession = Session::put('RememberMe', 'Yes');
             }
             else{
                 session_set_cookie_params(0);
                 session_start();
+                $cekSession = Session::put('RememberMe', 'No');
             }
             Session::flash('success', 'Login Success!');
             return redirect('/home');
