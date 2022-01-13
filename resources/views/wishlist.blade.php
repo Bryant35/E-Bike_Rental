@@ -90,7 +90,7 @@
                         <img src="{{$list->IMG_SEPEDA}}" class="card-img-top card-header" alt="img/redbike.jpg">
                         <div class="card-body">
                             <h5 class="card-title">{{$list->NAMA_SEPEDA}}</h5>
-                            <h4>Rp. 5000/jam</h4>
+                            <h4>Rp. 5000/hour</h4>
                         </div>
                         <div class="card-footer bg-transparent d-flex bd-highlight">
                             <form action="{{url('/delete')}}" method="POST">
@@ -103,7 +103,7 @@
                                 </svg>
                             </button>
                             </form>
-                            <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight">Check Out Now</button>
+                            <button type="button" class="btn btn-primary ms-auto p-2 bd-highlight"><a href="/order" style="text-decoration: none; color: white;">Check Out Now</a></button>
                         </div>
                     </div>
                 </div>
