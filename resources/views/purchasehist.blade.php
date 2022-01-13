@@ -107,19 +107,17 @@
                                 <td class="center">2021-09-17 03:47:05</td>
                                 <td class="right">Rp 15,000</td>
                             </tr> --}}
-                            @for ($i = 0; $i <= 15; $i++)
-                                @foreach($tampil_phistory as $history)
+                            @foreach($tampil_phistory as $history)
 
-                                    <tr>
-                                        <td class="center ps-4">{{ $history->Invoice }}</td>
-                                        <td class="left strong">{{ $history->TypeBike }}</td>
-                                        <td class="right">{{ $history->DateRent }}</td>
-                                        <td class="center">{{ $history->EndDate }}</td>
-                                        <td class="right text-end pe-4">{{ $history->Price }}</td>
-                                    </tr>
+                                <tr>
+                                    <td class="center ps-4">{{ $history->Invoice }}</td>
+                                    <td class="left strong">{{ $history->TypeBike }}</td>
+                                    <td class="right">{{ $history->DateRent }}</td>
+                                    <td class="center">{{ $history->EndDate }}</td>
+                                    <td class="right text-end pe-4">{{ $history->Price }}</td>
+                                </tr>
 
-                                @endforeach
-                            @endfor
+                            @endforeach
 
                         </tbody>
                         <tfoot>
