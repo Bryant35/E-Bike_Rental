@@ -79,7 +79,7 @@ class Awal extends Model
         return $res;
     }
 
-    public function akun($login){
+    public function akun2($login){
         $cmd = "SELECT * FROM penyewa WHERE USERNAME_PENYEWA =:username;";
         $data=['username'=> $login];
 

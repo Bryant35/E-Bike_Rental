@@ -55,12 +55,12 @@ class LoginController extends Controller
             if($req->has('RememberMe')){
             //  $minute = time()+60*60*24*30;
             //  setcookie('user', $uname, $minute);
-                session_start();
+                // session_start();
                 $cekSession = Session::put('RememberMe', 'Yes');
             }
             else{
-                session_set_cookie_params(0);
-                session_start();
+                // session_set_cookie_params(0);
+                // session_start();
                 $cekSession = Session::put('RememberMe', 'No');
             }
             Session::flash('success', 'Login Success!');
@@ -234,7 +234,7 @@ class LoginController extends Controller
             }
             if (isset($usedName) && count($usedName)>0){
                 Session::flash('usernameUsed', $usedName);
-                return redirect('/account');
+                return view('account');
             }
         }
 
@@ -247,7 +247,7 @@ class LoginController extends Controller
             return view('login');
         }
         $user = new Awal;
-        $tampil_data = $user->akun($login);
+        $tampil_data = $user->akun2($login);
         // dd($tampil_data[0]->SALDO_PENYEWA);
         Session::put('Nama_penyewa', $tampil_data[0]->NAMA_PENYEWA);
         Session::put('Email_penyewa', $tampil_data[0]->EMAIL_ADDRESS);
